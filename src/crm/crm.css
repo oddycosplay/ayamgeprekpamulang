@@ -1,0 +1,71 @@
+@import "tailwindcss";
+
+/* ===== Al-Fariz CRM brand layer (owner dashboard) =====
+ * Warna brand dari website pelanggan: maroon gerobak, sambel ijo,
+ * kuning cabai, putih nasi. */
+@theme {
+  --color-maroon: #5e0d10;
+  --color-maroon-deep: #3f0709;
+  --color-maroon-soft: #f6e7e4;
+  --color-ijo: #2e7d32;
+  --color-ijo-bright: #4caf50;
+  --color-ijo-soft: #e4f2e2;
+  --color-kuning: #f5c518;
+  --color-kuning-soft: #fdf3c8;
+  --color-crust: #f57c00;
+  --color-crust-soft: #fde9d4;
+  --color-ivory: #fdfbf7;
+  --color-paper: #f5f1e8;
+  --color-ink: #1f1512;
+  --color-ink-soft: #6b5d55;
+  --color-line: #e8e0d2;
+  --color-cabai: #c62828;
+  --color-cabai-soft: #fbe3e1;
+  --font-sans: "Plus Jakarta Sans", ui-sans-serif, system-ui, sans-serif;
+  --font-display: "Bricolage Grotesque", "Plus Jakarta Sans", ui-sans-serif, sans-serif;
+  --font-mono: "JetBrains Mono", ui-monospace, monospace;
+}
+
+@layer base {
+  html.af {
+    background-color: var(--color-ivory);
+    color: var(--color-ink);
+    color-scheme: light;
+  }
+  html.af body {
+    background-color: var(--color-ivory);
+    color: var(--color-ink);
+    font-family: var(--font-sans);
+    -webkit-font-smoothing: antialiased;
+  }
+  html.af * {
+    border-color: var(--color-line);
+  }
+  html.af :focus-visible {
+    outline: 2px solid var(--color-ijo);
+    outline-offset: 2px;
+  }
+}
+
+.af-awning {
+  background-image: repeating-linear-gradient(-45deg, var(--color-kuning) 0 10px, var(--color-maroon) 10px 20px);
+}
+.af-grain {
+  background-image: radial-gradient(rgb(255 255 255 / 0.06) 1px, transparent 1px);
+  background-size: 6px 6px;
+}
+.af-num {
+  font-family: var(--font-mono);
+  font-variant-numeric: tabular-nums;
+}
+@keyframes af-pulse-ring {
+  0% { box-shadow: 0 0 0 0 rgb(245 197 24 / 0.7); }
+  100% { box-shadow: 0 0 0 10px rgb(245 197 24 / 0); }
+}
+.af-new {
+  animation: af-pulse-ring 1.6s ease-out infinite;
+}
+@media (prefers-reduced-motion: reduce) {
+  .af-new { animation: none; }
+  html.af * { transition-duration: 0ms !important; }
+}

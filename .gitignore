@@ -9,3 +9,6 @@ coverage/
 crm-owner/
 CRM-LOGIN-OWNER.txt
 uploads/
+server.cjs
+__pycache__/
+*.pyc
