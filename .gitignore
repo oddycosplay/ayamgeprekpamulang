@@ -10,5 +10,6 @@ crm-owner/
 CRM-LOGIN-OWNER.txt
 uploads/
 server.cjs
+upload-hosting.zip
 __pycache__/
 *.pyc
