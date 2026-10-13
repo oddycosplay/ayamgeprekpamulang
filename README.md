@@ -1,10 +1,32 @@
 # Ayam Geprek Pamulang
 
 <p align="center">
-  <img src="./laptop_beranda.png" alt="Tampilan landing page Ayam Geprek Pamulang" width="900" />
+  <img src="./laptop_beranda.png" alt="Preview landing page Ayam Geprek Pamulang" width="900" />
+</p>
+
+<p align="center">
+  <a href="https://your-demo-link.com" target="_blank">
+    <img src="https://img.shields.io/badge/Live%20Demo-🚀-brightgreen?style=for-the-badge" alt="Live Demo" />
+  </a>
+  <a href="https://github.com/oddycosplay/ayamgeprekpamulang" target="_blank">
+    <img src="https://img.shields.io/badge/GitHub-Repo-181717?style=for-the-badge&logo=github" alt="GitHub Repository" />
+  </a>
+  <a href="https://wa.me/628XXXXXXXXXX" target="_blank">
+    <img src="https://img.shields.io/badge/WhatsApp-Order-25D366?style=for-the-badge&logo=whatsapp&logoColor=white" alt="WhatsApp Order" />
+  </a>
+</p>
+
+<p align="center">
+  <img src="https://img.shields.io/badge/React-20232A?style=for-the-badge&logo=react&logoColor=61DAFB" alt="React" />
+  <img src="https://img.shields.io/badge/TypeScript-3178C6?style=for-the-badge&logo=typescript&logoColor=white" alt="TypeScript" />
+  <img src="https://img.shields.io/badge/Vite-646CFF?style=for-the-badge&logo=vite&logoColor=white" alt="Vite" />
+  <img src="https://img.shields.io/badge/Express-000000?style=for-the-badge&logo=express&logoColor=white" alt="Express" />
+  <img src="https://img.shields.io/badge/MySQL-4479A1?style=for-the-badge&logo=mysql&logoColor=white" alt="MySQL" />
+  <img src="https://img.shields.io/badge/Google%20Gemini-AI-4285F4?style=for-the-badge" alt="Google Gemini" />
 </p>
 
 ## Tugas Akhir
+
 Proyek ini merupakan Tugas Akhir mahasiswa Universitas Pamulang untuk mata kuliah *Optimalisasi SEO*.
 
 Mahasiswa:
@@ -13,7 +35,6 @@ Mahasiswa:
 3. Febri
 4. Hilmi
 5. Eni
-
 
 Website landing page dan sistem operasional untuk usaha Ayam Geprek Al-Fariz Pamulang. Proyek ini dirancang sebagai solusi digital untuk memperkenalkan menu, layanan, dan proses pemesanan secara modern.
 
@@ -41,6 +62,19 @@ Project ini dibangun dengan React + TypeScript + Vite di sisi frontend, dan Expr
 - AI Image Studio untuk membuat visual makanan
 - CRM owner untuk mengelola data operasional
 - Server produksi untuk deployment di Node.js hosting
+
+## Preview
+
+<p align="center">
+  <img src="./laptop_beranda.png" alt="Dashboard utama Ayam Geprek Pamulang" width="900" />
+</p>
+
+### Highlights
+
+- UI landing page yang modern dan siap untuk portfolio
+- Desain responsif untuk desktop dan mobile
+- Fokus promosi produk serta pengalaman pembelian yang cepat
+- Integrasi AI dan CRM untuk optimalisasi operasional usaha
 
 ## Tech Stack
 
