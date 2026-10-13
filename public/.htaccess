@@ -10,6 +10,9 @@
   ModPagespeed off
 </IfModule>
 
+# Set DirectoryIndex so Apache serves the compiled production bundle first
+DirectoryIndex bundle.html index.html
+
 <IfModule mod_rewrite.c>
   RewriteEngine On
   RewriteBase /
@@ -21,10 +24,14 @@
   RewriteCond %{HTTPS} off
   RewriteRule ^(.*)$ https://%{HTTP_HOST}%{REQUEST_URI} [L,R=301]
 
-  # 2. SPA Routing fallback to index.html (if file or directory does not exist)
+  # 2. Production Bundle Serving & SPA Routing
+  RewriteRule ^$ bundle.html [L]
+  RewriteRule ^index\.html$ bundle.html [L]
+
+  # Fallback for client-side routing
   RewriteCond %{REQUEST_FILENAME} !-f
   RewriteCond %{REQUEST_FILENAME} !-d
-  RewriteRule ^ index.html [L]
+  RewriteRule ^ bundle.html [L]
 </IfModule>
 
 # ==============================================================================
