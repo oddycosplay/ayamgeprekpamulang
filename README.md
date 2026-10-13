@@ -1,5 +1,9 @@
 # Ayam Geprek Pamulang
 
+<p align="center">
+  <img src="./laptop_beranda.png" alt="Tampilan landing page Ayam Geprek Pamulang" width="900" />
+</p>
+
 ## Tugas Akhir
 Proyek ini merupakan Tugas Akhir mahasiswa Universitas Pamulang untuk mata kuliah *Optimalisasi SEO*.
 
@@ -11,7 +15,7 @@ Mahasiswa:
 5. Eni
 
 
-Website landing page dan sistem operasional untuk usaha Ayam Geprek Al-Fariz Pamulang. Proyek ini dirancang sebagai solusi digital untuk memperkenalkan menu, layanan, dan proses pemesanan secara modern serta membantu optimasi kehadiran online melalui praktik SEO.
+Website landing page dan sistem operasional untuk usaha Ayam Geprek Al-Fariz Pamulang. Proyek ini dirancang sebagai solusi digital untuk memperkenalkan menu, layanan, dan proses pemesanan secara modern.
 
 ## Tentang Project
 
@@ -130,7 +134,7 @@ Perintah build akan menghasilkan bundle frontend dan file server produksi (`serv
 
 ## Catatan Deployment
 
-Project ini sudah disiapkan untuk deployment di hosting Node.js seperti cPanel / DomaiNesia. Server produksi ada pada `server/index.ts` dan akan menyajikan static build dari `dist/` serta menghan...
+Project ini sudah disiapkan untuk deployment di hosting Node.js seperti cPanel / DomaiNesia. Server produksi ada pada `server/index.ts` dan akan menyajikan static build dari `dist/` serta menangani API backend.
 
 ## License
 
