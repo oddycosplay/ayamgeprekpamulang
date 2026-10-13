@@ -93,8 +93,6 @@ const SCHEMA = [
 const SEED_PRODUCTS: [string, string, string, number, string, string, string, number, number][] = [
   ['paket-geprek-nasi', 'Paket Geprek + Nasi', 'paket', 17000, 'Ayam krispi fillet geprek sambel ijo uleg dadakan + nasi putih pulen hangat + lalapan timun segar.', '/menu/paket-geprek-nasi.jpg', 'BEST SELLER', 1, 1],
   ['ayam-geprek-saja', 'Ayam Geprek Saja', 'alacarte', 15000, '1 potong ayam krispi jumbo berbalut sambel ijo cabai rawit pedas gurih tanpa nasi + lalapan.', '/menu/ayam-geprek-saja.jpg', 'ALACARTE', 1, 2],
-  ['geprek-original', 'Geprek Original', 'alacarte', 13000, 'Ayam geprek krispi dengan sambel ijo uleg pedas khas Al-Fariz di atas daun pisang segar.', '/menu/geprek-original.jpg', 'FAVORIT', 1, 3],
-  ['geprek-extra-crispy', 'Geprek Extra Crispy', 'alacarte', 15000, 'Ayam goreng crispy super renyah double coating, disiram sambel ijo uleg dadakan cabai rawit hijau.', '/menu/geprek-extra-crispy.png', 'NEW', 1, 4],
   ['extra-sambel', 'Extra Sambel Ijo', 'tambahan', 3000, 'Tambahan sambel ijo uleg dadakan per porsi.', '', '', 0, 10],
   ['tambah-nasi', 'Tambah Nasi Pulen', 'tambahan', 5000, 'Tambahan nasi putih pulen hangat per porsi.', '', '', 0, 11],
 ];

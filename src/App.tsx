@@ -19,18 +19,16 @@ import { LokasiKontakSection } from './components/LokasiKontakSection.tsx';
 import { Footer } from './components/Footer.tsx';
 
 import { AiAdvisorModal } from './components/AiAdvisorModal.tsx';
-import { ImageStudioModal } from './components/ImageStudioModal.tsx';
 import { LoginModal } from './components/LoginModal.tsx';
 import { MenuItem } from './types.ts';
 import { MENU_ITEMS } from './data/menuData.ts';
 
-import { Sparkles, Image as ImageIcon } from 'lucide-react';
+import { Sparkles } from 'lucide-react';
 
 export default function App() {
   const [selectedMenuItem, setSelectedMenuItem] = useState<MenuItem>(MENU_ITEMS[0]);
   const [isAdvisorOpen, setIsAdvisorOpen] = useState(false);
   const [advisorInitialMode, setAdvisorInitialMode] = useState<'advisor' | 'maps' | 'search'>('advisor');
-  const [isImageStudioOpen, setIsImageStudioOpen] = useState(false);
   const [isLoginOpen, setIsLoginOpen] = useState(false);
 
   // User auth/identity state
@@ -151,15 +149,6 @@ export default function App() {
           <Sparkles className="w-4 h-4" />
           <span className="hidden sm:inline">Asisten Menu & Maps AI</span>
         </button>
-
-        <button
-          onClick={() => setIsImageStudioOpen(true)}
-          className="bg-[#F5C518] hover:bg-[#e0b312] text-[#5e0d10] font-black text-xs py-2 px-3.5 rounded-full shadow-lg border border-amber-300 flex items-center gap-2 transform hover:scale-105 transition"
-          title="Studio Gambar Makanan AI"
-        >
-          <ImageIcon className="w-4 h-4" />
-          <span className="hidden sm:inline">Studio Gambar (1K/2K/4K)</span>
-        </button>
       </aside>
 
       {/* Modals */}
@@ -167,11 +156,6 @@ export default function App() {
         isOpen={isAdvisorOpen}
         onClose={() => setIsAdvisorOpen(false)}
         initialMode={advisorInitialMode}
-      />
-
-      <ImageStudioModal
-        isOpen={isImageStudioOpen}
-        onClose={() => setIsImageStudioOpen(false)}
       />
 
       <LoginModal

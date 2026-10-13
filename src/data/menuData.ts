@@ -1,7 +1,5 @@
 import geprekPaketNasi from '../produk/geprek-paket-nasi.jpg';
 import geprekAlacarte from '../produk/geprek-alacarte.jpg';
-import geprekOriginal from '../produk/geprek-original.jpg';
-import geprekExtraCrispy from '../produk/professional_food_photography_of_indonesian_ayam_geprek_sambel_ijo_extra_crispy.webp';
 import { MenuItem, Testimonial } from '../types.ts';
 
 export const MENU_ITEMS: MenuItem[] = [
@@ -23,26 +21,6 @@ export const MENU_ITEMS: MenuItem[] = [
     description: '1 potong ayam krispi jumbo berbalut sambel ijo cabai rawit pedas gurih tanpa nasi + lalapan.',
     image: geprekAlacarte,
     badge: 'ALACARTE',
-    spiceLevelSupported: true
-  },
-  {
-    id: 'geprek-original',
-    name: 'Geprek Original',
-    category: 'alacarte',
-    price: 13000,
-    description: 'Ayam geprek krispi dengan sambel ijo uleg pedas khas Al-Fariz di atas daun pisang segar.',
-    image: geprekOriginal,
-    badge: 'FAVORIT',
-    spiceLevelSupported: true
-  },
-  {
-    id: 'geprek-extra-crispy',
-    name: 'Geprek Extra Crispy',
-    category: 'alacarte',
-    price: 15000,
-    description: 'Ayam goreng crispy super renyah double coating, disiram sambel ijo uleg dadakan cabai rawit hijau yang nampol dan segar.',
-    image: geprekExtraCrispy,
-    badge: 'NEW',
     spiceLevelSupported: true
   }
 ];

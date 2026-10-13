@@ -174,7 +174,7 @@ export const TestimoniSection: React.FC = () => {
         <div className="text-center max-w-3xl mx-auto mb-10 sm:mb-12 space-y-3">
           <div className="inline-flex items-center gap-2 bg-[#781519]/10 border border-[#781519]/20 text-[#781519] px-4 py-1.5 rounded-full text-xs font-black uppercase tracking-wider shadow-xs">
             <Flame className="w-3.5 h-3.5 text-[#781519]" />
-            <span>Ulasan Asli & Rekomendasi</span>
+            <span>Testimoni</span>
           </div>
           <h2 className="text-2xl xs:text-3xl sm:text-4xl lg:text-5xl font-extrabold text-[#1F1F1F] font-serif leading-tight">
             Apa Kata <span className="text-[#781519]">Pelanggan Setia?</span>
