@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://ayamsambelijopamulang.my.id/sitemap.xml

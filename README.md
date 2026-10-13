@@ -1,186 +1,256 @@
-# Ayam Geprek Pamulang
+# Ayam Geprek Sambel Ijo Al-Fariz
 
 <p align="center">
-  <img src="./laptop_beranda.png" alt="Preview landing page Ayam Geprek Pamulang" width="900" />
+  <img src="./laptop_beranda.png" alt="Preview Landing Page Ayam Geprek Sambel Ijo Al-Fariz" width="900" />
 </p>
 
 <p align="center">
-  <a href="https://your-demo-link.com" target="_blank">
-    <img src="https://img.shields.io/badge/Live%20Demo-🚀-brightgreen?style=for-the-badge" alt="Live Demo" />
+  <a href="https://ayamsambelijopamulang.my.id" target="_blank">
+    <img src="https://img.shields.io/badge/Live%20Demo-🚀%20ayamsambelijopamulang.my.id-brightgreen?style=for-the-badge" alt="Live Demo" />
   </a>
   <a href="https://github.com/oddycosplay/ayamgeprekpamulang" target="_blank">
     <img src="https://img.shields.io/badge/GitHub-Repo-181717?style=for-the-badge&logo=github" alt="GitHub Repository" />
   </a>
-  <a href="https://wa.me/628XXXXXXXXXX" target="_blank">
-    <img src="https://img.shields.io/badge/WhatsApp-Order-25D366?style=for-the-badge&logo=whatsapp&logoColor=white" alt="WhatsApp Order" />
+  <a href="https://wa.me/628973816530" target="_blank">
+    <img src="https://img.shields.io/badge/WhatsApp-Order%2008973816530-25D366?style=for-the-badge&logo=whatsapp&logoColor=white" alt="WhatsApp Order" />
   </a>
 </p>
 
 <p align="center">
-  <img src="https://img.shields.io/badge/React-20232A?style=for-the-badge&logo=react&logoColor=61DAFB" alt="React" />
+  <img src="https://img.shields.io/badge/React%2019-20232A?style=for-the-badge&logo=react&logoColor=61DAFB" alt="React 19" />
   <img src="https://img.shields.io/badge/TypeScript-3178C6?style=for-the-badge&logo=typescript&logoColor=white" alt="TypeScript" />
-  <img src="https://img.shields.io/badge/Vite-646CFF?style=for-the-badge&logo=vite&logoColor=white" alt="Vite" />
+  <img src="https://img.shields.io/badge/Vite%208-646CFF?style=for-the-badge&logo=vite&logoColor=white" alt="Vite 8" />
+  <img src="https://img.shields.io/badge/Tailwind_CSS_v4-38B2AC?style=for-the-badge&logo=tailwind-css&logoColor=white" alt="Tailwind CSS v4" />
   <img src="https://img.shields.io/badge/Express-000000?style=for-the-badge&logo=express&logoColor=white" alt="Express" />
   <img src="https://img.shields.io/badge/MySQL-4479A1?style=for-the-badge&logo=mysql&logoColor=white" alt="MySQL" />
-  <img src="https://img.shields.io/badge/Google%20Gemini-AI-4285F4?style=for-the-badge" alt="Google Gemini" />
+  <img src="https://img.shields.io/badge/Google%20Gemini-AI-4285F4?style=for-the-badge&logo=google&logoColor=white" alt="Google Gemini" />
 </p>
 
-## Tugas Akhir
+---
 
-Proyek ini merupakan Tugas Akhir mahasiswa Universitas Pamulang untuk mata kuliah *Optimalisasi SEO*.
+## 🎓 Tugas Akhir & Profil Pengembang
 
-Mahasiswa:
-1. Oddy
-2. Sicilia
-3. Febri
-4. Hilmi
-5. Eni
+Proyek ini merupakan Tugas Akhir mahasiswa **Universitas Pamulang (UNPAM)** untuk mata kuliah *Optimalisasi SEO*.
 
-Website landing page dan sistem operasional untuk usaha Ayam Geprek Al-Fariz Pamulang. Proyek ini dirancang sebagai solusi digital untuk memperkenalkan menu, layanan, dan proses pemesanan secara modern.
+### Tim Mahasiswa:
+1. **Oddy**
+2. **Sicilia**
+3. **Febri**
+4. **Hilmi**
+5. **Eni**
 
-## Tentang Project
+Website landing page dan sistem operasional digital ini dirancang sebagai solusi komprehensif bagi UMKM kuliner **Ayam Geprek Sambel Ijo Al-Fariz Pamulang** guna mendongkrak visibilitas lokal di mesin pencari (SEO), memfasilitasi pemesanan interaktif mandiri, serta mengotomatisasi operasional dapur.
 
-Project ini menggabungkan:
+---
 
-- Landing page restoran yang modern dan responsif
-- Katalog menu dan simulasi pemesanan
-- Integrasi ke WhatsApp untuk order cepat
-- Fitur AI assistant untuk rekomendasi menu dan navigasi lokasi
-- Studio gambar AI untuk visual produk
-- Panel CRM untuk owner / admin
-- Backend Express yang melayani frontend dan API
+## 📌 Ringkasan Usaha & Identitas Bisnis
 
-Project ini dibangun dengan React + TypeScript + Vite di sisi frontend, dan Express + MySQL + Gemini API di sisi backend.
+- **Nama Usaha**: UMKM Kuliner Ayam Geprek Sambel Ijo Al-Fariz
+- **Lokasi Fisik**: Jl. Surya Kencana No. 27, Pamulang Barat (Tepat di Depan Gerbang Utama Kampus UNPAM), Tangerang Selatan
+- **Jam Operasional**: 15.00 – 22.00 WIB (Buka Setiap Hari)
+- **Kontak Resmi (WhatsApp)**: [+62 897-3816-530](https://wa.me/628973816530)
+- **Domain Resmi**: [https://ayamsambelijopamulang.my.id](https://ayamsambelijopamulang.my.id)
+- **Dokumen Terkait**: [PRD.md](file:///d:/project%20website/ayam-geprek-sambel-ijo-al-fariz/PRD.md), [DEPLOY-DOMAINESIA.md](file:///d:/project%20website/ayam-geprek-sambel-ijo-al-fariz/DEPLOY-DOMAINESIA.md), [DESIGN (1).md](file:///d:/project%20website/ayam-geprek-sambel-ijo-al-fariz/DESIGN%20(1).md)
 
-## Fitur Utama
+---
 
-- Halaman promosi restoran dan brand storytelling
-- Informasi menu, promo, layanan, testimoni, dan lokasi
-- Simulasi pemesanan produk sesuai pilihan menu
-- Tombol order langsung ke WhatsApp
-- AI Advisor untuk membantu pelanggan memilih menu dan lokasi
-- AI Image Studio untuk membuat visual makanan
-- CRM owner untuk mengelola data operasional
-- Server produksi untuk deployment di Node.js hosting
+## 🚀 Fitur Utama Sistem
 
-## Preview
+### 1. Portal Pelanggan (Customer Facing)
+- **Hero & Suasana Warung**: Tampilan interaktif cobek batu 3D, status gerobak buka/tutup *real-time*, dan navigasi cepat.
+- **Katalog Menu Juara**:
+  - *Paket Geprek + Nasi* (Rp 17.000, Best Seller): Ayam krispi fillet, sambel ijo dadakan, nasi pulen hangat, dan timun segar.
+  - *Ayam Geprek Saja* (Rp 15.000, Alacarte): Potongan krispi jumbo berbalut sambel ijo cabai rawit pedas gurih.
+- **Kalkulator Simulasi Pemesanan Kustom**:
+  - Konfigurasi tingkat kepedasan dinamis (Level 1 sampai Level 5, ~20k hingga 120k+ SHU).
+  - Pilihan penyajian sambal: *Dicampur di atas ayam*, *Dipisah di wadah cup*, atau *Tanpa sambal*.
+  - Tambahan (*Add-ons*): Extra Sambel Rawit (+Rp 3.000), Tambah Nasi Pulen (+Rp 5.000).
+  - Kalkulasi transparan: Base Total, Add-ons, PPN 11%, dan Grand Total.
+- **Simulasi Pembayaran Digital & Struk Resmi**:
+  - Pilihan metode: QRIS Dinamis (countdown 15 menit), E-Wallet (GoPay, OVO, DANA, ShopeePay), Virtual Account (BCA, Mandiri, BRI, SeaBank), dan Bayar Tunai di Tempat.
+  - Pembuatan nomor transaksi unik (`TX-FARIZ-XXXXXX`).
+  - Struk digital resmi (*Digital Receipt*) dengan opsi cetak/unduh.
+- **Generator Pesanan WhatsApp Terstandarisasi**: Mengonversi rincian pesanan dan status transaksi menjadi format pesan WhatsApp rapi ke nomor kasir (+62 897-3816-530).
+- **Riwayat & Pelacak Pesanan**: Riwayat transaksi tersimpan otomatis di browser (`localStorage`) dan sinkronisasi pelacakan status pesanan.
+- **Ulasan & Bukti Sosial (Testimoni)**: Filter ulasan mahasiswa UNPAM & warga sekitar, beserta modal kirim ulasan baru pelanggan.
+- **Peta Interaktif & Petunjuk Arah**: Google Maps interaktif dengan rute dan panduan patokan lokasi fisik gerobak di seberang gerbang utama UNPAM.
 
-<p align="center">
-  <img src="./laptop_beranda.png" alt="Dashboard utama Ayam Geprek Pamulang" width="900" />
-</p>
+### 2. Fitur Kecerdasan Buatan (Google Gemini AI)
+- **AI Culinary Advisor (`gemini-3.8-flash`)**: Konsultasi menu hemat budget mahasiswa, porsi gizi, rekomendasi level pedas, dan mode *Deep Thinking*.
+- **Google Maps Grounding**: Navigasi dan rute otomatis menuju lokasi fisik warung berbasis koordinat Maps tervalidasi.
+- **Google Search Grounding**: Informasi tren kuliner seputar kampus UNPAM.
+- **AI Image Studio (`gemini-3.1-flash-lite-image`)**: Generator visual fotografi kuliner ayam geprek beresolusi tinggi (1K/2K/4K) dengan *fallback showcase* bawaan.
 
-### Highlights
+### 3. CRM Dapur Owner Al-Fariz (`/crm`)
+- **Dashboard Ringkasan**: Statistik pesanan harian, omzet, rata-rata nilai transaksi, dan monitoring antrean.
+- **Manajemen Pesanan Real-time**: Kelola alur status pemesanan (*Antrean*, *Dimasak*, *Siap Ambil*, *Selesai*, *Dibatalkan*).
+- **Manajemen Katalog & Stok**: Tambah, ubah harga, ganti foto produk, dan atur ketersediaan menu.
+- **Pelacakan Pesanan Pelanggan (`/crm#/track`)**: Antarmuka bagi pelanggan untuk memantau status masakan berdasarkan Nomor Transaksi (`TX-FARIZ-XXXXXX`).
+- **Keamanan & Sesi**: Proteksi kata sandi owner (`OWNER_PASSWORD`) dengan sesi berbasis cookie terenkripsi (`SESSION_SECRET`).
 
-- UI landing page yang modern dan siap untuk portfolio
-- Desain responsif untuk desktop dan mobile
-- Fokus promosi produk serta pengalaman pembelian yang cepat
-- Integrasi AI dan CRM untuk optimalisasi operasional usaha
+---
 
-## Tech Stack
+## 🛠️ Arsitektur & Tumpukan Teknologi (Tech Stack)
 
-- Frontend: React, TypeScript, Vite, Tailwind CSS
-- Backend: Express.js
-- Database: MySQL
-- AI: Google Gemini via @google/genai
-- Build tools: Vite, esbuild
+| Lapisan | Teknologi | Versi / Keterangan |
+| :--- | :--- | :--- |
+| **Frontend Framework** | React | `^19.0.1` |
+| **Bahasa Pemrograman** | TypeScript | `^7.0.2` |
+| **Build Tool & Bundler** | Vite | `^8.3.0` (Didukung plugin `@vitejs/plugin-react`) |
+| **CSS & Desain Sistem** | Tailwind CSS v4 | `^4.3.3` (Neo-Brutalist Street-Food Style) |
+| **Animasi & Interaksi** | Motion | `^12.23.24` |
+| **Ikonografi** | Lucide React | `^1.54.0` |
+| **State & Data Fetching** | TanStack React Query | `^5.104.1` |
+| **Notifikasi / Toast** | Sonner | `^2.0.8` |
+| **Backend Server** | Express.js & Node.js | Express `^4.22.3`, Node.js `>=18` |
+| **Database CRM** | MySQL | Driver `mysql2: ^3.24.5` (Migrasi tabel otomatis) |
+| **AI Integration** | Google Gen AI SDK | `@google/genai: ^2.4.0` (Gemini 3.8 Flash & Gemini 3.1 Flash Lite Image) |
+| **Produksi Bundler** | esbuild | `^0.25.0` (Mengompilasi `server/index.ts` ke `server.cjs`) |
 
-## Struktur Project
+---
 
-```bash
-.
-├── src/
-│   ├── components/       # Komponen UI halaman
-│   ├── crm/              # Modul CRM
-│   ├── data/             # Data menu dan konten
-│   ├── hooks/            # Custom hooks
-│   ├── lib/              # Utility library
-│   ├── produk/           # Data produk / menu
-│   ├── server/           # Logika API dan server-side
-│   ├── App.tsx           # Entry utama aplikasi
-│   ├── main.tsx          # Bootstrap React
-│   └── types.ts          # Type definitions
+## 📁 Struktur Direktori
+
+```text
+ayam-geprek-sambel-ijo-al-fariz/
+├── crm-owner/                  # Aset pendukung CRM owner
+├── dist/                       # Output build produksi (website & CRM)
+├── figma-assets/               # Aset desain & referensi UI
+├── public/                     # Aset statis publik (.htaccess, robots.txt)
+├── scripts/
+│   └── bundle.js               # Skrip generator HTML standalone bundle
 ├── server/
-│   └── index.ts          # Server produksi Express
-├── public/               # Asset statis
-├── scripts/              # Script utility
-├── .env.example          # Template environment
-├── package.json          # Script dan dependency
-├── tsconfig.json         # Konfigurasi TypeScript
-├── vite.config.ts       # Konfigurasi Vite
-├── README.md             # Dokumentasi project
-└── ...
+│   └── index.ts                # Server backend utama (Express, CRM & API)
+├── src/
+│   ├── components/             # Komponen UI utama (Hero, Menu, Simulasi, Modal, dsb.)
+│   ├── crm/                    # Frontend CRM Dapur Owner (Pages: Dashboard, Orders, Products, Track)
+│   ├── data/                   # Data statis menu bawaan (menuData.ts)
+│   ├── produk/                 # Foto hidangan & fotografi kuliner produk (WebP optimized)
+│   ├── server/
+│   │   ├── apiHandler.ts       # Handler endpoint Google Gemini AI
+│   │   └── crm/                # Handler database MySQL & endpoint REST API CRM
+│   ├── App.tsx                 # Root komponen portal pelanggan
+│   ├── main.tsx                # Entry point aplikasi klien
+│   └── types.ts                # Kontrak skema TypeScript
+├── .env.example                # Templat variabel lingkungan
+├── DEPLOY-DOMAINESIA.md        # Panduan deployment cPanel / DomaiNesia
+├── DESIGN (1).md               # Dokumentasi sistem desain Neo-Brutalist
+├── package.json                # Dependensi dan skrip proyek
+├── PRD.md                      # Product Requirement Document lengkap
+├── server.cjs                  # Bundle server Node.js hasil kompilasi
+└── vite.config.ts              # Konfigurasi Vite & dev server
 ```
 
-## Prasyarat
+---
 
-- Node.js >= 18
-- MySQL (untuk CRM / database owner)
-- API Key Gemini
+## ⚙️ Prasyarat Sistem & Konfigurasi Lingkungan
 
-## Setup Local
+### Prasyarat
+- **Node.js**: Versi `18.x` atau lebih baru
+- **NPM**: Versi `9.x` atau lebih baru
+- **MySQL**: Diperlukan untuk modul CRM dapur (opsional jika hanya menjalankan simulasi frontend lokal)
 
-1. Clone repository
-2. Install dependency:
-
-```bash
-npm install
-```
-
-3. Salin file environment:
+### Variabel Lingkungan (`.env.local` / `.env`)
+Salin berkas [.env.example](file:///d:/project%20website/ayam-geprek-sambel-ijo-al-fariz/.env.example) menjadi `.env.local`:
 
 ```bash
 cp .env.example .env.local
 ```
 
-4. Isi variabel yang dibutuhkan pada `.env.local`:
+Sesuaikan nilai variabel berikut:
 
 ```env
-GEMINI_API_KEY="YOUR_GEMINI_API_KEY"
+# Konfigurasi Google Gemini AI
+GEMINI_API_KEY="AIzaSy..."
+
+# URL Aplikasi
 APP_URL="http://localhost:3000"
+
+# Konfigurasi Database CRM (MySQL)
 MYSQL_HOST=127.0.0.1
 MYSQL_PORT=3306
 MYSQL_USER=root
 MYSQL_PASSWORD=
 MYSQL_DATABASE=alfariz_crm
+
+# Autentikasi CRM Owner
 OWNER_PASSWORD="ganti-dengan-kata-sandi-owner"
-SESSION_SECRET="ganti-dengan-string-acak-panjang"
+SESSION_SECRET="string-acak-panjang-rahasia-minimal-40-karakter"
 ```
 
-5. Jalankan aplikasi dalam mode development:
+---
 
+## 💻 Panduan Menjalankan Proyek
+
+### 1. Instalasi Dependensi
+```bash
+npm install
+```
+
+### 2. Mode Pengembangan (Development)
+Jalankan server pengembangan terintegrasi:
 ```bash
 npm run dev
 ```
+- **Website Pelanggan**: Buka [http://localhost:3000](http://localhost:3000)
+- **CRM Dapur Owner**: Buka [http://localhost:3000/crm](http://localhost:3000/crm) (Login menggunakan `OWNER_PASSWORD`)
+- **Pelacakan Pesanan**: Buka [http://localhost:3000/crm#/track](http://localhost:3000/crm#/track)
 
-Aplikasi akan berjalan di:
-
-- Frontend: http://localhost:3000
-- CRM owner: http://localhost:3000/crm
-
-## Build untuk Production
-
+### 3. Build & Jalankan Mode Produksi
+Kompilasi aplikasi frontend dan server backend:
 ```bash
+# Build frontend ke dist/ dan server ke server.cjs
 npm run build
-npm start
+
+# Menjalankan server produksi
+npm run start
 ```
 
-Perintah build akan menghasilkan bundle frontend dan file server produksi (`server.cjs`).
+### 4. Menghasilkan Standalone Bundle HTML (Offline Demo)
+Untuk membuat berkas HTML tunggal mandiri tanpa ketergantungan server:
+```bash
+npm run bundle
+```
+Hasil file akan disimpan pada `bundle.html`.
 
-## Catatan Deployment
+---
 
-Project ini sudah disiapkan untuk deployment di hosting Node.js seperti cPanel / DomaiNesia. Server produksi ada pada `server/index.ts` dan akan menyajikan static build dari `dist/` serta menangani API backend.
+## 🌐 Panduan Deployment (cPanel / DomaiNesia)
 
-## License
+Proyek ini telah dikonfigurasi untuk berjalan di shared hosting atau VPS yang mendukung fitur **Setup Node.js App** (cPanel) dan database MySQL:
 
-Project ini menggunakan lisensi yang sesuai pada repo. Silakan cek file konfigurasi project untuk detail lisensi yang berlaku.
+1. Lakukan kompilasi lokal: `npm run build`.
+2. Siapkan arsip zip yang memuat:
+   - `dist/`
+   - `server.cjs`
+   - `package.json`
+   - `package-lock.json`
+   - `.npmrc`
+3. Buat database MySQL di cPanel dan berikan hak akses penuh (*ALL PRIVILEGES*).
+4. Buat aplikasi di menu **Setup Node.js App** dengan startup file `server.cjs` dan Node.js versi 18+.
+5. Masukkan seluruh *Environment Variables* di cPanel (`MYSQL_HOST`, `MYSQL_USER`, `MYSQL_PASSWORD`, `MYSQL_DATABASE`, `OWNER_PASSWORD`, `SESSION_SECRET`, `GEMINI_API_KEY`).
+6. Jalankan **Run NPM Install** lalu klik **Restart**.
 
-## Developer Notes
+Panduan langkah demi langkah yang detail tersedia di [DEPLOY-DOMAINESIA.md](file:///d:/project%20website/ayam-geprek-sambel-ijo-al-fariz/DEPLOY-DOMAINESIA.md).
 
-Untuk kebutuhan usaha kuliner, project ini fokus pada:
+---
 
-- Meningkatkan brand awareness
-- Menyederhanakan proses order
-- Menawarkan pengalaman digital modern kepada pelanggan
-- Memberikan alat operasional yang sederhana bagi owner
+## 📜 Skrip NPM yang Tersedia
 
-Semoga README ini membantu dokumentasi project lebih jelas dan siap dipakai untuk portfolio, demo, maupun kebutuhan deployment.
+| Perintah | Fungsi |
+| :--- | :--- |
+| `npm run dev` | Menjalankan Vite development server di port 3000 |
+| `npm run build` | Melakukan build frontend (`vite build`) dan server (`npm run build:server`) |
+| `npm run build:server` | Mengompilasi `server/index.ts` ke format CommonJS `server.cjs` menggunakan esbuild |
+| `npm run start` | Menjalankan server produksi Node.js (`node server.cjs`) |
+| `npm run preview` | Meninjau hasil build Vite secara lokal |
+| `npm run lint` | Melakukan pemeriksaan tipe TypeScript (`tsc --noEmit`) |
+| `npm run bundle` | Menghasilkan berkas distribusi mandiri `bundle.html` |
+| `npm run clean` | Menghapus folder `dist/` dan file `server.cjs` |
+
+---
+
+## 📄 Lisensi & Hak Cipta
+
+© 2027 **Ayam Geprek Sambel Ijo Al-Fariz**. Hak Cipta Dilindungi Undang-Undang.  
+Dikembangkan oleh Tim Mahasiswa Universitas Pamulang (Oddy, Sicilia, Febri, Hilmi, Eni) untuk mendukung digitalisasi UMKM kuliner sekitar kampus.

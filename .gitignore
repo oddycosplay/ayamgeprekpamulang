@@ -11,5 +11,7 @@ CRM-LOGIN-OWNER.txt
 uploads/
 server.cjs
 upload-hosting.zip
+deploy_dist.zip
+temp_*.txt
 __pycache__/
 *.pyc

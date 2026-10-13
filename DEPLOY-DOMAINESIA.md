@@ -8,7 +8,7 @@ aktivasi ke CS DomaiNesia atau pakai paket yang mendukung Node.js / VPS.
 Alamat setelah online:
 
 - Website pelanggan: `https://domainkamu.com`
-- CRM owner: `https://domainkamu.com/crm`
+- CRM owner: `https://alfariz-crm.higgsfield.app/`
 
 ---
 

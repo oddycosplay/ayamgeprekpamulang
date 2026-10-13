@@ -1,7 +1,7 @@
 import React from 'react';
 import { MapPin, Clock, Sparkles } from 'lucide-react';
 import { useParallax } from '../hooks/useParallax.ts';
-import citaRasaImg from '../produk/professional_food_photography_of_indonesian_ayam_geprek_sambel_ijo_extra_crispy.png';
+import citaRasaImg from '../produk/professional_food_photography_of_indonesian_ayam_geprek_sambel_ijo_extra_crispy.webp';
 
 export const CitaRasaBanner: React.FC = () => {
   // Parallax hook tracking banner container position in viewport

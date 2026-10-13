@@ -1,7 +1,7 @@
 import geprekPaketNasi from '../produk/geprek-paket-nasi.jpg';
 import geprekAlacarte from '../produk/geprek-alacarte.jpg';
 import geprekOriginal from '../produk/geprek-original.jpg';
-import geprekExtraCrispy from '../produk/professional_food_photography_of_indonesian_ayam_geprek_sambel_ijo_extra_crispy.png';
+import geprekExtraCrispy from '../produk/professional_food_photography_of_indonesian_ayam_geprek_sambel_ijo_extra_crispy.webp';
 import { MenuItem, Testimonial } from '../types.ts';
 
 export const MENU_ITEMS: MenuItem[] = [

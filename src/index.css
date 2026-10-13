@@ -29,6 +29,7 @@
   font-size: 16rem;
   font-weight: 900;
   color: rgba(255, 255, 255, 0.035);
+  -webkit-user-select: none;
   user-select: none;
   pointer-events: none;
   white-space: nowrap;
@@ -74,5 +75,4 @@
 }
 .no-scrollbar {
   -ms-overflow-style: none;
-  scrollbar-width: none;
 }

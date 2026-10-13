@@ -23,7 +23,30 @@ if (cssMatch) {
   const cssFileName = cssMatch[1];
   const cssFilePath = path.join(distDir, 'assets', cssFileName);
   if (fs.existsSync(cssFilePath)) {
-    const cssContent = fs.readFileSync(cssFilePath, 'utf-8');
+    let cssContent = fs.readFileSync(cssFilePath, 'utf-8');
+
+    // Compatibility fixes for older browsers and CSS linters
+    cssContent = cssContent
+      .replaceAll('-webkit-text-size-adjust:100%;', '')
+      .replaceAll('text-size-adjust:100%;', '')
+      .replaceAll('vertical-align:middle;display:block', 'display:block')
+      .replaceAll('-webkit-line-clamp:1;', '-webkit-line-clamp:1;line-clamp:1;')
+      .replaceAll('-webkit-line-clamp:2;', '-webkit-line-clamp:2;line-clamp:2;')
+      .replaceAll('-webkit-line-clamp:4;', '-webkit-line-clamp:4;line-clamp:4;')
+      .replaceAll('oklab(37.4474% .120738 .0557226/.2)', 'rgba(120, 21, 25, 0.2)')
+      .replaceAll('oklab(37.4474% .120738 .0557226/.3)', 'rgba(120, 21, 25, 0.3)')
+      .replaceAll('oklab(37.4474% .120738 .0557226/.05)', 'rgba(120, 21, 25, 0.05)')
+      .replaceAll('oklab(37.4474% .120738 .0557226/.1)', 'rgba(120, 21, 25, 0.1)')
+      .replaceAll('oklab(84.1944% -.0012635 .168374/.1)', 'rgba(245, 197, 24, 0.1)')
+      .replaceAll('oklab(84.1944% -.0012635 .168374/.2)', 'rgba(245, 197, 24, 0.2)')
+      .replaceAll('oklab(84.1944% -.0012635 .168374/.25)', 'rgba(245, 197, 24, 0.25)')
+      .replaceAll('oklab(84.1944% -.0012635 .168374/.3)', 'rgba(245, 197, 24, 0.3)')
+      .replaceAll('oklab(84.1944% -.0012635 .168374/.5)', 'rgba(245, 197, 24, 0.5)')
+      .replaceAll('oklab(31.3925% .102279 .0481237/.8)', 'rgba(94, 13, 16, 0.8)')
+      .replaceAll('oklab(97.9827% .00091666 .00442588/.8)', 'rgba(250, 248, 245, 0.8)')
+      .replaceAll('scrollbar-width:none;', '')
+      .replaceAll('scrollbar-width:none', '');
+
     htmlContent = htmlContent.replace(
       cssMatch[0],
       () => `<style>\n${cssContent}\n</style>`
@@ -38,7 +61,9 @@ if (jsMatch) {
   const jsFileName = jsMatch[1];
   const jsFilePath = path.join(distDir, 'assets', jsFileName);
   if (fs.existsSync(jsFilePath)) {
-    const jsContent = fs.readFileSync(jsFilePath, 'utf-8');
+    let jsContent = fs.readFileSync(jsFilePath, 'utf-8');
+    // Rewrite relative imports so they resolve to /assets/ when script is inlined in root HTML
+    jsContent = jsContent.replaceAll('from"./', 'from"/assets/');
     htmlContent = htmlContent.replace(
       jsMatch[0],
       () => `<script type="module">\n${jsContent}\n</script>`
