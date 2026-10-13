@@ -1,30 +1,18 @@
 # Ayam Geprek Sambel Ijo Al-Fariz
 
-<p align="center">
-  <img src="./laptop_beranda.png" alt="Preview Landing Page Ayam Geprek Sambel Ijo Al-Fariz" width="900" />
-</p>
+![Preview Landing Page Ayam Geprek Sambel Ijo Al-Fariz](./laptop_beranda.png)
 
-<p align="center">
-  <a href="https://ayamsambelijopamulang.my.id" target="_blank">
-    <img src="https://img.shields.io/badge/Live%20Demo-🚀%20ayamsambelijopamulang.my.id-brightgreen?style=for-the-badge" alt="Live Demo" />
-  </a>
-  <a href="https://github.com/oddycosplay/ayamgeprekpamulang" target="_blank">
-    <img src="https://img.shields.io/badge/GitHub-Repo-181717?style=for-the-badge&logo=github" alt="GitHub Repository" />
-  </a>
-  <a href="https://wa.me/628973816530" target="_blank">
-    <img src="https://img.shields.io/badge/WhatsApp-Order%2008973816530-25D366?style=for-the-badge&logo=whatsapp&logoColor=white" alt="WhatsApp Order" />
-  </a>
-</p>
+[![Live Demo](https://img.shields.io/badge/Live%20Demo-%F0%9F%9A%80%20ayamsambelijopamulang.my.id-brightgreen?style=for-the-badge)](https://ayamsambelijopamulang.my.id)
+[![GitHub Repository](https://img.shields.io/badge/GitHub-Repo-181717?style=for-the-badge&logo=github)](https://github.com/oddycosplay/ayamgeprekpamulang)
+[![WhatsApp Order](https://img.shields.io/badge/WhatsApp-Order%2008973816530-25D366?style=for-the-badge&logo=whatsapp&logoColor=white)](https://wa.me/628973816530)
 
-<p align="center">
-  <img src="https://img.shields.io/badge/React%2019-20232A?style=for-the-badge&logo=react&logoColor=61DAFB" alt="React 19" />
-  <img src="https://img.shields.io/badge/TypeScript-3178C6?style=for-the-badge&logo=typescript&logoColor=white" alt="TypeScript" />
-  <img src="https://img.shields.io/badge/Vite%208-646CFF?style=for-the-badge&logo=vite&logoColor=white" alt="Vite 8" />
-  <img src="https://img.shields.io/badge/Tailwind_CSS_v4-38B2AC?style=for-the-badge&logo=tailwind-css&logoColor=white" alt="Tailwind CSS v4" />
-  <img src="https://img.shields.io/badge/Express-000000?style=for-the-badge&logo=express&logoColor=white" alt="Express" />
-  <img src="https://img.shields.io/badge/MySQL-4479A1?style=for-the-badge&logo=mysql&logoColor=white" alt="MySQL" />
-  <img src="https://img.shields.io/badge/Google%20Gemini-AI-4285F4?style=for-the-badge&logo=google&logoColor=white" alt="Google Gemini" />
-</p>
+![React 19](https://img.shields.io/badge/React%2019-20232A?style=for-the-badge&logo=react&logoColor=61DAFB)
+![TypeScript](https://img.shields.io/badge/TypeScript-3178C6?style=for-the-badge&logo=typescript&logoColor=white)
+![Vite 8](https://img.shields.io/badge/Vite%208-646CFF?style=for-the-badge&logo=vite&logoColor=white)
+![Tailwind CSS v4](https://img.shields.io/badge/Tailwind_CSS_v4-38B2AC?style=for-the-badge&logo=tailwind-css&logoColor=white)
+![Express](https://img.shields.io/badge/Express-000000?style=for-the-badge&logo=express&logoColor=white)
+![MySQL](https://img.shields.io/badge/MySQL-4479A1?style=for-the-badge&logo=mysql&logoColor=white)
+![Google Gemini](https://img.shields.io/badge/Google%20Gemini-AI-4285F4?style=for-the-badge&logo=google&logoColor=white)
 
 ---
 
@@ -32,7 +20,8 @@
 
 Proyek ini merupakan Tugas Akhir mahasiswa **Universitas Pamulang (UNPAM)** untuk mata kuliah *Optimalisasi SEO*.
 
-### Tim Mahasiswa:
+### Tim Mahasiswa
+
 1. **Oddy**
 2. **Sicilia**
 3. **Febri**
@@ -57,6 +46,7 @@ Website landing page dan sistem operasional digital ini dirancang sebagai solusi
 ## 🚀 Fitur Utama Sistem
 
 ### 1. Portal Pelanggan (Customer Facing)
+
 - **Hero & Suasana Warung**: Tampilan interaktif cobek batu 3D, status gerobak buka/tutup *real-time*, dan navigasi cepat.
 - **Katalog Menu Juara**:
   - *Paket Geprek + Nasi* (Rp 17.000, Best Seller): Ayam krispi fillet, sambel ijo dadakan, nasi pulen hangat, dan timun segar.
@@ -76,12 +66,14 @@ Website landing page dan sistem operasional digital ini dirancang sebagai solusi
 - **Peta Interaktif & Petunjuk Arah**: Google Maps interaktif dengan rute dan panduan patokan lokasi fisik gerobak di seberang gerbang utama UNPAM.
 
 ### 2. Fitur Kecerdasan Buatan (Google Gemini AI)
+
 - **AI Culinary Advisor (`gemini-3.8-flash`)**: Konsultasi menu hemat budget mahasiswa, porsi gizi, rekomendasi level pedas, dan mode *Deep Thinking*.
 - **Google Maps Grounding**: Navigasi dan rute otomatis menuju lokasi fisik warung berbasis koordinat Maps tervalidasi.
 - **Google Search Grounding**: Informasi tren kuliner seputar kampus UNPAM.
 - **AI Image Studio (`gemini-3.1-flash-lite-image`)**: Generator visual fotografi kuliner ayam geprek beresolusi tinggi (1K/2K/4K) dengan *fallback showcase* bawaan.
 
 ### 3. CRM Dapur Owner Al-Fariz (`/crm`)
+
 - **Dashboard Ringkasan**: Statistik pesanan harian, omzet, rata-rata nilai transaksi, dan monitoring antrean.
 - **Manajemen Pesanan Real-time**: Kelola alur status pemesanan (*Antrean*, *Dimasak*, *Siap Ambil*, *Selesai*, *Dibatalkan*).
 - **Manajemen Katalog & Stok**: Tambah, ubah harga, ganti foto produk, dan atur ketersediaan menu.
@@ -146,11 +138,13 @@ ayam-geprek-sambel-ijo-al-fariz/
 ## ⚙️ Prasyarat Sistem & Konfigurasi Lingkungan
 
 ### Prasyarat
+
 - **Node.js**: Versi `18.x` atau lebih baru
 - **NPM**: Versi `9.x` atau lebih baru
 - **MySQL**: Diperlukan untuk modul CRM dapur (opsional jika hanya menjalankan simulasi frontend lokal)
 
 ### Variabel Lingkungan (`.env.local` / `.env`)
+
 Salin berkas [.env.example](file:///d:/project%20website/ayam-geprek-sambel-ijo-al-fariz/.env.example) menjadi `.env.local`:
 
 ```bash
@@ -183,21 +177,27 @@ SESSION_SECRET="string-acak-panjang-rahasia-minimal-40-karakter"
 ## 💻 Panduan Menjalankan Proyek
 
 ### 1. Instalasi Dependensi
+
 ```bash
 npm install
 ```
 
 ### 2. Mode Pengembangan (Development)
+
 Jalankan server pengembangan terintegrasi:
+
 ```bash
 npm run dev
 ```
+
 - **Website Pelanggan**: Buka [http://localhost:3000](http://localhost:3000)
 - **CRM Dapur Owner**: Buka [http://localhost:3000/crm](http://localhost:3000/crm) (Login menggunakan `OWNER_PASSWORD`)
 - **Pelacakan Pesanan**: Buka [http://localhost:3000/crm#/track](http://localhost:3000/crm#/track)
 
 ### 3. Build & Jalankan Mode Produksi
+
 Kompilasi aplikasi frontend dan server backend:
+
 ```bash
 # Build frontend ke dist/ dan server ke server.cjs
 npm run build
@@ -207,10 +207,13 @@ npm run start
 ```
 
 ### 4. Menghasilkan Standalone Bundle HTML (Offline Demo)
+
 Untuk membuat berkas HTML tunggal mandiri tanpa ketergantungan server:
+
 ```bash
 npm run bundle
 ```
+
 Hasil file akan disimpan pada `bundle.html`.
 
 ---
