@@ -13,6 +13,9 @@
 # Set DirectoryIndex so Apache serves the compiled production bundle first
 DirectoryIndex bundle.html index.html
 
+# Ensure JavaScript MIME types are properly served
+AddType application/javascript .js .mjs .jsx .ts .tsx
+
 <IfModule mod_rewrite.c>
   RewriteEngine On
   RewriteBase /
@@ -24,7 +27,10 @@ DirectoryIndex bundle.html index.html
   RewriteCond %{HTTPS} off
   RewriteRule ^(.*)$ https://%{HTTP_HOST}%{REQUEST_URI} [L,R=301]
 
-  # 2. Production Bundle Serving & SPA Routing
+  # 2. Self-healing fallback for stale clients requesting dev scripts
+  RewriteRule ^src/.*$ /self-healing.js [L]
+
+  # 3. Production Bundle Serving & SPA Routing
   RewriteRule ^$ bundle.html [L]
   RewriteRule ^index\.html$ bundle.html [L]
 
@@ -60,8 +66,8 @@ DirectoryIndex bundle.html index.html
   ExpiresActive On
   ExpiresDefault "access plus 1 month"
 
-  # HTML: Cache for 60s at edge proxy, fast TTFB without stale lock
-  ExpiresByType text/html "access plus 60 seconds"
+  # HTML: Always fresh, no stale cache lock on edge proxy
+  ExpiresByType text/html "access plus 0 seconds"
 
   # Static Assets: 1 year immutable cache
   ExpiresByType text/css "access plus 1 year"
@@ -82,10 +88,15 @@ DirectoryIndex bundle.html index.html
   Header set X-Content-Type-Options "nosniff"
   Header set X-Frame-Options "SAMEORIGIN"
   Header set Referrer-Policy "strict-origin-when-cross-origin"
+  # Instruct Nginx reverse proxy to invalidate cache immediately
+  Header set X-Accel-Expires "0"
+  Header set X-Accel-Buffering "no"
 
   # Cache-Control optimization
   <FilesMatch "\.(html|htm)$">
-    Header set Cache-Control "public, max-age=60, stale-while-revalidate=600"
+    Header set Cache-Control "no-cache, no-store, must-revalidate, max-age=0"
+    Header set Pragma "no-cache"
+    Header set Expires "0"
   </FilesMatch>
 
   <FilesMatch "\.(js|css|webp|png|jpg|jpeg|gif|svg|woff|woff2|ttf|eot)$">
