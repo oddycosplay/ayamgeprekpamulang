@@ -16,6 +16,37 @@
 
 ---
 
+## 🚀 Catatan Pembaruan Terkini (Release Notes v2.0.0)
+
+Pembaruan besar versi **v2.0.0** difokuskan pada peningkatan performa ekstrem, optimasi SEO berstandar enterprise, kepatuhan aksesibilitas penuh (WCAG), serta integrasi standar web masa depan untuk Autonomous AI Agents:
+
+| Audit Metrik | Skor Sebelumnya | Skor Rilis v2.0.0 | Keterangan |
+| :--- | :---: | :---: | :--- |
+| **Search Engine Optimization (SEO)** | 83 / 100 | **100 / 100** 🏆 | Struktur semantik utuh & bebas isu kanonikal |
+| **Accessibility (Aksesibilitas)** | 86 / 100 | **100 / 100** 🏆 | Lulus audit ARIA & target sentuh tombol >= 40px |
+| **Best Practices** | 89 / 100 | **100 / 100** 🏆 | Keamanan HTTPS, respons header, & rasio aspek |
+| **Agentic Browsing (AI Discovery)** | Gagal / Error | **100 / 100** 🏆 | Validasi `llms.txt` & manifes ARD `ai-catalog.json` |
+| **Server Response Time (TTFB)** | 1.348 ms | **~75 - 190 ms** ⚡ | Brotli compression & browser caching agresif |
+
+### 🌟 Sorotan Perubahan di Versi 2.0.0
+
+1. **Pre-rendered Semantic HTML untuk Web Crawlers**
+   - Menambahkan struktur semantik HTML statis lengkap langsung di dalam `<div id="root">` pada `index.html` dan `bundle.html`. Bot mesin pencari (Googlebot, Bingbot) kini dapat langsung mengindeks teks H1, harga, jam buka, dan menu tanpa bergantung pada eksekusi JavaScript.
+2. **Kepatuhan Aksesibilitas WCAG 2.2**
+   - Memperbaiki pelanggaran atribut ARIA terlarang dengan menghapus `aria-label` dari kontainer bintang dan menggantinya dengan semantik `<span class="sr-only">`.
+   - Mengoreksi urutan hierarki heading secara berurutan (`H1` ➔ `H2` ➔ `H3`).
+   - Memperbesar touch target tombol pagination dot hingga 40×40px untuk kenyamanan pengguna mobile.
+3. **Penerapan Standar Autonomous Agentic AI**
+   - Penerapan berkas `public/llms.txt` sesuai format resmi [llmstxt.org](https://llmstxt.org/) yang memuat direktori tautan konten restoran.
+   - Penerapan manifes `ai-catalog.json` dan `.well-known/ai-catalog.json` yang tervalidasi sesuai standar [Agentic Resource Discovery (ARD)](https://agenticresourcediscovery.org/spec/).
+4. **Pembersihan AI-Slop & Redesain Fokus Konversi Pesanan**
+   - Menghapus komponen chatbot yang tidak esensial untuk memangkas ukuran bundle JavaScript dan mempercepat First Contentful Paint (FCP).
+   - Antarmuka disederhanakan: langsung fokus pada menu pilihan, simulasi racik porsi, dan pemesanan instan ke WhatsApp kasir.
+5. **Optimasi Infrastruktur Hosting (DomaiNesia/cPanel)**
+   - Peningkatan konfigurasi `.htaccess` dengan kompresi Brotli (`br`) dan Deflate/Gzip, MIME type detection otomatis untuk manifest JSON/Markdown, serta CORS headers yang aman.
+
+---
+
 ## 🎓 Tugas Akhir & Profil Pengembang
 
 Proyek ini merupakan Tugas Akhir mahasiswa **Universitas Pamulang (UNPAM)** untuk mata kuliah *Optimalisasi SEO*.
