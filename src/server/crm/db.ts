@@ -142,6 +142,10 @@ async function init() {
   ]) {
     await pool.execute('INSERT IGNORE INTO settings (k, v) VALUES (?, ?)', [k, v]);
   }
+  // Hapus menu lama yang sudah tidak dijual
+  await pool.execute(
+    "DELETE FROM products WHERE id IN ('geprek-original', 'geprek-extra-crispy')"
+  );
 }
 
 export async function db(): Promise<Pool> {

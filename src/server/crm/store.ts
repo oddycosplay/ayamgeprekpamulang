@@ -57,7 +57,9 @@ export async function saveSettings(s: Settings) {
 
 // ---------- products ----------
 export async function listProducts(onlyActive = false): Promise<Product[]> {
-  return rows<Product>(`SELECT * FROM products ${onlyActive ? 'WHERE is_active = 1' : ''} ORDER BY sort_order, name`);
+  const where = ["id NOT IN ('geprek-original', 'geprek-extra-crispy')"];
+  if (onlyActive) where.push('is_active = 1');
+  return rows<Product>(`SELECT * FROM products WHERE ${where.join(' AND ')} ORDER BY sort_order, name`);
 }
 
 export type ProductInput = Omit<Product, 'updated_at' | 'id'> & { id?: string };

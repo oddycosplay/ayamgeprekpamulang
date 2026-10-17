@@ -52,8 +52,9 @@ async function loadMenu() {
       products: CrmProduct[];
     };
     const local = new Map(MENU_ITEMS.map((m) => [m.id, m]));
+    const EXCLUDED_MENU_IDS = new Set(['geprek-original', 'geprek-extra-crispy']);
     const items: MenuItem[] = data.products
-      .filter((p) => p.category === 'paket' || p.category === 'alacarte' || p.category === 'minuman')
+      .filter((p) => !EXCLUDED_MENU_IDS.has(p.id) && (p.category === 'paket' || p.category === 'alacarte' || p.category === 'minuman'))
       .map((p) => ({
         id: p.id,
         name: p.name,
