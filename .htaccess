@@ -1,0 +1,108 @@
+# ==============================================================================
+# AYAM GEPREK SAMBEL IJO AL-FARIZ - HIGH PERFORMANCE PRODUCTION CONFIGURATION
+# ==============================================================================
+
+# Disable mod_pagespeed to prevent background fetch latency and 504 gateway timeout
+<IfModule pagespeed_module>
+  ModPagespeed off
+</IfModule>
+<IfModule mod_pagespeed.c>
+  ModPagespeed off
+</IfModule>
+
+# Set DirectoryIndex so Apache serves the compiled production bundle first
+DirectoryIndex bundle.html index.html
+
+# Ensure JavaScript MIME types are properly served
+AddType application/javascript .js .mjs .jsx .ts .tsx
+AddType image/svg+xml .svg .svgz
+AddType image/webp .webp
+AddType font/woff2 .woff2
+
+<IfModule mod_rewrite.c>
+  RewriteEngine On
+  RewriteBase /
+
+  # 1. Canonical Redirect: www to non-www & Force HTTPS
+  RewriteCond %{HTTP_HOST} ^www\.ayamsambelijopamulang\.my\.id$ [NC]
+  RewriteRule ^(.*)$ https://ayamsambelijopamulang.my.id/$1 [L,R=301]
+
+  RewriteCond %{HTTPS} off
+  RewriteRule ^(.*)$ https://%{HTTP_HOST}%{REQUEST_URI} [L,R=301]
+
+  # 2. Self-healing fallback for stale clients requesting dev scripts
+  RewriteRule ^src/.*$ /self-healing.js [L]
+
+  # 3. Production Bundle Serving & SPA Routing
+  RewriteRule ^$ bundle.html [L]
+  RewriteRule ^index\.html$ bundle.html [L]
+
+  # Fallback for client-side routing
+  RewriteCond %{REQUEST_FILENAME} !-f
+  RewriteCond %{REQUEST_FILENAME} !-d
+  RewriteRule ^ bundle.html [L]
+</IfModule>
+
+# ==============================================================================
+# GZIP / BROTLI COMPRESSION FOR PERFORMANCE (LIGHTHOUSE COMPLIANCE)
+# ==============================================================================
+<IfModule mod_deflate.c>
+  AddOutputFilterByType DEFLATE text/html
+  AddOutputFilterByType DEFLATE text/plain
+  AddOutputFilterByType DEFLATE text/css
+  AddOutputFilterByType DEFLATE text/javascript
+  AddOutputFilterByType DEFLATE application/javascript
+  AddOutputFilterByType DEFLATE application/x-javascript
+  AddOutputFilterByType DEFLATE application/json
+  AddOutputFilterByType DEFLATE application/xml
+  AddOutputFilterByType DEFLATE text/xml
+  AddOutputFilterByType DEFLATE image/svg+xml
+  AddOutputFilterByType DEFLATE font/ttf
+  AddOutputFilterByType DEFLATE font/otf
+  AddOutputFilterByType DEFLATE font/woff
+  AddOutputFilterByType DEFLATE font/woff2
+</IfModule>
+
+# ==============================================================================
+# BROWSER & PROXY CACHING (FAST TTFB < 200MS & LIGHTHOUSE COMPLIANCE)
+# ==============================================================================
+<IfModule mod_expires.c>
+  ExpiresActive On
+  ExpiresDefault "access plus 1 month"
+
+  # HTML: Cached for 10 minutes locally, stale-while-revalidate for edge
+  ExpiresByType text/html "access plus 600 seconds"
+
+  # Static Assets: 1 year immutable cache
+  ExpiresByType text/css "access plus 1 year"
+  ExpiresByType application/javascript "access plus 1 year"
+  ExpiresByType text/javascript "access plus 1 year"
+  ExpiresByType image/jpeg "access plus 1 year"
+  ExpiresByType image/png "access plus 1 year"
+  ExpiresByType image/webp "access plus 1 year"
+  ExpiresByType image/svg+xml "access plus 1 year"
+  ExpiresByType font/woff "access plus 1 year"
+  ExpiresByType font/woff2 "access plus 1 year"
+</IfModule>
+
+# ==============================================================================
+# SECURITY HEADERS & REVERSE PROXY OPTIMIZATION
+# ==============================================================================
+<IfModule mod_headers.c>
+  Header set X-Content-Type-Options "nosniff"
+  Header set X-Frame-Options "SAMEORIGIN"
+  Header set Referrer-Policy "strict-origin-when-cross-origin"
+
+  # Enable fast edge caching on DomaiNesia Nginx reverse proxy
+  Header set X-Accel-Expires "3600"
+
+  # Cache-Control optimization for HTML
+  <FilesMatch "\.(html|htm)$">
+    Header set Cache-Control "public, max-age=600, s-maxage=3600, stale-while-revalidate=86400"
+  </FilesMatch>
+
+  # Cache-Control for immutable static assets
+  <FilesMatch "\.(js|css|webp|png|jpg|jpeg|gif|svg|woff|woff2|ttf|eot)$">
+    Header set Cache-Control "public, max-age=31536000, immutable"
+  </FilesMatch>
+</IfModule>
