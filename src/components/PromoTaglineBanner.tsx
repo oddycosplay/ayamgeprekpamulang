@@ -113,7 +113,9 @@ export const PromoTaglineBanner: React.FC = () => {
                 }}
               >
                 <img
-                  alt="Sajian Ayam Geprek Sambel Ijo Al-Fariz Spesial"
+                  alt="Sajian Spesial Ayam Geprek Sambel Ijo Al-Fariz Cabai Rawit Dadakan"
+                  loading="lazy"
+                  decoding="async"
                   className="w-full h-full object-cover rounded-full shadow-inner transform hover:scale-105 transition-transform duration-500 ease-out"
                   src={promoImg}
                 />

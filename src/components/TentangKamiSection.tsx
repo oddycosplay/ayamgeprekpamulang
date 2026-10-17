@@ -71,7 +71,9 @@ export const TentangKamiSection: React.FC = () => {
               <div className="relative z-10 w-[220px] xs:w-[260px] sm:w-[320px] h-[220px] xs:h-[260px] sm:h-[320px] rounded-full overflow-hidden border-4 border-white shadow-2xl bg-[#781519] flex items-center justify-center group">
                 <img
                   src={tentangImg}
-                  alt="Mas Al-Fariz - Founder & Peracik Sambel Ijo Al-Fariz"
+                  alt="Mas Al-Fariz - Founder & Peracik Sambel Ijo Al-Fariz Depan UNPAM"
+                  loading="lazy"
+                  decoding="async"
                   className="w-full h-full object-cover object-top scale-105 group-hover:scale-110 transition-transform duration-500"
                 />
                 <div className="absolute inset-0 bg-gradient-to-t from-black/85 via-black/30 to-transparent flex flex-col justify-end items-center text-center p-3 sm:p-5 pb-6 sm:pb-10 text-white">

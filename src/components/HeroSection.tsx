@@ -45,6 +45,10 @@ export const HeroSection: React.FC<HeroSectionProps> = ({ onOpenAdvisor }) => {
                 <img
                   src={heroImg}
                   alt="Ayam Geprek Sambel Ijo Al-Fariz Cobek Batu"
+                  width={460}
+                  height={460}
+                  loading="eager"
+                  fetchPriority="high"
                   className="w-full h-full object-cover rounded-full shadow-inner transform hover:scale-105 transition-transform duration-500 ease-out"
                 />
               </div>
@@ -67,14 +71,14 @@ export const HeroSection: React.FC<HeroSectionProps> = ({ onOpenAdvisor }) => {
 
           {/* Right Column: Hero Headline & Brand Title */}
           <div className="lg:col-span-6 text-center lg:text-left space-y-5 sm:space-y-6">
-            <div className="space-y-1">
-              <span className="inline-block text-base sm:text-xl md:text-2xl font-bold tracking-wide text-white/90">
+            <h1 className="space-y-1">
+              <span className="block text-base sm:text-xl md:text-2xl font-bold tracking-wide text-white/90">
                 Ayam Geprek Sambel Ijo
               </span>
-              <h1 className="text-5xl xs:text-6xl sm:text-7xl md:text-8xl font-normal text-[#F5C518] font-script tracking-wide leading-tight drop-shadow-md">
+              <span className="block text-5xl xs:text-6xl sm:text-7xl md:text-8xl font-normal text-[#F5C518] font-script tracking-wide leading-tight drop-shadow-md">
                 Al-Fariz
-              </h1>
-            </div>
+              </span>
+            </h1>
 
             <p className="text-sm xs:text-base sm:text-lg text-amber-50/90 leading-relaxed max-w-xl mx-auto lg:mx-0">
               Kuliner gerobak otentik sambel ijo uleg dadakan khas Nusantara tepat di seberang Kampus Utama Universitas Pamulang. Gurih krispi, renyah nendang, pedas segar bikin melek, dan sangat ramah di kantong mahasiswa!

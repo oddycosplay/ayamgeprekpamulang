@@ -1,4 +1,7 @@
 User-agent: *
 Allow: /
+Disallow: /crm.html
+Disallow: /crm-owner/
+Disallow: /api/
 
 Sitemap: https://ayamsambelijopamulang.my.id/sitemap.xml
