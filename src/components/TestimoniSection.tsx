@@ -389,6 +389,7 @@ export const TestimoniSection: React.FC = () => {
                       <div className="flex items-center justify-between gap-2 pt-0.5">
                         <div className="flex items-center gap-1.5">
                           <div
+                            role="img"
                             className="flex items-center gap-0.5"
                             aria-label={`Rating ${itemRating} dari 5 bintang`}
                           >
@@ -439,9 +440,9 @@ export const TestimoniSection: React.FC = () => {
                           {rev.name.charAt(0).toUpperCase()}
                         </div>
                         <div className="min-w-0">
-                          <h4 className="text-xs font-black text-gray-900 group-hover:text-[#781519] transition-colors truncate">
+                          <h3 className="text-xs font-black text-gray-900 group-hover:text-[#781519] transition-colors truncate">
                             {rev.name}
-                          </h4>
+                          </h3>
                           <p className="text-[11px] text-gray-500 font-medium truncate">
                             {rev.role}
                           </p>
@@ -458,19 +459,23 @@ export const TestimoniSection: React.FC = () => {
             </div>
 
             {/* Slider Dots Indicator / Interactive Pagination */}
-            <div className="flex items-center justify-center gap-1.5 pt-2">
+            <div className="flex items-center justify-center gap-1 pt-2">
               {filteredTestimonials.map((_, idx) => (
                 <button
                   key={idx}
                   type="button"
                   aria-label={`Ke slide ${idx + 1}`}
                   onClick={() => scrollToSlide(idx)}
-                  className={`h-2 rounded-full transition-all duration-300 cursor-pointer ${
-                    activeSlideIndex === idx
-                      ? 'w-7 bg-[#781519]'
-                      : 'w-2 bg-gray-300 hover:bg-gray-400'
-                  }`}
-                />
+                  className="w-7 h-7 flex items-center justify-center cursor-pointer p-1"
+                >
+                  <span
+                    className={`h-2 rounded-full transition-all duration-300 block ${
+                      activeSlideIndex === idx
+                        ? 'w-6 bg-[#781519]'
+                        : 'w-2 bg-gray-300 hover:bg-gray-400'
+                    }`}
+                  />
+                </button>
               ))}
             </div>
 

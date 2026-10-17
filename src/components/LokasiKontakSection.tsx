@@ -35,7 +35,7 @@ export const LokasiKontakSection: React.FC<LokasiKontakSectionProps> = () => {
                   <MapPin className="w-5 h-5" />
                 </div>
                 <div>
-                  <h4 className="font-bold text-white text-base">Alamat Gerobak:</h4>
+                  <h3 className="font-bold text-white text-base">Alamat Gerobak:</h3>
                   <p className="text-amber-100/80 text-sm">
                     Jl. Surya Kencana No. 27, Pamulang Barat (Depan Gerbang Kampus UNPAM, samping Mie Ayam & dekat minimarket Lawson), Tangerang Selatan, Banten.
                   </p>
@@ -48,7 +48,7 @@ export const LokasiKontakSection: React.FC<LokasiKontakSectionProps> = () => {
                   <Clock className="w-5 h-5" />
                 </div>
                 <div>
-                  <h4 className="font-bold text-white text-base">Jam Operasional:</h4>
+                  <h3 className="font-bold text-white text-base">Jam Operasional:</h3>
                   <p className="text-amber-100/80 text-sm">
                     Senin – Minggu: 15.00 – 22.00 WIB (Buka Setiap Hari)
                   </p>
@@ -61,7 +61,7 @@ export const LokasiKontakSection: React.FC<LokasiKontakSectionProps> = () => {
                   <Phone className="w-5 h-5" />
                 </div>
                 <div>
-                  <h4 className="font-bold text-white text-base">Kontak & Pemesanan:</h4>
+                  <h3 className="font-bold text-white text-base">Kontak & Pemesanan:</h3>
                   <p className="text-amber-100/80 text-sm">
                     WhatsApp: +62 897-3816-530 (Fast Response)
                   </p>
