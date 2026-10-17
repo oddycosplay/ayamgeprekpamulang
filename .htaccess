@@ -33,8 +33,8 @@ AddType font/woff2 .woff2
   RewriteCond %{HTTPS} off
   RewriteRule ^(.*)$ https://%{HTTP_HOST}%{REQUEST_URI} [L,R=301]
 
-  # 2. Allow .well-known, llms.txt, and ai-catalog.json directly
-  RewriteRule ^\.well-known/ - [L]
+  # 2. Allow and map AI manifests
+  RewriteRule ^\.well-known/ai-catalog\.json$ /ai-catalog.json [L]
   RewriteRule ^ai-catalog\.json$ - [L]
   RewriteRule ^llms\.txt$ - [L]
 
