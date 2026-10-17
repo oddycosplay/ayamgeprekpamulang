@@ -1,12 +1,8 @@
 import React from 'react';
-import { Clock, MapPin, Sparkles, MessageCircle, ArrowDown } from 'lucide-react';
+import { Clock, MapPin, MessageCircle, ArrowDown } from 'lucide-react';
 import heroImg from '../produk/geprek-paket-nasi.jpg';
 
-interface HeroSectionProps {
-  onOpenAdvisor: () => void;
-}
-
-export const HeroSection: React.FC<HeroSectionProps> = ({ onOpenAdvisor }) => {
+export const HeroSection: React.FC = () => {
   return (
     <section className="relative bg-[#781519] text-white overflow-hidden pt-6 pb-14 sm:py-16 lg:py-20" id="hero">
       {/* Watermark Background Typography */}
@@ -103,13 +99,6 @@ export const HeroSection: React.FC<HeroSectionProps> = ({ onOpenAdvisor }) => {
                 <MessageCircle className="w-4 h-4 fill-current" />
                 <span>Chat WA Sekarang</span>
               </a>
-              <button
-                onClick={onOpenAdvisor}
-                className="inline-flex items-center justify-center gap-1.5 bg-white/10 hover:bg-white/20 text-amber-200 font-semibold px-4 py-3.5 rounded-full text-xs sm:text-sm border border-amber-300/20 backdrop-blur-sm transition-all text-center"
-              >
-                <Sparkles className="w-3.5 h-3.5 text-[#F5C518]" />
-                <span>Tanya AI</span>
-              </button>
             </div>
 
             {/* Social Proof Trust Bar */}

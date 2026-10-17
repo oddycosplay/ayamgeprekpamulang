@@ -11,18 +11,12 @@ import { RahasiaRasaSection } from './components/RahasiaRasaSection.tsx';
 import { TestimoniSection } from './components/TestimoniSection.tsx';
 import { LokasiKontakSection } from './components/LokasiKontakSection.tsx';
 import { Footer } from './components/Footer.tsx';
-
-import { AiAdvisorModal } from './components/AiAdvisorModal.tsx';
 import { LoginModal } from './components/LoginModal.tsx';
 import { MenuItem } from './types.ts';
 import { MENU_ITEMS } from './data/menuData.ts';
 
-import { Sparkles } from 'lucide-react';
-
 export default function App() {
   const [selectedMenuItem, setSelectedMenuItem] = useState<MenuItem>(MENU_ITEMS[0]);
-  const [isAdvisorOpen, setIsAdvisorOpen] = useState(false);
-  const [advisorInitialMode, setAdvisorInitialMode] = useState<'advisor' | 'maps' | 'search'>('advisor');
   const [isLoginOpen, setIsLoginOpen] = useState(false);
 
   // User auth/identity state
@@ -73,12 +67,7 @@ export default function App() {
       {/* Main Page Flow: Simple, Fast, Direct Order Focus */}
       <main className="flex-1">
         {/* 1. Hero Section with Curiosity Headline */}
-        <HeroSection
-          onOpenAdvisor={() => {
-            setAdvisorInitialMode('advisor');
-            setIsAdvisorOpen(true);
-          }}
-        />
+        <HeroSection />
 
         {/* 2. Menu Apa? & Pesan Langsung via WhatsApp (Compact Order Hub) */}
         <OrderDirectSection
@@ -99,28 +88,7 @@ export default function App() {
       {/* Site Footer */}
       <Footer />
 
-      {/* Floating Quick Action Drawer (Right-bottom for quick access to AI tools) */}
-      <aside aria-label="Aksi Cepat Fitur" className="fixed bottom-6 right-6 z-40 flex flex-col gap-2.5 items-end">
-        <button
-          onClick={() => {
-            setAdvisorInitialMode('advisor');
-            setIsAdvisorOpen(true);
-          }}
-          className="bg-[#781519] hover:bg-[#5e0d10] text-[#F5C518] font-bold text-xs py-2 px-3.5 rounded-full shadow-lg border border-[#F5C518]/30 flex items-center gap-2 transform hover:scale-105 transition"
-          title="Tanya AI & Navigasi Maps"
-        >
-          <Sparkles className="w-4 h-4" />
-          <span className="hidden sm:inline">Asisten Menu & Maps AI</span>
-        </button>
-      </aside>
-
-      {/* Modals */}
-      <AiAdvisorModal
-        isOpen={isAdvisorOpen}
-        onClose={() => setIsAdvisorOpen(false)}
-        initialMode={advisorInitialMode}
-      />
-
+      {/* Login Modal for Owner/CRM */}
       <LoginModal
         isOpen={isLoginOpen}
         onClose={() => setIsLoginOpen(false)}
