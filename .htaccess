@@ -13,8 +13,11 @@
 # Set DirectoryIndex so Apache serves the compiled production bundle first
 DirectoryIndex bundle.html index.html
 
-# Ensure JavaScript MIME types are properly served
+# Ensure JavaScript and AI manifest MIME types are properly served
 AddType application/javascript .js .mjs .jsx .ts .tsx
+AddType application/json .json
+AddType text/plain .txt
+AddType text/markdown .md
 AddType image/svg+xml .svg .svgz
 AddType image/webp .webp
 AddType font/woff2 .woff2
@@ -30,10 +33,15 @@ AddType font/woff2 .woff2
   RewriteCond %{HTTPS} off
   RewriteRule ^(.*)$ https://%{HTTP_HOST}%{REQUEST_URI} [L,R=301]
 
-  # 2. Self-healing fallback for stale clients requesting dev scripts
+  # 2. Allow .well-known, llms.txt, and ai-catalog.json directly
+  RewriteRule ^\.well-known/ - [L]
+  RewriteRule ^ai-catalog\.json$ - [L]
+  RewriteRule ^llms\.txt$ - [L]
+
+  # 3. Self-healing fallback for stale clients requesting dev scripts
   RewriteRule ^src/.*$ /self-healing.js [L]
 
-  # 3. Production Bundle Serving & SPA Routing
+  # 4. Production Bundle Serving & SPA Routing
   RewriteRule ^$ bundle.html [L]
   RewriteRule ^index\.html$ bundle.html [L]
 
