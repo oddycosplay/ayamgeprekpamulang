@@ -35,17 +35,16 @@ export const Header: React.FC<HeaderProps> = ({
           </div>
         </a>
 
-        {/* ===== DESKTOP NAVIGATION — tengah, hanya lg ke atas ===== */}
+        {/* ===== DESKTOP NAVIGATION ===== */}
         <nav
           aria-label="Navigasi Utama"
           className="hidden lg:flex flex-1 items-center justify-center gap-6 xl:gap-8 text-sm font-semibold text-gray-700"
         >
           <a className="text-[#781519] font-bold hover:opacity-70 transition-opacity" href="#hero">Home</a>
-          <a className="hover:text-[#781519] transition-colors" href="#tentang-kami">Tentang Kami</a>
-          <a className="hover:text-[#781519] transition-colors" href="#menu">Menu</a>
-          <a className="hover:text-[#781519] transition-colors" href="#keunggulan">Keunggulan</a>
-          <a className="hover:text-[#781519] transition-colors" href="#simulasi-pemesanan">Pesan Langsung</a>
-          <a className="hover:text-[#781519] transition-colors" href="#lokasi">Lokasi & Kontak</a>
+          <a className="hover:text-[#781519] transition-colors" href="#order">Menu & Pesan WA</a>
+          <a className="hover:text-[#781519] transition-colors" href="#rahasia">Rahasia Rasa</a>
+          <a className="hover:text-[#781519] transition-colors" href="#testimoni">Ulasan Pelanggan</a>
+          <a className="hover:text-[#781519] transition-colors" href="#lokasi">Lokasi UNPAM</a>
         </nav>
 
         {/* Right Action Buttons */}
@@ -53,13 +52,13 @@ export const Header: React.FC<HeaderProps> = ({
 
           {/* Order CTA */}
           <a
-            className="inline-flex items-center gap-1.5 xs:gap-2 bg-[#F5C518] hover:bg-[#e0b312] text-[#5e0d10] px-3 xs:px-4 sm:px-5 py-2 xs:py-2.5 rounded-full font-bold text-xs sm:text-sm shadow-sm transition-all transform hover:scale-105"
-            href="https://wa.me/628973816530?text=Halo%20Ayam%20Geprek%20Al-Fariz,%20saya%20ingin%20pesan"
+            className="inline-flex items-center gap-1.5 xs:gap-2 bg-[#F5C518] hover:bg-[#e0b312] text-[#5e0d10] px-3.5 xs:px-4 sm:px-5 py-2 xs:py-2.5 rounded-full font-black text-xs sm:text-sm shadow-sm transition-all transform hover:scale-105"
+            href="https://wa.me/628973816530?text=Halo%20Mas%20Al-Fariz,%20saya%20mau%20pesan%20Ayam%20Geprek%20Sambel%20Ijo"
             rel="noopener noreferrer"
             target="_blank"
           >
             <MessageCircle className="w-3.5 h-3.5 xs:w-4 xs:h-4 fill-current" />
-            <span>Order</span>
+            <span>Pesan via WA</span>
           </a>
 
           {/* Owner Login Button */}
@@ -72,7 +71,7 @@ export const Header: React.FC<HeaderProps> = ({
             <LogIn className="w-4 h-4 xs:w-5 xs:h-5" />
           </button>
 
-          {/* ===== HAMBURGER — hanya mobile & tablet (di bawah lg) ===== */}
+          {/* ===== HAMBURGER — hanya mobile & tablet ===== */}
           <button
             onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
             className="lg:hidden p-2 text-gray-700 hover:text-[#781519] rounded-xl hover:bg-gray-100 min-h-[40px] min-w-[40px] flex items-center justify-center"
@@ -96,21 +95,17 @@ export const Header: React.FC<HeaderProps> = ({
             className="block py-2.5 px-3 rounded-xl text-sm font-bold text-[#781519] hover:bg-amber-50 transition">
             Home
           </a>
-          <a onClick={() => setMobileMenuOpen(false)} href="#tentang-kami"
-            className="block py-2.5 px-3 rounded-xl text-sm font-semibold text-gray-700 hover:bg-gray-50 transition">
-            Tentang Kami
+          <a onClick={() => setMobileMenuOpen(false)} href="#order"
+            className="block py-2.5 px-3 rounded-xl text-sm font-bold text-[#781519] bg-amber-50 hover:bg-amber-100 transition">
+            Menu & Pesan Langsung (WA)
           </a>
-          <a onClick={() => setMobileMenuOpen(false)} href="#menu"
+          <a onClick={() => setMobileMenuOpen(false)} href="#rahasia"
             className="block py-2.5 px-3 rounded-xl text-sm font-semibold text-gray-700 hover:bg-gray-50 transition">
-            Daftar Menu
+            Rahasia Rasa
           </a>
-          <a onClick={() => setMobileMenuOpen(false)} href="#keunggulan"
+          <a onClick={() => setMobileMenuOpen(false)} href="#testimoni"
             className="block py-2.5 px-3 rounded-xl text-sm font-semibold text-gray-700 hover:bg-gray-50 transition">
-            Keunggulan
-          </a>
-          <a onClick={() => setMobileMenuOpen(false)} href="#simulasi-pemesanan"
-            className="block py-2.5 px-3 rounded-xl text-sm font-bold text-[#781519] bg-[#781519]/5 hover:bg-[#781519]/10 transition">
-            Pesan Langsung
+            Ulasan Pelanggan
           </a>
           <a onClick={() => setMobileMenuOpen(false)} href="#lokasi"
             className="block py-2.5 px-3 rounded-xl text-sm font-semibold text-gray-700 hover:bg-gray-50 transition">

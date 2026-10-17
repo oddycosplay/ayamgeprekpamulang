@@ -6,14 +6,8 @@
 import React, { useState, useEffect } from 'react';
 import { Header } from './components/Header.tsx';
 import { HeroSection } from './components/HeroSection.tsx';
-import { WelcomeBar } from './components/WelcomeBar.tsx';
-import { TentangKamiSection } from './components/TentangKamiSection.tsx';
-import { CitaRasaBanner } from './components/CitaRasaBanner.tsx';
-import { KeunggulanSection } from './components/KeunggulanSection.tsx';
-import { PromoTaglineBanner } from './components/PromoTaglineBanner.tsx';
-import { MenuSection } from './components/MenuSection.tsx';
-import { LayananKamiSection } from './components/LayananKamiSection.tsx';
-import { SimulasiPemesanan } from './components/SimulasiPemesanan.tsx';
+import { OrderDirectSection } from './components/OrderDirectSection.tsx';
+import { RahasiaRasaSection } from './components/RahasiaRasaSection.tsx';
 import { TestimoniSection } from './components/TestimoniSection.tsx';
 import { LokasiKontakSection } from './components/LokasiKontakSection.tsx';
 import { Footer } from './components/Footer.tsx';
@@ -67,19 +61,6 @@ export default function App() {
     }
   };
 
-  const handleSelectMenuForOrder = (item: MenuItem) => {
-    setSelectedMenuItem(item);
-    const element = document.getElementById('simulasi-pemesanan');
-    if (element) {
-      element.scrollIntoView({ behavior: 'smooth' });
-    }
-  };
-
-  const handleOpenMapsAdvisor = () => {
-    setAdvisorInitialMode('maps');
-    setIsAdvisorOpen(true);
-  };
-
   return (
     <div className="min-h-screen bg-[#FBFBFA] flex flex-col relative selection:bg-[#F5C518] selection:text-[#5e0d10]">
       {/* Primary Sticky Header */}
@@ -89,9 +70,9 @@ export default function App() {
         userName={userName}
       />
 
-      {/* Main Page Flow Matching Reference Exactly */}
+      {/* Main Page Flow: Simple, Fast, Direct Order Focus */}
       <main className="flex-1">
-        {/* 1. Hero Section with Al-Fariz Watermark & Glowing Food Platter */}
+        {/* 1. Hero Section with Curiosity Headline */}
         <HeroSection
           onOpenAdvisor={() => {
             setAdvisorInitialMode('advisor');
@@ -99,37 +80,19 @@ export default function App() {
           }}
         />
 
-        {/* 2. Welcome Strip */}
-        <WelcomeBar />
-
-        {/* 3. Tentang Kami with Mas Al-Fariz Graphic & Seal */}
-        <TentangKamiSection />
-
-        {/* 4. Cita Rasa Asli Banner (Yellow Gradient Card) */}
-        <CitaRasaBanner />
-
-        {/* 5. Keunggulan Warung Kami (4 Grid Cards) */}
-        <KeunggulanSection />
-
-        {/* 6. Tagline Heroic Banner ("Siang-Malam Enaknya Geprek Al-Fariz!") */}
-        <PromoTaglineBanner />
-
-        {/* 7. Menu Catalog Juara Sambel Ijo (2 Menu Items) */}
-        <MenuSection onSelectMenuForOrder={handleSelectMenuForOrder} />
-
-        {/* 8. Layanan Kami (Our Services) */}
-        <LayananKamiSection />
-
-        {/* 9. Simulasi Pemesanan & Direct WhatsApp Order Generator */}
-        <SimulasiPemesanan
+        {/* 2. Menu Apa? & Pesan Langsung via WhatsApp (Compact Order Hub) */}
+        <OrderDirectSection
           selectedMenuItem={selectedMenuItem}
           onMenuItemChange={setSelectedMenuItem}
         />
 
-        {/* 10. Apa Sih Kata Pembeli (Testimonial Slider) */}
+        {/* 3. Rahasia Rasa & Kisah Otentik Mas Al-Fariz */}
+        <RahasiaRasaSection />
+
+        {/* 4. Apa Sih Kata Pembeli (Ulasan & Testimoni Bintang 5) */}
         <TestimoniSection />
 
-        {/* 11. Lokasi Strategis Depan UNPAM & Interactive Maps */}
+        {/* 5. Lokasi Strategis Depan UNPAM & Peta */}
         <LokasiKontakSection />
       </main>
 
