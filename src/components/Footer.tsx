@@ -20,7 +20,7 @@ export const Footer: React.FC = () => {
 
           {/* Links Navigation */}
           <div>
-            <h4 className="text-sm font-bold text-white uppercase tracking-wider mb-4">Navigasi</h4>
+            <p className="text-sm font-bold text-white uppercase tracking-wider mb-4">Navigasi</p>
             <ul className="space-y-2 text-xs">
               <li><a className="hover:text-[#F5C518] transition-colors" href="#hero">Home</a></li>
               <li><a className="hover:text-[#F5C518] transition-colors" href="#tentang-kami">Tentang Kami</a></li>
@@ -33,7 +33,7 @@ export const Footer: React.FC = () => {
 
           {/* Menu Pilihan */}
           <div>
-            <h4 className="text-sm font-bold text-white uppercase tracking-wider mb-4">Menu Pilihan</h4>
+            <p className="text-sm font-bold text-white uppercase tracking-wider mb-4">Menu Pilihan</p>
             <ul className="space-y-2 text-xs">
               <li className="flex items-center justify-between py-0.5 border-b border-white/5">
                 <span className="text-amber-100/90 hover:text-[#F5C518] transition-colors cursor-default">
@@ -52,7 +52,7 @@ export const Footer: React.FC = () => {
 
           {/* Jam Buka & Order */}
           <div>
-            <h4 className="text-sm font-bold text-white uppercase tracking-wider mb-4">Jam Operasional</h4>
+            <p className="text-sm font-bold text-white uppercase tracking-wider mb-4">Jam Operasional</p>
             <div className="text-xs space-y-2">
               <p>
                 <strong className="text-[#F5C518]">Senin - Minggu:</strong><br />

@@ -109,9 +109,9 @@ export const LokasiKontakSection: React.FC<LokasiKontakSectionProps> = () => {
                     <MapPin className="w-3.5 h-3.5 fill-current" />
                     <span>📍 DEPAN KAMPUS UNPAM</span>
                   </div>
-                  <h4 className="text-white font-bold text-base sm:text-lg drop-shadow-sm">
+                  <p className="text-white font-bold text-base sm:text-lg drop-shadow-sm">
                     Ayam Geprek Sambel Ijo Al-Fariz
-                  </h4>
+                  </p>
                   <p className="text-gray-200 text-xs mt-1 drop-shadow-sm">
                     Samping Mie Ayam & Dekat Lawson Jl. Surya Kencana Pamulang
                   </p>

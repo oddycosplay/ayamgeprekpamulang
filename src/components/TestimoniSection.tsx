@@ -388,14 +388,12 @@ export const TestimoniSection: React.FC = () => {
                       {/* 1 - 5 Star Rating System Header */}
                       <div className="flex items-center justify-between gap-2 pt-0.5">
                         <div className="flex items-center gap-1.5">
-                          <div
-                            role="img"
-                            className="flex items-center gap-0.5"
-                            aria-label={`Rating ${itemRating} dari 5 bintang`}
-                          >
+                          <div className="flex items-center gap-0.5">
+                            <span className="sr-only">Rating {itemRating} dari 5 bintang</span>
                             {[1, 2, 3, 4, 5].map((star) => (
                               <Star
                                 key={star}
+                                aria-hidden="true"
                                 className={`w-4 h-4 transition-transform group-hover:scale-110 ${
                                   star <= itemRating
                                     ? 'fill-[#F5C518] text-[#F5C518]'
@@ -466,7 +464,7 @@ export const TestimoniSection: React.FC = () => {
                   type="button"
                   aria-label={`Ke slide ${idx + 1}`}
                   onClick={() => scrollToSlide(idx)}
-                  className="w-7 h-7 flex items-center justify-center cursor-pointer p-1"
+                  className="w-10 h-10 flex items-center justify-center cursor-pointer p-2 focus:outline-none touch-manipulation"
                 >
                   <span
                     className={`h-2 rounded-full transition-all duration-300 block ${

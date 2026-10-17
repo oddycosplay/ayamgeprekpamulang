@@ -77,9 +77,9 @@ export const TentangKamiSection: React.FC = () => {
                   className="w-full h-full object-cover object-top scale-105 group-hover:scale-110 transition-transform duration-500"
                 />
                 <div className="absolute inset-0 bg-gradient-to-t from-black/85 via-black/30 to-transparent flex flex-col justify-end items-center text-center p-3 sm:p-5 pb-6 sm:pb-10 text-white">
-                  <h4 className="font-extrabold text-base xs:text-lg sm:text-xl text-[#F5C518] drop-shadow leading-tight">
+                  <h3 className="font-extrabold text-base xs:text-lg sm:text-xl text-[#F5C518] drop-shadow leading-tight">
                     Mas Al-Fariz
-                  </h4>
+                  </h3>
                   <p className="text-[9px] xs:text-[10px] sm:text-xs text-amber-100 font-medium leading-snug mt-0.5">
                     Founder & Peracik Sambel Ijo Al-Fariz
                   </p>

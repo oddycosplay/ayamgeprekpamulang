@@ -195,9 +195,9 @@ export const DigitalPaymentModal: React.FC<DigitalPaymentModalProps> = ({
                   <span className="inline-block px-3 py-1 bg-emerald-600 text-white text-xs font-black uppercase tracking-wider rounded-full shadow-sm">
                     ✓ PEMBAYARAN LUNAS (SIMULASI)
                   </span>
-                  <h4 className="text-xl font-black text-gray-900 mt-2 font-serif">
+                  <p className="text-xl font-black text-gray-900 mt-2 font-serif">
                     Rp {orderData.grandTotal.toLocaleString('id-ID')}
-                  </h4>
+                  </p>
                   <p className="text-xs text-gray-600 mt-0.5">
                     Transaksi berhasil diverifikasi otomatis oleh sistem.
                   </p>
@@ -387,9 +387,9 @@ export const DigitalPaymentModal: React.FC<DigitalPaymentModalProps> = ({
                     </div>
 
                     <div className="pt-3 pb-1">
-                      <h4 className="font-bold text-xs text-gray-900 uppercase tracking-wide">
+                      <p className="font-bold text-xs text-gray-900 uppercase tracking-wide">
                         AYAM GEPREK AL-FARIZ UNPAM
-                      </h4>
+                      </p>
                       <p className="text-[10px] font-mono text-gray-400">NMID: ID1020249816530</p>
                     </div>
 
