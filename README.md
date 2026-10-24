@@ -16,69 +16,47 @@
 
 ---
 
-## 🚀 Catatan Pembaruan Terkini (Release Notes v2.0.0)
+## 1. Gambaran Umum Proyek
 
-Pembaruan besar versi **v2.0.0** difokuskan pada peningkatan performa ekstrem, optimasi SEO berstandar enterprise, kepatuhan aksesibilitas penuh (WCAG), serta integrasi standar web masa depan untuk AI discovery dan pengalaman pelanggan yang lebih cepat.
+Proyek ini merupakan pengembangan website dan sistem operasional digital untuk UMKM kuliner Ayam Geprek Sambel Ijo Al-Fariz yang berlokasi di Pamulang, Tangerang Selatan. Tujuan utama dari pengembangan ini adalah meningkatkan visibilitas usaha di dunia digital, mempermudah proses pemesanan, serta mendukung pengelolaan operasional usaha secara lebih efisien.
 
-| Audit Metrik | Skor Sebelumnya | Skor Rilis v2.0.0 | Keterangan |
-| :--- | :---: | :---: | :--- |
-| **Search Engine Optimization (SEO)** | 83 / 100 | **100 / 100** 🏆 | Struktur semantik utuh & bebas isu kanonikal |
-| **Accessibility (Aksesibilitas)** | 86 / 100 | **100 / 100** 🏆 | Lulus audit ARIA & target sentuh tombol >= 40px |
-| **Best Practices** | 89 / 100 | **100 / 100** 🏆 | Keamanan HTTPS, respons header, & rasio aspek |
-| **Agentic Browsing (AI Discovery)** | Gagal / Error | **100 / 100** 🏆 | Validasi `llms.txt` & manifes ARD `ai-catalog.json` |
-| **Server Response Time (TTFB)** | 1.348 ms | **~75 - 190 ms** ⚡ | Brotli compression & browser caching agresif |
-
-### 🌟 Sorotan Perubahan di Versi 2.0.0
-
-1. **Pre-rendered Semantic HTML untuk Web Crawlers**
-   - Menambahkan struktur semantik HTML statis lengkap langsung di dalam `<div id="root">` pada `index.html` dan `bundle.html`. Bot mesin pencari (Googlebot, Bingbot) kini dapat langsung mengindek konten tanpa menunggu proses hydration.
-2. **Kepatuhan Aksesibilitas WCAG 2.2**
-   - Memperbaiki pelanggaran atribut ARIA terlarang dengan menghapus `aria-label` dari kontainer bintang dan menggantinya dengan semantik `<span class="sr-only">`.
-   - Mengoreksi urutan hierarki heading secara berurutan (`H1` ➔ `H2` ➔ `H3`).
-   - Memperbesar touch target tombol pagination dot hingga 40×40px untuk kenyamanan pengguna mobile.
-3. **Penerapan Standar Autonomous Agentic AI**
-   - Penerapan berkas `public/llms.txt` sesuai format resmi [llmstxt.org](https://llmstxt.org/) yang memuat direktori tautan konten restoran.
-   - Penerapan manifes `ai-catalog.json` dan `.well-known/ai-catalog.json` yang tervalidasi sesuai standar [Agentic Resource Discovery (ARD)](https://agenticresourcediscovery.org/spec/).
-4. **Pembersihan AI-Slop & Redesain Fokus Konversi Pesanan**
-   - Menghapus komponen chatbot yang tidak esensial untuk memangkas ukuran bundle JavaScript dan mempercepat First Contentful Paint (FCP).
-   - Antarmuka disederhanakan: langsung fokus pada menu pilihan, simulasi racik porsi, dan pemesanan instan ke WhatsApp kasir.
-5. **Optimasi Infrastruktur Hosting (DomaiNesia/cPanel)**
-   - Peningkatan konfigurasi `.htaccess` dengan kompresi Brotli (`br`) dan Deflate/Gzip, MIME type detection otomatis untuk manifest JSON/Markdown, serta CORS headers yang aman.
+Website yang dibangun tidak hanya berfungsi sebagai media promosi, tetapi juga sebagai kanal transaksi digital yang memungkinkan pelanggan melakukan pemesanan dengan cepat, melihat menu, menilai produk, dan menerima informasi mengenai status pesanan secara real-time.
 
 ---
 
-## 🎓 Tugas Akhir & Profil Pengembang
+## 2. Latar Belakang dan Tujuan
 
-Proyek ini merupakan Tugas Akhir mahasiswa **Universitas Pamulang (UNPAM)** untuk mata kuliah *Optimalisasi SEO*.
+UMKM kuliner memiliki kebutuhan untuk bertransformasi dari model penjualan konvensional menuju sistem digital agar dapat bersaing dan berkembang di era teknologi. Berdasarkan kebutuhan tersebut, website ini dirancang untuk:
 
-### Tim Mahasiswa
-
-1. **Oddy**
-2. **Sicilia**
-3. **Febri**
-4. **Hilmi**
-5. **Eni**
-
-Website landing page dan sistem operasional digital ini dirancang sebagai solusi komprehensif bagi UMKM kuliner **Ayam Geprek Sambel Ijo Al-Fariz Pamulang** guna mendongkrak visibilitas lokal di platform digital dan mempercepat proses transaksi.
+- Menampilkan identitas usaha dan profil bisnis secara profesional.
+- Menyajikan katalog menu secara rapi dan mudah dipahami.
+- Memfasilitasi proses pemesanan melalui platform digital.
+- Mengintegrasikan komunikasi order ke WhatsApp agar lebih praktis.
+- Menyediakan panel admin untuk mengelola pesanan, menu, dan laporan penjualan.
+- Meningkatkan pengalaman pelanggan melalui tampilan modern dan responsif.
 
 ---
 
-## 📌 Ringkasan Usaha & Identitas Bisnis
+## 3. Ruang Lingkup Sistem
 
-- **Nama Usaha**: UMKM Kuliner Ayam Geprek Sambel Ijo Al-Fariz
-- **Lokasi Fisik**: Jl. Surya Kencana No. 27, Pamulang Barat (Tepat di Depan Gerbang Utama Kampus UNPAM), Tangerang Selatan
-- **Jam Operasional**: 15.00 – 22.00 WIB (Buka Setiap Hari)
-- **Kontak Resmi (WhatsApp)**: [+62 897-3816-530](https://wa.me/628973816530)
-- **Domain Resmi**: [https://ayamsambelijopamulang.my.id](https://ayamsambelijopamulang.my.id)
-- **Dokumen Terkait**: [PRD.md](PRD.md), [DEPLOY-DOMAINESIA.md](DEPLOY-DOMAINESIA.md)
+Sistem yang dikembangkan mencakup beberapa komponen utama, yaitu:
+
+- Portal pelanggan
+- Modul katalog menu
+- Modul keranjang dan checkout
+- Modul transaksi dan pembayaran
+- Modul pengelolaan pesanan oleh admin
+- Modul tracking status pesanan
+- Modul ulasan dan testimoni
+- Integrasi AI untuk rekomendasi dan interaksi pelanggan
 
 ---
 
-## 🔄 Flowchart Sistem Usulan
+## 4. Flowchart Sistem
 
 ```mermaid
 flowchart TD
-    A[Pengunjung masuk ke website] --> B[Melihat menu & promo]
+    A[Pengunjung masuk ke website] --> B[Melihat menu dan promo]
     B --> C{Ingin memesan?}
     C -- Ya --> D[Login / daftar akun]
     C -- Tidak --> E[Melihat informasi toko]
@@ -94,355 +72,345 @@ flowchart TD
     M --> N{Ambil di tempat / antar}
     N -- Antar --> O[Pesanan dikirim]
     N -- Ambil --> P[Pesanan siap diambil]
-    O --> Q[Customer menerima pesanan]
+    O --> Q[Pelanggan menerima pesanan]
     P --> Q
-    Q --> R[Review & rating]
-
+    Q --> R[Review dan rating]
     L --> S[Update status pesanan]
     S --> T[Data order tersimpan di database]
 ```
 
-## 🧩 Sistem Usulan
+---
 
-### 1. Fitur utama
-- Halaman landing page
-  - Hero section
-  - Menu unggulan
-  - Promo / diskon
-  - Testimoni
-  - Lokasi cabang
-- Menu digital
-  - Kategori makanan
-  - Detail produk
-  - Harga
-  - Stok
-  - Gambar menu
-- Keranjang & checkout
-  - Tambah, hapus, ubah qty
-  - Diskon / voucher
-  - Pilih metode pembayaran
-  - Alamat pengiriman / pickup
-- Sistem order
-  - Nomor order otomatis
-  - Status order: menunggu, diproses, siap, dikirim, selesai
-- Admin panel
-  - Kelola menu
-  - Kelola promo
-  - Kelola pesanan
-  - Laporan penjualan
-  - Kontrol status order
+## 5. Sistem Usulan
 
-### 2. Arsitektur sistem yang disarankan
-Karena repo ini didominasi oleh TypeScript, pendekatan paling cocok adalah:
+### 5.1 Fitur Utama
+
+- Landing page dengan hero section, menu unggulan, promo, testimoni, dan lokasi usaha
+- Katalog produk yang mencakup nama menu, harga, deskripsi, dan foto
+- Keranjang belanja dan proses checkout
+- Opsi metode pembayaran seperti COD, transfer, dan e-wallet
+- Tracking status pesanan dari menunggu hingga selesai
+- Panel admin untuk mengelola menu, pesanan, dan laporan
+- Integrasi WhatsApp untuk komunikasi dan konfirmasi order
+- Fitur ulasan pelanggan untuk meningkatkan kepercayaan publik
+
+### 5.2 Arsitektur Sistem
+
+Berdasarkan komposisi repository yang mayoritas berupa TypeScript, solusi yang paling sesuai adalah menggunakan pendekatan modular berbasis web modern:
 
 - Frontend: Next.js + TypeScript
-  - Landing page
-  - Menu
-  - Cart
-  - Checkout
-  - Admin dashboard
-- Backend: Node.js / Express atau Next.js API Routes
-  - autentikasi user/admin
-  - proses order
-  - manajemen menu
-  - transaksi pembayaran
+- Backend: Node.js + Express atau API route berbasis Next.js
 - Database: PostgreSQL / MySQL
-  - users
-  - products
-  - categories
-  - orders
-  - transactions
-  - reviews
-- Storage:
-  - image upload untuk menu
-  - file produk, promo, banner
+- Manajemen data: relasional database untuk transaksi dan catalog menu
+- Penyimpanan media: sistem upload gambar produk dan promosi
+- Integrasi eksternal: WhatsApp API, payment gateway, dan layanan AI
 
-### 3. Struktur modul
-- User module
-  - login/register
-  - profile
-  - riwayat order
-- Product module
-  - tambah/edit/hapus menu
-  - kategori produk
-  - diskon
-- Order module
-  - create order
-  - update status
-  - track order
-- Payment module
+### 5.3 Modul utama
+
+- User Module
+  - Registrasi dan login
+  - Profil pengguna
+  - Riwayat pemesanan
+
+- Product Module
+  - Manajemen kategori menu
+  - Tambah, ubah, dan hapus produk
+  - Pengaturan stok dan harga
+
+- Order Module
+  - Pembuatan transaksi
+  - Pemantauan status order
+  - Log pesanan
+
+- Payment Module
   - COD
-  - transfer bank
-  - e-wallet
-- Admin module
-  - dashboard penjualan
-  - laporan harian/bulanan
-  - kelola pelanggan
+  - Transfer bank
+  - E-wallet
 
-### 4. Alur pengguna
-1. Pengunjung membuka website.
-2. Melihat menu dan promo.
-3. Memilih produk.
-4. Menambahkan ke keranjang.
-5. Melakukan checkout.
-6. Memilih metode pembayaran.
-7. Sistem menyimpan order.
-8. Admin menerima dan memperbarui status pesanan.
-9. Customer menerima konfirmasi dan dapat melihat status order.
-
-### 5. Skema data utama
-- User
-  - id
-  - name
-  - email
-  - password
-  - role
-- Product
-  - id
-  - name
-  - category_id
-  - price
-  - description
-  - image
-  - stock
-- Order
-  - id
-  - user_id
-  - total_price
-  - status
-  - payment_method
-  - created_at
-- OrderItem
-  - id
-  - order_id
-  - product_id
-  - quantity
-  - subtotal
-
-### 6. Teknologi yang cocok
-- Frontend: Next.js, React, Tailwind CSS
-- Backend: NestJS / Express / FastAPI
-- Database: PostgreSQL
-- Payment: Midtrans / Xendit
-- Deployment: Vercel + Railway / Render
-- Notification: WhatsApp API / email
-
-### 7. Kesimpulan
-Website Ayam Sambel Ijo Pamulang akan lebih optimal jika dikembangkan sebagai sistem pemesanan digital berbasis web yang memadukan landing page marketing dengan fitur order online, admin dashboard, dan integrasi pembayaran. Solusi ini cocok untuk meningkatkan konversi pelanggan sekaligus mempermudah operasional usaha.
+- Admin Module
+  - Dashboard penjualan
+  - Laporan harian dan bulanan
+  - Manajemen pelanggan dan pesanan
 
 ---
 
-## 🚀 Fitur Utama Sistem
+## 6. ERD (Entity Relationship Diagram)
 
-### 1. Portal Pelanggan (Customer Facing)
+```mermaid
+erDiagram
+    USERS ||--o{ ORDERS : makes
+    USERS ||--o{ REVIEWS : writes
+    CATEGORIES ||--o{ PRODUCTS : contains
+    PRODUCTS ||--o{ ORDER_ITEMS : includes
+    ORDERS ||--o{ ORDER_ITEMS : has
+    ORDERS ||--o| PAYMENTS : uses
 
-- **Hero & Suasana Warung**: Tampilan interaktif cobek batu 3D, status gerobak buka/tutup *real-time*, dan navigasi cepat.
-- **Katalog Menu Juara**:
-  - *Paket Geprek + Nasi* (Rp 17.000, Best Seller): Ayam krispi fillet, sambel ijo dadakan, nasi pulen hangat, dan timun segar.
-  - *Ayam Geprek Saja* (Rp 15.000, Alacarte): Potongan krispi jumbo berbalut sambel ijo cabai rawit pedas gurih.
-- **Kalkulator Simulasi Pemesanan Kustom**:
-  - Konfigurasi tingkat kepedasan dinamis (Level 1 sampai Level 5, ~20k hingga 120k+ SHU).
-  - Pilihan penyajian sambal: *Dicampur di atas ayam*, *Dipisah di wadah cup*, atau *Tanpa sambal*.
-  - Tambahan (*Add-ons*): Extra Sambel Rawit (+Rp 3.000), Tambah Nasi Pulen (+Rp 5.000).
-  - Kalkulasi transparan: Base Total, Add-ons, PPN 11%, dan Grand Total.
-- **Simulasi Pembayaran Digital & Struk Resmi**:
-  - Pilihan metode: QRIS Dinamis (countdown 15 menit), E-Wallet (GoPay, OVO, DANA, ShopeePay), Virtual Account (BCA, Mandiri, BRI, SeaBank), dan Bayar Tunai di Tempat.
-  - Pembuatan nomor transaksi unik (`TX-FARIZ-XXXXXX`).
-  - Struk digital resmi (*Digital Receipt*) dengan opsi cetak/unduh.
-- **Generator Pesanan WhatsApp Terstandarisasi**: Mengonversi rincian pesanan dan status transaksi menjadi format pesan WhatsApp rapi ke nomor kasir (+62 897-3816-530).
-- **Riwayat & Pelacak Pesanan**: Riwayat transaksi tersimpan otomatis di browser (`localStorage`) dan sinkronisasi pelacakan status pesanan.
-- **Ulasan & Bukti Sosial (Testimoni)**: Filter ulasan mahasiswa UNPAM & warga sekitar, beserta modal kirim ulasan baru pelanggan.
-- **Peta Interaktif & Petunjuk Arah**: Google Maps interaktif dengan rute dan panduan patokan lokasi fisik gerobak di seberang gerbang utama UNPAM.
+    USERS {
+        int id PK
+        string name
+        string email
+        string password
+        string role
+        datetime created_at
+    }
 
-### 2. Fitur Kecerdasan Buatan (Google Gemini AI)
+    CATEGORIES {
+        int id PK
+        string name
+        string description
+    }
 
-- **AI Culinary Advisor (`gemini-3.8-flash`)**: Konsultasi menu hemat budget mahasiswa, porsi gizi, rekomendasi level pedas, dan mode *Deep Thinking*.
-- **Google Maps Grounding**: Navigasi dan rute otomatis menuju lokasi fisik warung berbasis koordinat Maps tervalidasi.
-- **Google Search Grounding**: Informasi tren kuliner seputar kampus UNPAM.
-- **AI Image Studio (`gemini-3.1-flash-lite-image`)**: Generator visual fotografi kuliner ayam geprek beresolusi tinggi (1K/2K/4K) dengan *fallback showcase* bawaan.
+    PRODUCTS {
+        int id PK
+        int category_id FK
+        string name
+        text description
+        decimal price
+        int stock
+        string image_url
+        boolean is_available
+    }
 
-### 3. CRM Dapur Owner Al-Fariz (`/crm`)
+    ORDERS {
+        int id PK
+        int user_id FK
+        decimal total_price
+        string status
+        string payment_method
+        datetime created_at
+    }
 
-- **Dashboard Ringkasan**: Statistik pesanan harian, omzet, rata-rata nilai transaksi, dan monitoring antrean.
-- **Manajemen Pesanan Real-time**: Kelola alur status pemesanan (*Antrean*, *Dimasak*, *Siap Ambil*, *Selesai*, *Dibatalkan*).
-- **Manajemen Katalog & Stok**: Tambah, ubah harga, ganti foto produk, dan atur ketersediaan menu.
-- **Pelacakan Pesanan Pelanggan (`/crm#/track`)**: Antarmuka bagi pelanggan untuk memantau status masakan berdasarkan Nomor Transaksi (`TX-FARIZ-XXXXXX`).
-- **Keamanan & Sesi**: Proteksi kata sandi owner (`OWNER_PASSWORD`) dengan sesi berbasis cookie terenkripsi (`SESSION_SECRET`).
+    ORDER_ITEMS {
+        int id PK
+        int order_id FK
+        int product_id FK
+        int quantity
+        decimal subtotal
+    }
 
----
+    PAYMENTS {
+        int id PK
+        int order_id FK
+        string payment_type
+        string payment_status
+        string transaction_code
+        datetime paid_at
+    }
 
-## 🛠️ Arsitektur & Tumpukan Teknologi (Tech Stack)
-
-| Lapisan | Teknologi | Versi / Keterangan |
-| :--- | :--- | :--- |
-| **Frontend Framework** | React | `^19.0.1` |
-| **Bahasa Pemrograman** | TypeScript | `^7.0.2` |
-| **Build Tool & Bundler** | Vite | `^8.3.0` (Didukung plugin `@vitejs/plugin-react`) |
-| **CSS & Desain Sistem** | Tailwind CSS v4 | `^4.3.3` (Neo-Brutalist Street-Food Style) |
-| **Animasi & Interaksi** | Motion | `^12.23.24` |
-| **Ikonografi** | Lucide React | `^1.54.0` |
-| **State & Data Fetching** | TanStack React Query | `^5.104.1` |
-| **Notifikasi / Toast** | Sonner | `^2.0.8` |
-| **Backend Server** | Express.js & Node.js | Express `^4.22.3`, Node.js `>=18` |
-| **Database CRM** | MySQL | Driver `mysql2: ^3.24.5` (Migrasi tabel otomatis) |
-| **AI Integration** | Google Gen AI SDK | `@google/genai: ^2.4.0` (Gemini 3.8 Flash & Gemini 3.1 Flash Lite Image) |
-| **Produksi Bundler** | esbuild | `^0.25.0` (Mengompilasi `server/index.ts` ke `server.cjs`) |
-
----
-
-## 📁 Struktur Direktori
-
-```text
-ayam-geprek-sambel-ijo-al-fariz/
-├── crm-owner/                  # Aset pendukung CRM owner
-├── dist/                       # Output build produksi (website & CRM)
-├── figma-assets/               # Aset desain & referensi UI
-├── public/                     # Aset statis publik (.htaccess, robots.txt)
-├── scripts/
-│   └── bundle.js               # Skrip generator HTML standalone bundle
-├── server/
-│   └── index.ts                # Server backend utama (Express, CRM & API)
-├── src/
-│   ├── components/             # Komponen UI utama (Hero, Menu, Simulasi, Modal, dsb.)
-│   ├── crm/                    # Frontend CRM Dapur Owner (Pages: Dashboard, Orders, Products, Track)
-│   ├── data/                   # Data statis menu bawaan (menuData.ts)
-│   ├── produk/                 # Foto hidangan & fotografi kuliner produk (WebP optimized)
-│   ├── server/
-│   │   ├── apiHandler.ts       # Handler endpoint Google Gemini AI
-│   │   └── crm/                # Handler database MySQL & endpoint REST API CRM
-│   ├── App.tsx                 # Root komponen portal pelanggan
-│   ├── main.tsx                # Entry point aplikasi klien
-│   └── types.ts                # Kontrak skema TypeScript
-├── .env.example                # Templat variabel lingkungan
-├── DEPLOY-DOMAINESIA.md        # Panduan deployment cPanel / DomaiNesia
-├── DESIGN (1).md               # Dokumentasi sistem desain Neo-Brutalist
-├── package.json                # Dependensi dan skrip proyek
-├── PRD.md                      # Product Requirement Document lengkap
-├── server.cjs                  # Bundle server Node.js hasil kompilasi
-├── vite.config.ts              # Konfigurasi Vite & dev server
+    REVIEWS {
+        int id PK
+        int user_id FK
+        int product_id FK
+        int rating
+        text comment
+        datetime created_at
+    }
 ```
 
 ---
 
-## ⚙️ Prasyarat Sistem & Konfigurasi Lingkungan
+## 7. Wireframe UI
 
-### Prasyarat
+Berikut gambaran struktur antarmuka pengguna yang diusulkan:
 
-- **Node.js**: Versi `18.x` atau lebih baru
-- **NPM**: Versi `9.x` atau lebih baru
-- **MySQL**: Diperlukan untuk modul CRM dapur (opsional jika hanya menjalankan simulasi frontend lokal)
+```mermaid
+flowchart LR
+    A[Halaman Awal / Landing Page] --> B[Hero Section]
+    A --> C[Menu Unggulan]
+    A --> D[Promo dan Diskon]
+    A --> E[Testimoni]
+    A --> F[Lokasi dan Kontak]
 
-### Variabel Lingkungan (`.env.local` / `.env`)
+    G[Halaman Menu] --> H[Kategori Menu]
+    G --> I[Daftar Produk]
+    G --> J[Detail Produk]
+    J --> K[Tambah ke Keranjang]
 
-Salin berkas [.env.example](.env.example) menjadi `.env.local`:
+    L[Halaman Keranjang] --> M[Review Pesanan]
+    M --> N[Checkout]
+    N --> O[Pilih Metode Pembayaran]
+    O --> P[Konfirmasi Order]
+
+    Q[Halaman Admin] --> R[Dashboard]
+    Q --> S[Daftar Pesanan]
+    Q --> T[Manajemen Menu]
+    Q --> U[Laporan Penjualan]
+
+    V[Halaman Tracking] --> W[Input Nomor Order]
+    W --> X[Status Pesanan]
+```
+
+### 7.1 Deskripsi Wireframe
+
+- Halaman utama menampilkan brand awareness, hero banner, promo, dan informasi usaha
+- Halaman menu menampilkan daftar produk berdasarkan kategori
+- Halaman detail produk menampilkan foto, deskripsi, pilihan rasa/porsi, dan tombol tambah ke keranjang
+- Halaman checkout menginformasikan total pembayaran, metode pembayaran, dan data pengiriman
+- Halaman admin memungkinkan owner mengelola menu, order, dan laporan usaha
+- Halaman tracking memungkinkan pelanggan mengecek status pesanan tanpa perlu menghubungi admin secara langsung
+
+---
+
+## 8. Struktur Folder Proyek
+
+```text
+ayam-geprek-sambel-ijo-al-fariz/
+├── public/                     # Aset publik dan konfigurasi server
+│   ├── .htaccess
+│   ├── llms.txt
+│   ├── robots.txt
+│   ├── sitemap.xml
+│   └── manifest files
+├── src/
+│   ├── components/            # Komponen reusable UI
+│   ├── crm/                   # Dashboard admin / CRM
+│   ├── data/                  # Data menu dan konfigurasi aplikasi
+│   ├── hooks/                 # Custom hooks
+│   ├── pages/                 # Halaman aplikasi
+│   ├── services/              # Integrasi API dan backend
+│   ├── styles/                # Styling global
+│   ├── types/                 # Interface TypeScript
+│   ├── utils/                 # Helper & utility function
+│   ├── App.tsx
+│   ├── main.tsx
+│   └── types.ts
+├── server/
+│   └── index.ts               # Server backend utama
+├── scripts/
+│   └── bundle.js              # Script bundle HTML / distribusi
+├── crm-owner/                 # Asset pendukung dashboard owner
+├── dist/                      # Hasil build produksi
+├── figma-assets/              # Referensi UI dan desain
+├── .env.example               # Template environment variable
+├── DEPLOY-DOMAINESIA.md       # Panduan deployment
+├── DESIGN (1).md              # Dokumentasi desain
+├── package.json               # Dependency dan script proyek
+├── PRD.md                     # Product Requirement Document
+├── README.md                  # Dokumentasi proyek
+├── server.cjs                 # Build server produksi
+├── vite.config.ts             # Konfigurasi Vite
+├── tsconfig.json
+├── package-lock.json
+└── .gitignore
+```
+
+---
+
+## 9. Teknologi yang Digunakan
+
+| Layer | Teknologi | Keterangan |
+| :--- | :--- | :--- |
+| Frontend | React + TypeScript | Antarmuka website modern dan responsif |
+| Build Tool | Vite | Proses development dan build lebih cepat |
+| Styling | Tailwind CSS | Desain UI yang cepat dan konsisten |
+| Backend | Express.js + Node.js | Proses API dan pengelolaan data |
+| Database | MySQL / PostgreSQL | Penyimpanan data pelanggan, order, dan menu |
+| AI Integration | Google Gemini | Rekomendasi, interaksi, dan dukungan AI |
+| Deployment | cPanel, Vercel, Render, atau VPS | Publikasi project ke lingkungan production |
+
+---
+
+## 10. Prasyarat Sistem
+
+- Node.js versi 18 atau lebih tinggi
+- npm atau pnpm
+- MySQL / PostgreSQL untuk modul CRM dan database transaksi
+- Access key untuk integrasi AI (Google Gemini)
+- Server atau hosting untuk deployment publik
+
+---
+
+## 11. Konfigurasi Lingkungan
+
+Salin file `.env.example` menjadi `.env.local` lalu sesuaikan isinya:
 
 ```bash
 cp .env.example .env.local
 ```
 
-Sesuaikan nilai variabel berikut:
+Contoh konfigurasi:
 
 ```env
-# Konfigurasi Google Gemini AI
-GEMINI_API_KEY="AIzaSy..."
-
-# URL Aplikasi
+GEMINI_API_KEY="your_api_key"
 APP_URL="http://localhost:3000"
-
-# Konfigurasi Database CRM (MySQL)
 MYSQL_HOST=127.0.0.1
 MYSQL_PORT=3306
 MYSQL_USER=root
 MYSQL_PASSWORD=
 MYSQL_DATABASE=alfariz_crm
-
-# Autentikasi CRM Owner
-OWNER_PASSWORD="ganti-dengan-kata-sandi-owner"
-SESSION_SECRET="string-acak-panjang-rahasia-minimal-40-karakter"
+OWNER_PASSWORD="your_owner_password"
+SESSION_SECRET="your_secure_session_secret"
 ```
 
 ---
 
-## 💻 Panduan Menjalankan Proyek
+## 12. Panduan Menjalankan Proyek
 
-### 1. Instalasi Dependensi
+### 12.1 Instalasi Dependensi
 
 ```bash
 npm install
 ```
 
-### 2. Mode Pengembangan (Development)
-
-Jalankan server pengembangan terintegrasi:
+### 12.2 Mode Development
 
 ```bash
 npm run dev
 ```
 
-- **Website Pelanggan**: Buka [http://localhost:3000](http://localhost:3000)
-- **CRM Dapur Owner**: Buka [http://localhost:3000/crm](http://localhost:3000/crm) (Login menggunakan `OWNER_PASSWORD`)
-- **Pelacakan Pesanan**: Buka [http://localhost:3000/crm#/track](http://localhost:3000/crm#/track)
+Akses aplikasi di:
 
-### 3. Build & Jalankan Mode Produksi
+- Website pelanggan: http://localhost:3000
+- Dashboard admin: http://localhost:3000/crm
+- Tracking order: http://localhost:3000/crm#/track
 
-Kompilasi aplikasi frontend dan server backend:
+### 12.3 Build Produksi
 
 ```bash
-# Build frontend ke dist/ dan server ke server.cjs
 npm run build
-
-# Menjalankan server produksi
 npm run start
 ```
 
-### 4. Menghasilkan Standalone Bundle HTML (Offline Demo)
+---
 
-Untuk membuat berkas HTML tunggal mandiri tanpa ketergantungan server:
+## 13. Deployment
 
-```bash
-npm run bundle
-```
+Proyek ini dapat di-deploy pada platform seperti:
 
-Hasil file akan disimpan pada `bundle.html`.
+- cPanel / DomaiNesia
+- Vercel
+- Render
+- VPS / Ubuntu Server
+
+Panduan deploy lebih detail tersedia di file [DEPLOY-DOMAINESIA.md](DEPLOY-DOMAINESIA.md).
 
 ---
 
-## 🌐 Panduan Deployment (cPanel / DomaiNesia)
+## 14. Hasil yang Diharapkan
 
-Proyek ini telah dikonfigurasi untuk berjalan di shared hosting atau VPS yang mendukung fitur **Setup Node.js App** (cPanel) dan database MySQL:
+Dengan sistem ini, diharapkan usaha Ayam Geprek Sambel Ijo Al-Fariz dapat:
 
-1. Lakukan kompilasi lokal: `npm run build`.
-2. Siapkan arsip zip yang memuat:
-   - `dist/`
-   - `server.cjs`
-   - `package.json`
-   - `package-lock.json`
-   - `.npmrc`
-3. Buat database MySQL di cPanel dan berikan hak akses penuh (*ALL PRIVILEGES*).
-4. Buat aplikasi di menu **Setup Node.js App** dengan startup file `server.cjs` dan Node.js versi 18+.
-5. Masukkan seluruh *Environment Variables* di cPanel (`MYSQL_HOST`, `MYSQL_USER`, `MYSQL_PASSWORD`, `MYSQL_DATABASE`, `OWNER_PASSWORD`, `SESSION_SECRET`, `GEMINI_API_KEY`).
-6. Jalankan **Run NPM Install** lalu klik **Restart**.
-
-Panduan langkah demi langkah yang detail tersedia di [DEPLOY-DOMAINESIA.md](DEPLOY-DOMAINESIA.md).
+- Meningkatkan brand awareness dan visibilitas online
+- Mempercepat proses pemesanan barang dan layanan
+- Memudahkan owner dalam mengelola order dan penjualan
+- Meningkatkan kepuasan pelanggan melalui akses yang cepat, modern, dan informatif
 
 ---
 
-## 📜 Skrip NPM yang Tersedia
+## 15. Tim Pengembang
 
-| Perintah | Fungsi |
-| :--- | :--- |
-| `npm run dev` | Menjalankan Vite development server di port 3000 |
-| `npm run build` | Melakukan build frontend (`vite build`) dan server (`npm run build:server`) |
-| `npm run build:server` | Mengompilasi `server/index.ts` ke format CommonJS `server.cjs` menggunakan esbuild |
-| `npm run start` | Menjalankan server produksi Node.js (`node server.cjs`) |
-| `npm run preview` | Meninjau hasil build Vite secara lokal |
-| `npm run lint` | Melakukan pemeriksaan tipe TypeScript (`tsc --noEmit`) |
-| `npm run bundle` | Menghasilkan berkas distribusi mandiri `bundle.html` |
-| `npm run clean` | Menghapus folder `dist/` dan file `server.cjs` |
+Proyek ini dikembangkan oleh mahasiswa Universitas Pamulang sebagai bagian dari tugas akhir dan pengembangan digitalisasi UMKM kuliner.
+
+- Oddy
+- Sicilia
+- Febri
+- Hilmi
+- Eni
 
 ---
 
-## 📄 Lisensi & Hak Cipta
+## 16. Lisensi
 
-© 2027 **Ayam Geprek Sambel Ijo Al-Fariz**. Hak Cipta Dilindungi Undang-Undang.  
-Dikembangkan oleh Tim Mahasiswa Universitas Pamulang (Oddy, Sicilia, Febri, Hilmi, Eni) untuk mendukung digitalisasi UMKM kuliner sekitar kampus.
+© 2027 Ayam Geprek Sambel Ijo Al-Fariz. Seluruh hak cipta dilindungi undang-undang.
+
+Dikembangkan untuk mendukung digitalisasi usaha kuliner dan peningkatan kualitas layanan pelanggan secara berkelanjutan.
