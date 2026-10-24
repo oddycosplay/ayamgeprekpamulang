@@ -18,7 +18,7 @@
 
 ## 🚀 Catatan Pembaruan Terkini (Release Notes v2.0.0)
 
-Pembaruan besar versi **v2.0.0** difokuskan pada peningkatan performa ekstrem, optimasi SEO berstandar enterprise, kepatuhan aksesibilitas penuh (WCAG), serta integrasi standar web masa depan untuk Autonomous AI Agents:
+Pembaruan besar versi **v2.0.0** difokuskan pada peningkatan performa ekstrem, optimasi SEO berstandar enterprise, kepatuhan aksesibilitas penuh (WCAG), serta integrasi standar web masa depan untuk AI discovery dan pengalaman pelanggan yang lebih cepat.
 
 | Audit Metrik | Skor Sebelumnya | Skor Rilis v2.0.0 | Keterangan |
 | :--- | :---: | :---: | :--- |
@@ -31,7 +31,7 @@ Pembaruan besar versi **v2.0.0** difokuskan pada peningkatan performa ekstrem, o
 ### 🌟 Sorotan Perubahan di Versi 2.0.0
 
 1. **Pre-rendered Semantic HTML untuk Web Crawlers**
-   - Menambahkan struktur semantik HTML statis lengkap langsung di dalam `<div id="root">` pada `index.html` dan `bundle.html`. Bot mesin pencari (Googlebot, Bingbot) kini dapat langsung mengindeks teks H1, harga, jam buka, dan menu tanpa bergantung pada eksekusi JavaScript.
+   - Menambahkan struktur semantik HTML statis lengkap langsung di dalam `<div id="root">` pada `index.html` dan `bundle.html`. Bot mesin pencari (Googlebot, Bingbot) kini dapat langsung mengindek konten tanpa menunggu proses hydration.
 2. **Kepatuhan Aksesibilitas WCAG 2.2**
    - Memperbaiki pelanggaran atribut ARIA terlarang dengan menghapus `aria-label` dari kontainer bintang dan menggantinya dengan semantik `<span class="sr-only">`.
    - Mengoreksi urutan hierarki heading secara berurutan (`H1` ➔ `H2` ➔ `H3`).
@@ -59,7 +59,7 @@ Proyek ini merupakan Tugas Akhir mahasiswa **Universitas Pamulang (UNPAM)** untu
 4. **Hilmi**
 5. **Eni**
 
-Website landing page dan sistem operasional digital ini dirancang sebagai solusi komprehensif bagi UMKM kuliner **Ayam Geprek Sambel Ijo Al-Fariz Pamulang** guna mendongkrak visibilitas lokal di mesin pencari (SEO), memfasilitasi pemesanan interaktif mandiri, serta mengotomatisasi operasional dapur.
+Website landing page dan sistem operasional digital ini dirancang sebagai solusi komprehensif bagi UMKM kuliner **Ayam Geprek Sambel Ijo Al-Fariz Pamulang** guna mendongkrak visibilitas lokal di platform digital dan mempercepat proses transaksi.
 
 ---
 
@@ -70,7 +70,165 @@ Website landing page dan sistem operasional digital ini dirancang sebagai solusi
 - **Jam Operasional**: 15.00 – 22.00 WIB (Buka Setiap Hari)
 - **Kontak Resmi (WhatsApp)**: [+62 897-3816-530](https://wa.me/628973816530)
 - **Domain Resmi**: [https://ayamsambelijopamulang.my.id](https://ayamsambelijopamulang.my.id)
-- **Dokumen Terkait**: [PRD.md](file:///d:/project%20website/ayam-geprek-sambel-ijo-al-fariz/PRD.md), [DEPLOY-DOMAINESIA.md](file:///d:/project%20website/ayam-geprek-sambel-ijo-al-fariz/DEPLOY-DOMAINESIA.md), [DESIGN (1).md](file:///d:/project%20website/ayam-geprek-sambel-ijo-al-fariz/DESIGN%20(1).md)
+- **Dokumen Terkait**: [PRD.md](PRD.md), [DEPLOY-DOMAINESIA.md](DEPLOY-DOMAINESIA.md)
+
+---
+
+## 🔄 Flowchart Sistem Usulan
+
+```mermaid
+flowchart TD
+    A[Pengunjung masuk ke website] --> B[Melihat menu & promo]
+    B --> C{Ingin memesan?}
+    C -- Ya --> D[Login / daftar akun]
+    C -- Tidak --> E[Melihat informasi toko]
+    D --> F[Tambah menu ke keranjang]
+    F --> G[Review pesanan]
+    G --> H{Metode pembayaran}
+    H -- COD --> I[Konfirmasi pesanan]
+    H -- Transfer / E-Wallet --> J[Bayar]
+    J --> K[Order diterima sistem]
+    I --> K
+    K --> L[Admin menerima order]
+    L --> M[Proses pesanan]
+    M --> N{Ambil di tempat / antar}
+    N -- Antar --> O[Pesanan dikirim]
+    N -- Ambil --> P[Pesanan siap diambil]
+    O --> Q[Customer menerima pesanan]
+    P --> Q
+    Q --> R[Review & rating]
+
+    L --> S[Update status pesanan]
+    S --> T[Data order tersimpan di database]
+```
+
+## 🧩 Sistem Usulan
+
+### 1. Fitur utama
+- Halaman landing page
+  - Hero section
+  - Menu unggulan
+  - Promo / diskon
+  - Testimoni
+  - Lokasi cabang
+- Menu digital
+  - Kategori makanan
+  - Detail produk
+  - Harga
+  - Stok
+  - Gambar menu
+- Keranjang & checkout
+  - Tambah, hapus, ubah qty
+  - Diskon / voucher
+  - Pilih metode pembayaran
+  - Alamat pengiriman / pickup
+- Sistem order
+  - Nomor order otomatis
+  - Status order: menunggu, diproses, siap, dikirim, selesai
+- Admin panel
+  - Kelola menu
+  - Kelola promo
+  - Kelola pesanan
+  - Laporan penjualan
+  - Kontrol status order
+
+### 2. Arsitektur sistem yang disarankan
+Karena repo ini didominasi oleh TypeScript, pendekatan paling cocok adalah:
+
+- Frontend: Next.js + TypeScript
+  - Landing page
+  - Menu
+  - Cart
+  - Checkout
+  - Admin dashboard
+- Backend: Node.js / Express atau Next.js API Routes
+  - autentikasi user/admin
+  - proses order
+  - manajemen menu
+  - transaksi pembayaran
+- Database: PostgreSQL / MySQL
+  - users
+  - products
+  - categories
+  - orders
+  - transactions
+  - reviews
+- Storage:
+  - image upload untuk menu
+  - file produk, promo, banner
+
+### 3. Struktur modul
+- User module
+  - login/register
+  - profile
+  - riwayat order
+- Product module
+  - tambah/edit/hapus menu
+  - kategori produk
+  - diskon
+- Order module
+  - create order
+  - update status
+  - track order
+- Payment module
+  - COD
+  - transfer bank
+  - e-wallet
+- Admin module
+  - dashboard penjualan
+  - laporan harian/bulanan
+  - kelola pelanggan
+
+### 4. Alur pengguna
+1. Pengunjung membuka website.
+2. Melihat menu dan promo.
+3. Memilih produk.
+4. Menambahkan ke keranjang.
+5. Melakukan checkout.
+6. Memilih metode pembayaran.
+7. Sistem menyimpan order.
+8. Admin menerima dan memperbarui status pesanan.
+9. Customer menerima konfirmasi dan dapat melihat status order.
+
+### 5. Skema data utama
+- User
+  - id
+  - name
+  - email
+  - password
+  - role
+- Product
+  - id
+  - name
+  - category_id
+  - price
+  - description
+  - image
+  - stock
+- Order
+  - id
+  - user_id
+  - total_price
+  - status
+  - payment_method
+  - created_at
+- OrderItem
+  - id
+  - order_id
+  - product_id
+  - quantity
+  - subtotal
+
+### 6. Teknologi yang cocok
+- Frontend: Next.js, React, Tailwind CSS
+- Backend: NestJS / Express / FastAPI
+- Database: PostgreSQL
+- Payment: Midtrans / Xendit
+- Deployment: Vercel + Railway / Render
+- Notification: WhatsApp API / email
+
+### 7. Kesimpulan
+Website Ayam Sambel Ijo Pamulang akan lebih optimal jika dikembangkan sebagai sistem pemesanan digital berbasis web yang memadukan landing page marketing dengan fitur order online, admin dashboard, dan integrasi pembayaran. Solusi ini cocok untuk meningkatkan konversi pelanggan sekaligus mempermudah operasional usaha.
 
 ---
 
@@ -161,7 +319,7 @@ ayam-geprek-sambel-ijo-al-fariz/
 ├── package.json                # Dependensi dan skrip proyek
 ├── PRD.md                      # Product Requirement Document lengkap
 ├── server.cjs                  # Bundle server Node.js hasil kompilasi
-└── vite.config.ts              # Konfigurasi Vite & dev server
+├── vite.config.ts              # Konfigurasi Vite & dev server
 ```
 
 ---
@@ -176,7 +334,7 @@ ayam-geprek-sambel-ijo-al-fariz/
 
 ### Variabel Lingkungan (`.env.local` / `.env`)
 
-Salin berkas [.env.example](file:///d:/project%20website/ayam-geprek-sambel-ijo-al-fariz/.env.example) menjadi `.env.local`:
+Salin berkas [.env.example](.env.example) menjadi `.env.local`:
 
 ```bash
 cp .env.example .env.local
@@ -265,7 +423,7 @@ Proyek ini telah dikonfigurasi untuk berjalan di shared hosting atau VPS yang me
 5. Masukkan seluruh *Environment Variables* di cPanel (`MYSQL_HOST`, `MYSQL_USER`, `MYSQL_PASSWORD`, `MYSQL_DATABASE`, `OWNER_PASSWORD`, `SESSION_SECRET`, `GEMINI_API_KEY`).
 6. Jalankan **Run NPM Install** lalu klik **Restart**.
 
-Panduan langkah demi langkah yang detail tersedia di [DEPLOY-DOMAINESIA.md](file:///d:/project%20website/ayam-geprek-sambel-ijo-al-fariz/DEPLOY-DOMAINESIA.md).
+Panduan langkah demi langkah yang detail tersedia di [DEPLOY-DOMAINESIA.md](DEPLOY-DOMAINESIA.md).
 
 ---
 
