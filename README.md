@@ -3,7 +3,7 @@
 ![Preview Landing Page Ayam Penyet Sambel Ijo Al-Fariz](./laptop_beranda.png)
 <p align="center">
   <a href="[https://ayamsambelijopamulang.my.id](https://ayamsambelijopamulang.my.id)">
-    <img src="[https://img.shields.io/badge/Live-Demo-34D058?style=for-the-badge&logo=github](https://img.shields.io/badge/Live%20Demo-%F0%9F%9A%80%20ayamsambelijopamulang.my.id-brightgreen?style=for-the-badge)" alt="website" />
+    <img src="https://img.shields.io/badge/Live%20Demo-%F0%9F%9A%80%20ayamsambelijopamulang.my.id-brightgreen?style=for-the-badge)" alt="website" />
   </a>
   <a href="https://github.com/oddycosplay/ayamgeprekpamulang/tree/main">
     <img src="https://img.shields.io/badge/GitHub-Repository-181717?style=for-the-badge&logo=github" alt="GitHub Repository" />
