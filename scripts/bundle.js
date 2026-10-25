@@ -71,3 +71,11 @@ const stats = fs.statSync(outputPath);
 console.log(`\n🎉 bundle.html successfully created!`);
 console.log(`📄 Path: ${outputPath}`);
 console.log(`📦 Size: ${(stats.size / 1024).toFixed(1)} KB`);
+
+// Mirror compiled assets to root assets/ so git deploy automatically deploys runtime chunks to cPanel docroot
+const rootAssetsDir = path.join(projectRoot, 'assets');
+if (!fs.existsSync(rootAssetsDir)) {
+  fs.mkdirSync(rootAssetsDir, { recursive: true });
+}
+fs.cpSync(path.join(distDir, 'assets'), rootAssetsDir, { recursive: true });
+console.log(`📦 Mirrored compiled assets to ${rootAssetsDir}`);
