@@ -17,7 +17,7 @@ export const HeroSection: React.FC = () => {
         <div className="flex flex-wrap items-center gap-2.5 sm:gap-4 mb-6 text-xs sm:text-sm text-amber-100 font-medium">
           <div className="flex items-center gap-2 bg-black/30 backdrop-blur-sm px-3.5 py-1.5 rounded-full border border-white/10">
             <Clock className="w-3.5 h-3.5 text-[#F5C518]" />
-            <span>Buka Setiap Hari <strong>15.00 - 22.00 WIB</strong></span>
+            <span>Buka Setiap Hari <strong>10.00 - 22.00 WIB</strong></span>
           </div>
           <a
             href="#lokasi"

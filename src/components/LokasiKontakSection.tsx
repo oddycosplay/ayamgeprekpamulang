@@ -20,12 +20,12 @@ export const LokasiKontakSection: React.FC<LokasiKontakSectionProps> = () => {
                 Kunjungi Gerobak Kami
               </span>
               <h2 className="text-3xl sm:text-4xl font-extrabold font-serif">
-                Lokasi Strategis Depan UNPAM Pamulang
+                Lokasi Resmi di Google Bisnis & Google Maps
               </h2>
             </div>
 
             <p className="text-amber-100/90 text-sm sm:text-base leading-relaxed">
-              Temukan gerobak ikonik kami tepat di seberang gerbang utama kampus Universitas Pamulang. Sangat mudah dijangkau bagi pejalan kaki, pengguna transportasi online, maupun yang membawa kendaraan pribadi.
+              Temukan titik resmi gerobak kami yang terdaftar di Google Bisnis. Sangat mudah dijangkau bagi pejalan kaki, pengguna transportasi online, maupun yang membawa kendaraan pribadi.
             </p>
 
             <div className="space-y-4 pt-2">
@@ -35,9 +35,9 @@ export const LokasiKontakSection: React.FC<LokasiKontakSectionProps> = () => {
                   <MapPin className="w-5 h-5" />
                 </div>
                 <div>
-                  <h3 className="font-bold text-white text-base">Alamat Gerobak:</h3>
+                  <h3 className="font-bold text-white text-base">Alamat Resmi Google Bisnis:</h3>
                   <p className="text-amber-100/80 text-sm">
-                    Jl. Surya Kencana No. 27, Pamulang Barat (Depan Gerbang Kampus UNPAM, samping Mie Ayam & dekat minimarket Lawson), Tangerang Selatan, Banten.
+                    Jl. Pamulang Raya Jl. Pajajaran No.7, Pamulang Bar., Kec. Pamulang, Kota Tangerang Selatan, Pamulang Bar., Kec. Pamulang, Tanggerang Selatan, Banten 15417
                   </p>
                 </div>
               </div>
@@ -50,7 +50,7 @@ export const LokasiKontakSection: React.FC<LokasiKontakSectionProps> = () => {
                 <div>
                   <h3 className="font-bold text-white text-base">Jam Operasional:</h3>
                   <p className="text-amber-100/80 text-sm">
-                    Senin – Minggu: 15.00 – 22.00 WIB (Buka Setiap Hari)
+                    Senin – Minggu: 10.00 – 22.00 WIB (Buka Setiap Hari)
                   </p>
                 </div>
               </div>
@@ -73,7 +73,7 @@ export const LokasiKontakSection: React.FC<LokasiKontakSectionProps> = () => {
             <div className="pt-4 flex flex-wrap gap-3 sm:gap-4">
               <a
                 className="inline-flex items-center gap-2 bg-[#F5C518] hover:bg-[#e0b312] text-[#5e0d10] font-bold px-6 py-3 rounded-full text-sm shadow transition transform hover:-translate-y-0.5"
-                href="https://maps.google.com/?q=Universitas+Pamulang+Jl.+Surya+Kencana+No.27+Pamulang+Barat"
+                href="https://maps.google.com/?q=Jl.+Pamulang+Raya+Jl.+Pajajaran+No.7,+Pamulang+Bar.,+Kec.+Pamulang,+Kota+Tangerang+Selatan,+Pamulang+Bar.,+Kec.+Pamulang,+Tanggerang+Selatan,+Banten+15417"
                 rel="noopener noreferrer"
                 target="_blank"
               >
@@ -98,22 +98,22 @@ export const LokasiKontakSection: React.FC<LokasiKontakSectionProps> = () => {
               <div className="aspect-video w-full rounded-2xl overflow-hidden bg-neutral-800 relative flex items-center justify-center border border-white/10">
                 <iframe
                   className="w-full h-full border-0 absolute inset-0 z-0"
-                  src="https://maps.google.com/maps?q=Universitas%20Pamulang%20Jl.%20Surya%20Kencana%20No.27%20Pamulang%20Barat&t=&z=16&ie=UTF8&iwloc=&output=embed"
+                  src="https://maps.google.com/maps?q=Jl.%20Pamulang%20Raya%20Jl.%20Pajajaran%20No.7,%20Pamulang%20Bar.,%20Kec.%20Pamulang,%20Kota%20Tangerang%20Selatan,%20Pamulang%20Bar.,%20Kec.%20Pamulang,%20Tanggerang%20Selatan,%20Banten%2015417&t=&z=16&ie=UTF8&iwloc=&output=embed"
                   allowFullScreen={false}
                   loading="lazy"
                   referrerPolicy="no-referrer-when-downgrade"
-                  title="Lokasi Google Maps Ayam Penyet Al-Fariz UNPAM"
+                  title="Lokasi Google Maps Ayam Penyet Al-Fariz Pamulang"
                 />
                 <div className="absolute inset-0 pointer-events-none bg-gradient-to-t from-black/80 via-transparent to-transparent z-10 flex flex-col justify-end p-5 sm:p-6">
                   <div className="pointer-events-auto bg-[#F5C518] text-[#5e0d10] text-xs font-black px-3 py-1 rounded-full w-max mb-2 shadow-md flex items-center gap-1.5">
                     <MapPin className="w-3.5 h-3.5 fill-current" />
-                    <span>📍 DEPAN KAMPUS UNPAM</span>
+                    <span>📍 LOKASI GEROBAK AL-FARIZ</span>
                   </div>
                   <p className="text-white font-bold text-base sm:text-lg drop-shadow-sm">
                     Ayam Penyet Sambel Ijo Al-Fariz
                   </p>
                   <p className="text-gray-200 text-xs mt-1 drop-shadow-sm">
-                    Samping Mie Ayam & Dekat Lawson Jl. Surya Kencana Pamulang
+                    Jl. Pamulang Raya Jl. Pajajaran No.7, Pamulang Bar., Kec. Pamulang, Kota Tangerang Selatan, Pamulang Bar., Kec. Pamulang, Tanggerang Selatan, Banten 15417
                   </p>
                 </div>
               </div>

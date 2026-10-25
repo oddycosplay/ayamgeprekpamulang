@@ -7,7 +7,7 @@ Ayam Penyet Sambel Ijo Al-Fariz menyajikan ayam goreng krispi renyah dengan balu
 ## Layanan & Halaman Utama
 
 - [Menu & Pemesanan Online](https://ayamsambelijopamulang.my.id/#order): Daftar harga porsi Ayam Penyet Sambel Ijo (Paket Nasi Rp 17.000, Ala Carte Rp 15.000) dan order WhatsApp langsung.
-- [Lokasi Gerobak Depan UNPAM](https://ayamsambelijopamulang.my.id/#lokasi): Panduan alamat gerobak di Jl. Surya Kencana No. 27 Pamulang Barat dan navigasi Google Maps.
+- [Lokasi Gerobak](https://ayamsambelijopamulang.my.id/#lokasi): Panduan alamat gerobak di Jl. Pamulang Raya Jl. Pajajaran No.7, Pamulang Bar., Kec. Pamulang, Kota Tangerang Selatan, Pamulang Bar., Kec. Pamulang, Tanggerang Selatan, Banten 15417 dan navigasi Google Maps.
 - [Rahasia Rasa & Kisah Mas Al-Fariz](https://ayamsambelijopamulang.my.id/#rahasia): Cerita otentik di balik racikan ulegan sambel ijo dadakan dan ayam krispi gurih meresap.
 - [Ulasan & Testimoni Pelanggan](https://ayamsambelijopamulang.my.id/#testimoni): Ulasan terverifikasi bintang 5 dari mahasiswa UNPAM dan warga seputar Pamulang.
 
@@ -15,4 +15,4 @@ Ayam Penyet Sambel Ijo Al-Fariz menyajikan ayam goreng krispi renyah dengan balu
 
 - [Website Resmi](https://ayamsambelijopamulang.my.id/): Beranda portal resmi Ayam Penyet Sambel Ijo Al-Fariz.
 - [WhatsApp Pemesanan](https://wa.me/628973816530): Jalur cepat pemesanan pesanan via WhatsApp Mas Al-Fariz (+62 897-3816-530).
-- [Navigasi Google Maps](https://maps.google.com/?q=Universitas+Pamulang+Jl.+Surya+Kencana+No.27+Pamulang+Barat): Panduan rute Google Maps langsung ke gerobak depan kampus UNPAM.
+- [Navigasi Google Maps](https://maps.google.com/?q=Jl.+Pamulang+Raya+Jl.+Pajajaran+No.7,+Pamulang+Bar.,+Kec.+Pamulang,+Kota+Tangerang+Selatan,+Pamulang+Bar.,+Kec.+Pamulang,+Tanggerang+Selatan,+Banten+15417): Panduan rute Google Maps langsung ke gerobak Al-Fariz Pamulang Barat.

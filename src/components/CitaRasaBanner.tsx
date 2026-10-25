@@ -137,13 +137,13 @@ export const CitaRasaBanner: React.FC = () => {
                 <div className="w-5 h-5 sm:w-6 sm:h-6 rounded-full bg-[#781519] text-white flex items-center justify-center flex-shrink-0 text-xs shadow-sm">
                   <MapPin className="w-3 sm:w-3.5 h-3 sm:h-3.5" />
                 </div>
-                <span className="text-xs sm:text-sm">Jl. Surya Kencana No. 27, Pamulang Barat (Depan Kampus Utama UNPAM)</span>
+                <span className="text-xs sm:text-sm">Jl. Pamulang Raya Jl. Pajajaran No.7, Pamulang Bar., Kec. Pamulang, Kota Tangerang Selatan, Pamulang Bar., Kec. Pamulang, Tanggerang Selatan, Banten 15417</span>
               </div>
               <div className="flex items-center justify-center md:justify-start gap-2">
                 <div className="w-5 h-5 sm:w-6 sm:h-6 rounded-full bg-[#781519] text-white flex items-center justify-center flex-shrink-0 text-xs shadow-sm">
                   <Clock className="w-3 sm:w-3.5 h-3 sm:h-3.5" />
                 </div>
-                <span className="text-xs sm:text-sm">Senin - Minggu jam 15.00 - 22.00 WIB</span>
+                <span className="text-xs sm:text-sm">Senin - Minggu jam 10.00 - 22.00 WIB</span>
               </div>
             </div>
           </div>

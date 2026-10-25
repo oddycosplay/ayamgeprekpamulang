@@ -12,7 +12,7 @@
 | **Versi Dokumen** | 1.0.0 (Enterprise Production-Ready) |
 | **Status Dokumen** | Disetujui berdasarkan Analisis Kode Sumber & Spesifikasi Desain |
 | **Entitas Usaha** | UMKM Kuliner Ayam Penyet Sambel Ijo Al-Fariz |
-| **Lokasi Operasional** | Jl. Surya Kencana No. 27, Pamulang Barat (Depan Kampus Utama UNPAM), Tangerang Selatan |
+| **Lokasi Operasional** | Jl. Pamulang Raya Jl. Pajajaran No.7, Pamulang Bar., Kec. Pamulang, Kota Tangerang Selatan, Pamulang Bar., Kec. Pamulang, Tanggerang Selatan, Banten 15417 |
 | **Kontak Resmi** | WhatsApp: +62 897-3816-530 |
 | **Dokumen Acuan** | `DESIGN (1).md`, `metadata.json`, `package.json`, `src/App.tsx` |
 
@@ -26,7 +26,7 @@ Ayam Penyet Sambel Ijo Al-Fariz merupakan aplikasi web modern berorientasi *crav
 
 ### 1.2 Tujuan Bisnis (Business Objectives)
 
-1. **Digitalisasi Pemesanan Warung Gerobak:** Mengurangi antrean fisik di jam sibuk perkuliahan (15.00 – 22.00 WIB) melalui mekanisme peracikan pesanan mandiri (*self-service custom order*).
+1. **Digitalisasi Pemesanan Warung Gerobak:** Mengurangi antrean fisik di jam sibuk perkuliahan (10.00 – 22.00 WIB) melalui mekanisme peracikan pesanan mandiri (*self-service custom order*).
 2. **Standardisasi Format Pesanan WhatsApp:** Menghilangkan ambiguitas pesanan teks biasa dengan format terstruktur otomatis (menu, level pedas, cara penyajian sambal, add-ons, catatan, subtotal, PPN 11%, dan ID transaksi).
 3. **Pemberdayaan Pelanggan Berbasis AI:** Menyediakan asisten kuliner cerdas berbasis Google Gemini untuk konsultasi nutrisi/anggaran, navigasi rute kampus dengan Google Maps Grounding, serta visualisasi foto makanan beresolusi tinggi.
 
@@ -282,7 +282,7 @@ Mohon konfirmasi dan segera diproses ya! Terima kasih 🙏
      - Didukung opsi *Deep Thinking* untuk analisis kecukupan kalori dan estimasi toleransi capsaicin (SHU).
      - Fallback offline: Menyajikan rekomendasi paket hemat Rp 20.000 jika API key tidak tersedia.
   2. **Maps Grounding:**
-     - Memberikan panduan navigasi menuju titik Jl. Surya Kencana No. 27 Pamulang Barat dengan koordinat lintang `-6.3456`, bujur `106.7412`.
+     - Memberikan panduan navigasi menuju titik Jl. Pamulang Raya Jl. Pajajaran No.7, Pamulang Bar., Kec. Pamulang, Kota Tangerang Selatan dengan koordinat lintang `-6.3456`, bujur `106.7412`.
      - Menghasilkan tautan Google Maps tervalidasi.
   3. **Search Grounding:**
      - Menyajikan informasi tren kuliner seputar kampus UNPAM bersumber dari pencarian Google terkini.
@@ -304,7 +304,7 @@ Mohon konfirmasi dan segera diproses ya! Terima kasih 🙏
 - **Fitur:**
   - Embed iframe Google Maps titik Universitas Pamulang.
   - Petunjuk patokan fisik: Depan gerbang utama UNPAM, samping Mie Ayam, dekat minimarket Lawson.
-  - Jam buka terverifikasi: 15.00 – 22.00 WIB setiap hari.
+  - Jam buka terverifikasi: 10.00 – 22.00 WIB setiap hari.
   - Tautan langsung pembuka aplikasi Google Maps eksternal.
 
 ---

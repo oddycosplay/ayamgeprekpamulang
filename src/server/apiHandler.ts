@@ -59,21 +59,17 @@ export async function handleApiRequest(req: IncomingMessage, res: ServerResponse
     // 1. Google Maps Grounding
     if (url.startsWith('/api/gemini/grounding-maps') && req.method === 'POST') {
       const body = await parseJsonBody(req);
-      const query = body.query || 'Ayam Penyet Sambel Ijo Al-Fariz depan Kampus Utama UNPAM Jl Surya Kencana Pamulang Barat';
+      const query = body.query || 'Ayam Penyet Sambel Ijo Al-Fariz Jl Pamulang Raya Jl Pajajaran No.7 Pamulang Barat';
       const ai = getAiClient();
 
       if (!ai) {
         return sendJson(res, 200, {
           success: true,
-          text: `Ayam Penyet Sambel Ijo Al-Fariz berlokasi sangat strategis di Jl. Surya Kencana No. 27, Pamulang Barat, persis di seberang gerbang utama Kampus UNPAM (Universitas Pamulang), tepat di samping warung Mie Ayam dan beberapa langkah dari Lawson minimarket. Mudah diakses dari Bundaran Pamulang maupun halte busway/angkot D07.`,
+          text: `Ayam Penyet Sambel Ijo Al-Fariz berlokasi sangat strategis di Jl. Pamulang Raya Jl. Pajajaran No.7, Pamulang Bar., Kec. Pamulang, Kota Tangerang Selatan, Pamulang Bar., Kec. Pamulang, Tanggerang Selatan, Banten 15417. Mudah diakses dari Bundaran Pamulang maupun pusat keramaian Pamulang.`,
           mapsLinks: [
             {
-              title: "Gerbang Utama Universitas Pamulang (UNPAM)",
-              uri: "https://maps.google.com/?q=Universitas+Pamulang+Jl.+Surya+Kencana+No.27+Pamulang+Barat"
-            },
-            {
-              title: "Jl. Surya Kencana No. 27 Pamulang Barat",
-              uri: "https://maps.google.com/?q=Jl.+Surya+Kencana+No.+27+Pamulang+Barat"
+              title: "Jl. Pamulang Raya Jl. Pajajaran No.7, Pamulang Bar., Kec. Pamulang, Kota Tangerang Selatan, Pamulang Bar., Kec. Pamulang, Tanggerang Selatan, Banten 15417",
+              uri: "https://maps.google.com/?q=Jl.+Pamulang+Raya+Jl.+Pajajaran+No.7,+Pamulang+Bar.,+Kec.+Pamulang,+Kota+Tangerang+Selatan,+Pamulang+Bar.,+Kec.+Pamulang,+Tanggerang+Selatan,+Banten+15417"
             }
           ],
           source: "local-fallback"
@@ -83,7 +79,7 @@ export async function handleApiRequest(req: IncomingMessage, res: ServerResponse
       try {
         const response = await ai.models.generateContent({
           model: 'gemini-3.8-flash',
-          contents: `Jawab dalam bahasa Indonesia dengan jelas dan informatif: ${query}. Berikan panduan navigasi ke gerobak Ayam Penyet Sambel Ijo Al-Fariz di depan Kampus UNPAM Pamulang Barat (Jl. Surya Kencana No. 27), patokan sekitar (sebelah mie ayam & dekat Lawson), dan akses transportasi umum.`,
+          contents: `Jawab dalam bahasa Indonesia dengan jelas dan informatif: ${query}. Berikan panduan navigasi ke gerobak Ayam Penyet Sambel Ijo Al-Fariz di Jl. Pamulang Raya Jl. Pajajaran No.7, Pamulang Bar., Kec. Pamulang, Kota Tangerang Selatan, Pamulang Bar., Kec. Pamulang, Tanggerang Selatan, Banten 15417, patokan sekitar, dan akses transportasi umum.`,
           config: {
             tools: [{ googleMaps: {} }],
             toolConfig: {
@@ -112,8 +108,8 @@ export async function handleApiRequest(req: IncomingMessage, res: ServerResponse
 
         if (mapsLinks.length === 0) {
           mapsLinks.push({
-            title: "Titik Lokasi: Seberang Kampus Utama UNPAM Pamulang",
-            uri: "https://maps.google.com/?q=Universitas+Pamulang+Jl.+Surya+Kencana+No.27+Pamulang+Barat"
+            title: "Titik Lokasi: Jl. Pamulang Raya Jl. Pajajaran No.7, Pamulang Barat",
+            uri: "https://maps.google.com/?q=Jl.+Pamulang+Raya+Jl.+Pajajaran+No.7,+Pamulang+Bar.,+Kec.+Pamulang,+Kota+Tangerang+Selatan,+Pamulang+Bar.,+Kec.+Pamulang,+Tanggerang+Selatan,+Banten+15417"
           });
         }
 
@@ -127,11 +123,11 @@ export async function handleApiRequest(req: IncomingMessage, res: ServerResponse
         console.warn('Maps grounding error, falling back to standard response:', err.message);
         return sendJson(res, 200, {
           success: true,
-          text: `Gerobak Ayam Penyet Sambel Ijo Al-Fariz berada tepat di seberang gerbang utama Kampus UNPAM (Universitas Pamulang), Jl. Surya Kencana No. 27 Pamulang Barat, samping Mie Ayam & dekat Lawson. Akses jalan sangat hidup dan ramai mahasiswa siang hingga malam hari (buka 15.00 - 22.00 WIB).`,
+          text: `Gerobak Ayam Penyet Sambel Ijo Al-Fariz berada di Jl. Pamulang Raya Jl. Pajajaran No.7, Pamulang Bar., Kec. Pamulang, Kota Tangerang Selatan, Pamulang Bar., Kec. Pamulang, Tanggerang Selatan, Banten 15417. Akses jalan sangat hidup dan ramai pengunjung siang hingga malam hari (buka 10.00 - 22.00 WIB).`,
           mapsLinks: [
             {
-              title: "Titik Lokasi: Depan Kampus Utama UNPAM",
-              uri: "https://maps.google.com/?q=Universitas+Pamulang+Jl.+Surya+Kencana+No.27+Pamulang+Barat"
+              title: "Titik Lokasi: Jl. Pamulang Raya Jl. Pajajaran No.7, Pamulang Barat",
+              uri: "https://maps.google.com/?q=Jl.+Pamulang+Raya+Jl.+Pajajaran+No.7,+Pamulang+Bar.,+Kec.+Pamulang,+Kota+Tangerang+Selatan,+Pamulang+Bar.,+Kec.+Pamulang,+Tanggerang+Selatan,+Banten+15417"
             }
           ],
           source: "fallback"

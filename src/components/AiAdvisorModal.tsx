@@ -69,11 +69,11 @@ export const AiAdvisorModal: React.FC<AiAdvisorModalProps> = ({
       });
     } catch (err) {
       setMapsResponse({
-        text: 'Ayam Penyet Al-Fariz berada di seberang gerbang utama UNPAM Pamulang Barat, samping warung Mie Ayam.',
+        text: 'Ayam Penyet Al-Fariz terdaftar resmi di Google Bisnis: Jl. Pamulang Raya Jl. Pajajaran No.7, Pamulang Bar., Kec. Pamulang, Kota Tangerang Selatan, Pamulang Bar., Kec. Pamulang, Tanggerang Selatan, Banten 15417.',
         mapsLinks: [
           {
-            title: 'Google Maps: Kampus Utama UNPAM Pamulang',
-            uri: 'https://maps.google.com/?q=Universitas+Pamulang+Jl.+Surya+Kencana+No.27+Pamulang+Barat'
+            title: 'Google Maps: Jl. Pamulang Raya Jl. Pajajaran No.7, Pamulang Barat',
+            uri: 'https://maps.google.com/?q=Jl.+Pamulang+Raya+Jl.+Pajajaran+No.7,+Pamulang+Bar.,+Kec.+Pamulang,+Kota+Tangerang+Selatan,+Pamulang+Bar.,+Kec.+Pamulang,+Tanggerang+Selatan,+Banten+15417'
           }
         ]
       });
@@ -233,13 +233,13 @@ export const AiAdvisorModal: React.FC<AiAdvisorModalProps> = ({
                 <>
                   <button
                     onClick={() => {
-                      const q = 'Patokan jalan persis menuju gerobak Al-Fariz dari gerbang utama UNPAM Surya Kencana';
+                      const q = 'Patokan jalan persis menuju gerobak Al-Fariz di Jl. Pamulang Raya Jl. Pajajaran No.7 Pamulang Barat';
                       setPrompt(q);
                       handleMapsGroundingSubmit(q);
                     }}
                     className="text-xs bg-gray-50 hover:bg-amber-50 text-gray-700 px-3 py-1.5 rounded-full border border-gray-200 font-medium transition"
                   >
-                    📍 Patokan Gerbang Utama UNPAM
+                    📍 Patokan Jl. Pajajaran No.7 Pamulang
                   </button>
                   <button
                     onClick={() => {

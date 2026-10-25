@@ -56,11 +56,15 @@ export const Footer: React.FC = () => {
             <div className="text-xs space-y-2">
               <p>
                 <strong className="text-[#F5C518]">Senin - Minggu:</strong><br />
-                15:00 - 22:00 WIB
+                10:00 - 22:00 WIB
               </p>
               <p className="pt-2">
                 <strong className="text-[#F5C518]">WhatsApp Pemesanan:</strong><br />
                 0897-3816-530
+              </p>
+              <p className="pt-2 text-amber-200/90 leading-relaxed">
+                <strong className="text-[#F5C518]">Alamat Google Bisnis:</strong><br />
+                Jl. Pamulang Raya Jl. Pajajaran No.7, Pamulang Bar., Kec. Pamulang, Kota Tangerang Selatan, Pamulang Bar., Kec. Pamulang, Tanggerang Selatan, Banten 15417
               </p>
             </div>
           </div>
