@@ -10,7 +10,7 @@ export const HeroSection: React.FC = () => {
 
       {/* Ambient light effects */}
       <div className="absolute -top-32 -left-32 w-96 h-96 bg-[#5e0d10] rounded-full blur-3xl opacity-60 pointer-events-none"></div>
-      <div className="absolute -bottom-32 -right-32 w-96 h-96 bg-[#F5C518]/15 rounded-full blur-3xl opacity-50 pointer-events-none"></div>
+      <div className="absolute -bottom-32 -right-32 w-96 h-96 bg-[#F5C518]/20 rounded-full blur-3xl opacity-50 pointer-events-none"></div>
 
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
         {/* Top Badges */}
@@ -40,7 +40,7 @@ export const HeroSection: React.FC = () => {
               <div className="relative w-full h-full rounded-full p-2.5 xs:p-3 sm:p-4 bg-gradient-to-tr from-[#3a080a] via-[#5e0d10] to-[#781519] border-4 border-amber-300/30 shadow-2xl flex items-center justify-center overflow-hidden">
                 <img
                   src={heroImg}
-                  alt="Ayam Geprek Sambel Ijo Al-Fariz Cobek Batu"
+                  alt="Ayam Penyet Sambel Ijo Al-Fariz Cobek Batu"
                   width={440}
                   height={440}
                   loading="eager"
@@ -51,7 +51,7 @@ export const HeroSection: React.FC = () => {
 
               {/* Floating Rating Pill Badge */}
               <div className="absolute bottom-2 left-0 xs:bottom-4 xs:left-2 sm:bottom-8 sm:left-2 bg-[#F5C518] text-[#5e0d10] font-black px-3.5 xs:px-4 py-1.5 xs:py-2 rounded-full shadow-xl flex items-center gap-2 border-2 border-white animate-float z-20">
-                <span className="text-[11px] xs:text-xs sm:text-sm">Paket Geprek + Nasi</span>
+                <span className="text-[11px] xs:text-xs sm:text-sm">Paket Penyet + Nasi</span>
                 <span className="inline-flex items-center text-[10px] xs:text-xs bg-[#781519] text-[#F5C518] px-2 py-0.5 rounded-full font-black">
                   Rp 17.000
                 </span>
@@ -91,7 +91,7 @@ export const HeroSection: React.FC = () => {
                 <ArrowDown className="w-4 h-4 animate-bounce" />
               </a>
               <a
-                href="https://wa.me/628973816530?text=Halo%20Mas%20Al-Fariz,%20saya%20mau%20pesan%20Ayam%20Geprek%20Sambel%20Ijo"
+                href="https://wa.me/628973816530?text=Halo%20Mas%20Al-Fariz,%20saya%20mau%20pesan%20Ayam%20Penyet%20Sambel%20Ijo"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="bg-emerald-600 hover:bg-emerald-500 text-white font-bold px-5 sm:px-6 py-3.5 rounded-full text-sm sm:text-base shadow-md transition-all text-center flex items-center justify-center gap-2"

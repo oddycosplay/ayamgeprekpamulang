@@ -14,7 +14,7 @@ export const Footer: React.FC = () => {
               <span className="text-2xl font-serif font-black text-white">Al-Fariz</span>
             </div>
             <p className="text-xs leading-relaxed text-amber-200/70">
-              Ayam Geprek Sambel Ijo Al-Fariz adalah kuliner gerobak otentik sambel ijo uleg dadakan dengan racikan khas Nusantara di depan kampus UNPAM Pamulang Barat.
+              Ayam Penyet Sambel Ijo Al-Fariz adalah kuliner gerobak otentik sambel ijo uleg dadakan dengan racikan khas Nusantara di depan kampus UNPAM Pamulang Barat.
             </p>
           </div>
 
@@ -37,13 +37,13 @@ export const Footer: React.FC = () => {
             <ul className="space-y-2 text-xs">
               <li className="flex items-center justify-between py-0.5 border-b border-white/5">
                 <span className="text-amber-100/90 hover:text-[#F5C518] transition-colors cursor-default">
-                  Paket Geprek + Nasi
+                  Paket Penyet + Nasi
                 </span>
                 <span className="font-bold text-[#F5C518] text-[11px]">Rp 17.000</span>
               </li>
               <li className="flex items-center justify-between py-0.5 border-b border-white/5">
                 <span className="text-amber-100/90 hover:text-[#F5C518] transition-colors cursor-default">
-                  Ayam Geprek Saja
+                  Ayam Penyet Saja
                 </span>
                 <span className="font-bold text-[#F5C518] text-[11px]">Rp 15.000</span>
               </li>
@@ -69,7 +69,7 @@ export const Footer: React.FC = () => {
         {/* Copyright Bottom */}
         <div className="pt-8 flex flex-col sm:flex-row items-center justify-between text-xs text-amber-200/60 gap-4">
           <p>
-            created design by @oddycosplay © 2027 Ayam Geprek Sambel Ijo Al-Fariz UNPAM. Seluruh hak cipta dilindungi undang-undang.
+            created design by @oddycosplay © 2027 Ayam Penyet Sambel Ijo Al-Fariz UNPAM. Seluruh hak cipta dilindungi undang-undang.
           </p>
           <p className="flex items-center gap-2">
             <span>Dibuat dengan rasa otentik untuk pecinta pedas Pamulang</span>

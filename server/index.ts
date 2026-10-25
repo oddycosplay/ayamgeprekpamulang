@@ -57,5 +57,5 @@ app.use((_req, res) => {
 
 const port = Number(process.env.PORT) || 3000;
 app.listen(port, () => {
-  console.log(`Ayam Geprek Al-Fariz jalan di port ${port} (CRM: /crm)`);
+  console.log(`Ayam Penyet Al-Fariz jalan di port ${port} (CRM: /crm)`);
 });

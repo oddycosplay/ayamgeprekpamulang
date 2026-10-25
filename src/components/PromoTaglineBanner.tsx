@@ -50,7 +50,7 @@ export const PromoTaglineBanner: React.FC = () => {
               Yuk Beli!
             </div>
             <h2 className="text-3xl xs:text-4xl md:text-5xl font-extrabold text-gray-900 tracking-tight leading-tight font-serif">
-              Siang-Malam Enaknya <span className="text-[#781519] block sm:inline">Geprek Al-Fariz!</span>
+              Siang-Malam Enaknya <span className="text-[#781519] block sm:inline">Penyet Al-Fariz!</span>
             </h2>
             <p className="text-xs xs:text-sm md:text-base text-gray-600 leading-relaxed max-w-lg mx-auto lg:mx-0">
               Order sekarang di GoFood & ShopeeFood atau mampir langsung ke gerobak depan UNPAM — cepat, pedas nampol, nikmat!
@@ -58,7 +58,7 @@ export const PromoTaglineBanner: React.FC = () => {
             <div className="pt-2 flex flex-wrap items-center justify-center lg:justify-start gap-4">
               <a
                 className="inline-flex items-center gap-2.5 bg-white border border-gray-300 hover:border-[#781519] text-gray-800 hover:text-[#781519] font-bold px-6 py-3 rounded-full text-xs sm:text-sm shadow-sm hover:shadow transition-all duration-300 transform hover:-translate-y-0.5"
-                href="https://wa.me/628973816530?text=Halo%20Ayam%20Geprek%20Al-Fariz,%20saya%20mau%20pesan"
+                href="https://wa.me/628973816530?text=Halo%20Ayam%20Penyet%20Al-Fariz,%20saya%20mau%20pesan"
                 rel="noopener noreferrer"
                 target="_blank"
               >
@@ -113,7 +113,9 @@ export const PromoTaglineBanner: React.FC = () => {
                 }}
               >
                 <img
-                  alt="Sajian Spesial Ayam Geprek Sambel Ijo Al-Fariz Cabai Rawit Dadakan"
+                  alt="Sajian Spesial Ayam Penyet Sambel Ijo Al-Fariz Cabai Rawit Dadakan"
+                  width={380}
+                  height={380}
                   loading="lazy"
                   decoding="async"
                   className="w-full h-full object-cover rounded-full shadow-inner transform hover:scale-105 transition-transform duration-500 ease-out"
@@ -138,7 +140,7 @@ export const PromoTaglineBanner: React.FC = () => {
                   transform: `translate3d(0, ${offset * -0.45}px, 0)`,
                 }}
               >
-                <span className="text-[10px] xs:text-[11px] sm:text-xs">Paket Geprek Ijo</span>
+                <span className="text-[10px] xs:text-[11px] sm:text-xs">Paket Penyet Ijo</span>
                 <span className="bg-[#781519] text-[#F5C518] px-1 xs:px-1.5 py-0.5 rounded-full text-[9px] xs:text-[10px] sm:text-xs font-black">★ 5.0</span>
               </div>
             </div>

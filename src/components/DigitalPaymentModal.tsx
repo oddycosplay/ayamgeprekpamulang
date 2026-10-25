@@ -177,7 +177,7 @@ export const DigitalPaymentModal: React.FC<DigitalPaymentModalProps> = ({
             {paymentCompleted ? 'Bukti Struk Digital Lunas' : 'Metode Pembayaran Digital'}
           </h3>
           <p className="text-xs text-amber-100/90 mt-0.5">
-            Merchant: <strong>Ayam Geprek Al-Fariz (Depan UNPAM Pamulang)</strong>
+            Merchant: <strong>Ayam Penyet Al-Fariz (Depan UNPAM Pamulang)</strong>
           </p>
         </div>
 
@@ -388,7 +388,7 @@ export const DigitalPaymentModal: React.FC<DigitalPaymentModalProps> = ({
 
                     <div className="pt-3 pb-1">
                       <p className="font-bold text-xs text-gray-900 uppercase tracking-wide">
-                        AYAM GEPREK AL-FARIZ UNPAM
+                        AYAM PENYET AL-FARIZ UNPAM
                       </p>
                       <p className="text-[10px] font-mono text-gray-400">NMID: ID1020249816530</p>
                     </div>
@@ -590,7 +590,7 @@ export const DigitalPaymentModal: React.FC<DigitalPaymentModalProps> = ({
                           0897-3816-530
                         </span>
                         <span className="text-[11px] text-gray-500 block">
-                          a.n. Ayam Geprek Al-Fariz Pamulang
+                          a.n. Ayam Penyet Al-Fariz Pamulang
                         </span>
                       </div>
                       <button
@@ -697,7 +697,7 @@ export const DigitalPaymentModal: React.FC<DigitalPaymentModalProps> = ({
                             : '90123 8973816530'}
                         </span>
                         <span className="text-[11px] text-gray-500 block">
-                          a.n. Ayam Geprek Al-Fariz VA
+                          a.n. Ayam Penyet Al-Fariz VA
                         </span>
                       </div>
                       <button

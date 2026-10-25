@@ -14,7 +14,7 @@ export const TentangKamiSection: React.FC = () => {
                 Tentang Kami
               </span>
               <h2 className="text-3xl sm:text-4xl md:text-5xl font-extrabold text-[#1F1F1F] font-serif leading-tight">
-                Ayam Geprek Sambel Ijo<br className="hidden sm:inline" /> Al-Fariz
+                Ayam Penyet Sambel Ijo<br className="hidden sm:inline" /> Al-Fariz
               </h2>
             </div>
 
@@ -72,6 +72,8 @@ export const TentangKamiSection: React.FC = () => {
                 <img
                   src={tentangImg}
                   alt="Mas Al-Fariz - Founder & Peracik Sambel Ijo Al-Fariz Depan UNPAM"
+                  width={320}
+                  height={320}
                   loading="lazy"
                   decoding="async"
                   className="w-full h-full object-cover object-top scale-105 group-hover:scale-110 transition-transform duration-500"
@@ -92,7 +94,7 @@ export const TentangKamiSection: React.FC = () => {
               {/* Floating Seal Badge */}
               <div className="absolute -bottom-2 right-0 xs:right-2 sm:bottom-2 sm:right-0 z-20 w-20 h-20 xs:w-24 xs:h-24 sm:w-28 sm:h-28 rounded-full bg-white p-1.5 shadow-2xl border-2 border-[#781519] flex items-center justify-center transform rotate-6 hover:rotate-12 transition-transform">
                 <div className="w-full h-full rounded-full bg-[#781519] text-center flex flex-col items-center justify-center p-1 text-white">
-                  <span className="text-[8px] xs:text-[9px] font-bold uppercase tracking-wider text-[#F5C518]">GEPREK</span>
+                  <span className="text-[8px] xs:text-[9px] font-bold uppercase tracking-wider text-[#F5C518]">PENYET</span>
                   <span className="text-[10px] xs:text-xs font-serif font-black leading-tight text-white">AL-FARIZ</span>
                   <span className="text-[7px] xs:text-[8px] text-amber-200">PAMULANG</span>
                 </div>

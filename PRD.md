@@ -1,6 +1,6 @@
 # PRODUCT REQUIREMENT DOCUMENT (PRD)
 
-## Ayam Geprek Sambel Ijo Al-Fariz
+## Ayam Penyet Sambel Ijo Al-Fariz
 
 ---
 
@@ -8,10 +8,10 @@
 
 | Atribut | Keterangan |
 | :--- | :--- |
-| **Nama Proyek** | Website Resmi & Simulasi Pemesanan Ayam Geprek Sambel Ijo Al-Fariz |
+| **Nama Proyek** | Website Resmi & Simulasi Pemesanan Ayam Penyet Sambel Ijo Al-Fariz |
 | **Versi Dokumen** | 1.0.0 (Enterprise Production-Ready) |
 | **Status Dokumen** | Disetujui berdasarkan Analisis Kode Sumber & Spesifikasi Desain |
-| **Entitas Usaha** | UMKM Kuliner Ayam Geprek Sambel Ijo Al-Fariz |
+| **Entitas Usaha** | UMKM Kuliner Ayam Penyet Sambel Ijo Al-Fariz |
 | **Lokasi Operasional** | Jl. Surya Kencana No. 27, Pamulang Barat (Depan Kampus Utama UNPAM), Tangerang Selatan |
 | **Kontak Resmi** | WhatsApp: +62 897-3816-530 |
 | **Dokumen Acuan** | `DESIGN (1).md`, `metadata.json`, `package.json`, `src/App.tsx` |
@@ -22,7 +22,7 @@
 
 ### 1.1 Latar Belakang & Deskripsi Produk
 
-Ayam Geprek Sambel Ijo Al-Fariz merupakan aplikasi web modern berorientasi *craving-driven Indonesian culinary discovery and ordering simulation*. Aplikasi ini dirancang khusus untuk memfasilitasi pelanggan (mahasiswa Universitas Pamulang, tenaga pendidik, dan masyarakat sekitar Pamulang) dalam mengeksplorasi hidangan otentik ayam goreng tepung krispi dengan balutan ulegan sambel ijo dadakan, mengonfigurasi porsi secara kustom, melakukan simulasi pembayaran digital, serta meneruskan pesanan resmi secara instan ke gerobak fisik melalui WhatsApp API.
+Ayam Penyet Sambel Ijo Al-Fariz merupakan aplikasi web modern berorientasi *craving-driven Indonesian culinary discovery and ordering simulation*. Aplikasi ini dirancang khusus untuk memfasilitasi pelanggan (mahasiswa Universitas Pamulang, tenaga pendidik, dan masyarakat sekitar Pamulang) dalam mengeksplorasi hidangan otentik ayam goreng tepung krispi dengan balutan ulegan sambel ijo dadakan, mengonfigurasi porsi secara kustom, melakukan simulasi pembayaran digital, serta meneruskan pesanan resmi secara instan ke gerobak fisik melalui WhatsApp API.
 
 ### 1.2 Tujuan Bisnis (Business Objectives)
 
@@ -132,7 +132,7 @@ Website dirancang sebagai *Single Page Application (SPA)* responsif yang terbagi
        │
 [5. Keunggulan Section (Grid 4 Pilar: Murah, Lezat, Fresh, Mudah Dipesan)]
        │
-[6. Promo Tagline Banner ("Siang-Malam Enaknya Geprek Al-Fariz!")]
+[6. Promo Tagline Banner ("Siang-Malam Enaknya Penyet Al-Fariz!")]
        │
 [7. Menu Section (Katalog Menu Juara Sambel Ijo dengan Scroll-to-Order)]
        │
@@ -169,8 +169,8 @@ Website dirancang sebagai *Single Page Application (SPA)* responsif yang terbagi
 - **Deskripsi:** Menyajikan daftar menu utama warung dengan rincian harga, deskripsi bahan, badge, dan trigger pemilihan porsi.
 - **Komponen:** `MenuSection.tsx`, `data/menuData.ts`.
 - **Daftar Menu Tersedia:**
-  1. `Paket Geprek + Nasi` (Rp 17.000, Best Seller): Ayam krispi fillet geprek sambel ijo dadakan + Nasi putih pulen hangat + Lalapan timun segar.
-  2. `Ayam Geprek Saja` (Rp 15.000, Alacarte): 1 potong ayam krispi jumbo berbalut sambel ijo cabai rawit pedas gurih tanpa nasi + lalapan.
+  1. `Paket Penyet + Nasi` (Rp 17.000, Best Seller): Ayam krispi fillet penyet sambel ijo dadakan + Nasi putih pulen hangat + Lalapan timun segar.
+  2. `Ayam Penyet Saja` (Rp 15.000, Alacarte): 1 potong ayam krispi jumbo berbalut sambel ijo cabai rawit pedas gurih tanpa nasi + lalapan.
 - **Aturan Flow:**
   - Mengklik kartu menu atau tombol "Racik Porsi & Pesan Sekarang" otomatis memperbarui state `selectedMenuItem` dan melakukan *smooth scroll* ke komponen `#simulasi-pemesanan`.
 
@@ -234,7 +234,7 @@ Website dirancang sebagai *Single Page Application (SPA)* responsif yang terbagi
 **Format Teks Terstandarisasi:**
 
 ```text
-Halo Admin Ayam Geprek Al-Fariz UNPAM!
+Halo Admin Ayam Penyet Al-Fariz UNPAM!
 
 [PEMBAYARAN LUNAS TERVERIFIKASI] ✅ (jika lunas)
 Metode: {Metode Pembayaran}
@@ -289,7 +289,7 @@ Mohon konfirmasi dan segera diproses ya! Terima kasih 🙏
 
 ### FR-09: Studio Gambar Kuliner AI
 
-- **Deskripsi:** Pembuat visual fotografi kuliner ayam geprek berkualitas tinggi untuk materi promosi atau display.
+- **Deskripsi:** Pembuat visual fotografi kuliner ayam penyet berkualitas tinggi untuk materi promosi atau display.
 - **Komponen:** `ImageStudioModal.tsx`, `server/apiHandler.ts`.
 - **Fitur:**
   - Input prompt kustom atau pilihan rekomendasi bawaan.
@@ -443,7 +443,7 @@ Endpoint internal yang ditangani oleh `src/server/apiHandler.ts`:
 ```json
 {
   "success": true,
-  "advice": "💡 Rekomendasi Terbaik: Paket Geprek + Nasi (Rp 17.000)...",
+  "advice": "💡 Rekomendasi Terbaik: Paket Penyet + Nasi (Rp 17.000)...",
   "thinkingNotes": null,
   "source": "gemini-advisor"
 }
@@ -457,7 +457,7 @@ Endpoint internal yang ditangani oleh `src/server/apiHandler.ts`:
 
 ```json
 {
-  "query": "Panduan rute jalan ke Ayam Geprek Al-Fariz depan Kampus UNPAM"
+  "query": "Panduan rute jalan ke Ayam Penyet Al-Fariz depan Kampus UNPAM"
 }
 ```
 
@@ -466,7 +466,7 @@ Endpoint internal yang ditangani oleh `src/server/apiHandler.ts`:
 ```json
 {
   "success": true,
-  "text": "Ayam Geprek Sambel Ijo Al-Fariz berlokasi sangat strategis di Jl. Surya Kencana No. 27...",
+  "text": "Ayam Penyet Sambel Ijo Al-Fariz berlokasi sangat strategis di Jl. Surya Kencana No. 27...",
   "mapsLinks": [
     {
       "title": "Gerbang Utama Universitas Pamulang (UNPAM)",
@@ -485,7 +485,7 @@ Endpoint internal yang ditangani oleh `src/server/apiHandler.ts`:
 
 ```json
 {
-  "query": "Kuliner ayam geprek sambel ijo kampus UNPAM Pamulang tren mahasiswa"
+  "query": "Kuliner ayam penyet sambel ijo kampus UNPAM Pamulang tren mahasiswa"
 }
 ```
 
@@ -494,7 +494,7 @@ Endpoint internal yang ditangani oleh `src/server/apiHandler.ts`:
 ```json
 {
   "success": true,
-  "text": "Ayam Geprek Sambel Ijo adalah salah satu kuliner favorit mahasiswa...",
+  "text": "Ayam Penyet Sambel Ijo adalah salah satu kuliner favorit mahasiswa...",
   "citations": [
     {
       "title": "Kuliner Populer Seputar Kampus UNPAM Pamulang",
@@ -513,7 +513,7 @@ Endpoint internal yang ditangani oleh `src/server/apiHandler.ts`:
 
 ```json
 {
-  "prompt": "Paket Ayam Geprek Sambel Ijo uleg dadakan di cobek batu panas...",
+  "prompt": "Paket Ayam Penyet Sambel Ijo uleg dadakan di cobek batu panas...",
   "imageSize": "1K"
 }
 ```

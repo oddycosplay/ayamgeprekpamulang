@@ -53,7 +53,7 @@ export const Header: React.FC<HeaderProps> = ({
           {/* Order CTA */}
           <a
             className="inline-flex items-center gap-1.5 xs:gap-2 bg-[#F5C518] hover:bg-[#e0b312] text-[#5e0d10] px-3.5 xs:px-4 sm:px-5 py-2 xs:py-2.5 rounded-full font-black text-xs sm:text-sm shadow-sm transition-all transform hover:scale-105"
-            href="https://wa.me/628973816530?text=Halo%20Mas%20Al-Fariz,%20saya%20mau%20pesan%20Ayam%20Geprek%20Sambel%20Ijo"
+            href="https://wa.me/628973816530?text=Halo%20Mas%20Al-Fariz,%20saya%20mau%20pesan%20Ayam%20Penyet%20Sambel%20Ijo"
             rel="noopener noreferrer"
             target="_blank"
           >

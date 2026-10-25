@@ -1,6 +1,6 @@
-# Ayam Geprek Sambel Ijo Al-Fariz
+# Ayam Penyet Sambel Ijo Al-Fariz
 
-![Preview Landing Page Ayam Geprek Sambel Ijo Al-Fariz](./laptop_beranda.png)
+![Preview Landing Page Ayam Penyet Sambel Ijo Al-Fariz](./laptop_beranda.png)
 
 [![Live Demo](https://img.shields.io/badge/Live%20Demo-%F0%9F%9A%80%20ayamsambelijopamulang.my.id-brightgreen?style=for-the-badge)](https://ayamsambelijopamulang.my.id)
 [![GitHub Repository](https://img.shields.io/badge/GitHub-Repo-181717?style=for-the-badge&logo=github)](https://github.com/oddycosplay/ayamgeprekpamulang)
@@ -18,7 +18,7 @@
 
 ## 1. Gambaran Umum Proyek
 
-Proyek ini merupakan pengembangan website dan sistem operasional digital untuk UMKM kuliner Ayam Geprek Sambel Ijo Al-Fariz yang berlokasi di Pamulang, Tangerang Selatan. Tujuan utama dari pengembangan ini adalah meningkatkan visibilitas usaha di dunia digital, mempermudah proses pemesanan, serta mendukung pengelolaan operasional usaha secara lebih efisien.
+Proyek ini merupakan pengembangan website dan sistem operasional digital untuk UMKM kuliner Ayam Penyet Sambel Ijo Al-Fariz yang berlokasi di Pamulang, Tangerang Selatan. Tujuan utama dari pengembangan ini adalah meningkatkan visibilitas usaha di dunia digital, mempermudah proses pemesanan, serta mendukung pengelolaan operasional usaha secara lebih efisien.
 
 Website yang dibangun tidak hanya berfungsi sebagai media promosi, tetapi juga sebagai kanal transaksi digital yang memungkinkan pelanggan melakukan pemesanan dengan cepat, melihat menu, menilai produk, dan menerima informasi mengenai status pesanan secara real-time.
 
@@ -388,7 +388,7 @@ Panduan deploy lebih detail tersedia di file [DEPLOY-DOMAINESIA.md](DEPLOY-DOMAI
 
 ## 14. Hasil yang Diharapkan
 
-Dengan sistem ini, diharapkan usaha Ayam Geprek Sambel Ijo Al-Fariz dapat:
+Dengan sistem ini, diharapkan usaha Ayam Penyet Sambel Ijo Al-Fariz dapat:
 
 - Meningkatkan brand awareness dan visibilitas online
 - Mempercepat proses pemesanan barang dan layanan
@@ -411,6 +411,6 @@ Proyek ini dikembangkan oleh mahasiswa Universitas Pamulang sebagai bagian dari 
 
 ## 16. Lisensi
 
-© 2027 Ayam Geprek Sambel Ijo Al-Fariz. Seluruh hak cipta dilindungi undang-undang.
+© 2027 Ayam Penyet Sambel Ijo Al-Fariz. Seluruh hak cipta dilindungi undang-undang.
 
 Dikembangkan untuk mendukung digitalisasi usaha kuliner dan peningkatan kualitas layanan pelanggan secara berkelanjutan.

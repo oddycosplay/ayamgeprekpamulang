@@ -337,7 +337,9 @@ export const OrderDirectSection: React.FC<OrderDirectSectionProps> = ({
                         <div className="relative rounded-2xl overflow-hidden aspect-video mb-3.5 bg-gray-100">
                           <img
                             src={item.image}
-                            alt={`${item.name} - Ayam Geprek Sambel Ijo Al-Fariz Pamulang`}
+                            alt={`${item.name} - Ayam Penyet Sambel Ijo Al-Fariz Pamulang`}
+                            width={400}
+                            height={225}
                             className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
                             loading="lazy"
                           />

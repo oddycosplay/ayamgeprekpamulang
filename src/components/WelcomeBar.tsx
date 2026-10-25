@@ -10,7 +10,7 @@ export const WelcomeBar: React.FC = () => {
         </span>
         <div className="flex flex-wrap sm:inline-flex items-center justify-center p-1 sm:p-1.5 bg-white rounded-2xl sm:rounded-full border border-gray-200 shadow-sm max-w-full">
           <span className="px-3 sm:px-5 py-1 sm:py-1.5 text-xs sm:text-sm font-semibold text-gray-700">
-            Ayam Geprek Sambel Ijo Al-Fariz
+            Ayam Penyet Sambel Ijo Al-Fariz
           </span>
           <a
             href="#menu"

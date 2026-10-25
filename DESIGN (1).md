@@ -1,5 +1,5 @@
 ---
-name: Geprek Sambel Ijo Brutalist
+name: Penyet Sambel Ijo Brutalist
 colors:
   surface: '#f8f9ff'
   surface-dim: '#d0dbed'
@@ -138,7 +138,7 @@ spacing:
 
 ## Brand & Style
 
-This design system channels an uncompromising, high-velocity neo-brutalist street-food energy engineered directly for craving-driven Indonesian culinary e-commerce and local eatery discovery. It fuses the visceral, aromatic heat of crushed fiery bird's eye chilies and crispy spiced fried chicken (*ayam geprek*) with punchy editorial typography, hard ink-black structural borders, and instant transaction-oriented triggers. 
+This design system channels an uncompromising, high-velocity neo-brutalist street-food energy engineered directly for craving-driven Indonesian culinary e-commerce and local eatery discovery. It fuses the visceral, aromatic heat of crushed fiery bird's eye chilies and crispy spiced fried chicken (*ayam penyet*) with punchy editorial typography, hard ink-black structural borders, and instant transaction-oriented triggers. 
 
 The aesthetic eschews generic softness in favor of deliberate, razor-sharp geometric framing, high-contrast posterized card layouts, and tactile, high-impact CTA architecture. It speaks directly to hungry urbanites, college students, and food enthusiasts seeking rapid satisfaction via WhatsApp ordering and instant map navigation.
 

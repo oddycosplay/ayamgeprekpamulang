@@ -52,7 +52,7 @@ export const AiAdvisorModal: React.FC<AiAdvisorModalProps> = ({
   };
 
   const handleMapsGroundingSubmit = async (queryText?: string) => {
-    const textToSubmit = queryText || prompt || 'Panduan rute jalan ke Ayam Geprek Al-Fariz depan Kampus UNPAM';
+    const textToSubmit = queryText || prompt || 'Panduan rute jalan ke Ayam Penyet Al-Fariz depan Kampus UNPAM';
     setLoading(true);
     setMapsResponse(null);
 
@@ -69,7 +69,7 @@ export const AiAdvisorModal: React.FC<AiAdvisorModalProps> = ({
       });
     } catch (err) {
       setMapsResponse({
-        text: 'Ayam Geprek Al-Fariz berada di seberang gerbang utama UNPAM Pamulang Barat, samping warung Mie Ayam.',
+        text: 'Ayam Penyet Al-Fariz berada di seberang gerbang utama UNPAM Pamulang Barat, samping warung Mie Ayam.',
         mapsLinks: [
           {
             title: 'Google Maps: Kampus Utama UNPAM Pamulang',
@@ -83,7 +83,7 @@ export const AiAdvisorModal: React.FC<AiAdvisorModalProps> = ({
   };
 
   const handleSearchGroundingSubmit = async (queryText?: string) => {
-    const textToSubmit = queryText || prompt || 'Tren ayam geprek sambel ijo kampus UNPAM Tangerang Selatan';
+    const textToSubmit = queryText || prompt || 'Tren ayam penyet sambel ijo kampus UNPAM Tangerang Selatan';
     setLoading(true);
     setSearchResponse(null);
 
@@ -100,7 +100,7 @@ export const AiAdvisorModal: React.FC<AiAdvisorModalProps> = ({
       });
     } catch (err) {
       setSearchResponse({
-        text: 'Kuliner ayam geprek sambel ijo merupakan salah satu pilihan terpopuler mahasiswa di sekitar Pamulang.',
+        text: 'Kuliner ayam penyet sambel ijo merupakan salah satu pilihan terpopuler mahasiswa di sekitar Pamulang.',
         citations: []
       });
     } finally {
@@ -173,7 +173,7 @@ export const AiAdvisorModal: React.FC<AiAdvisorModalProps> = ({
           <button
             onClick={() => {
               setActiveTab('search');
-              setPrompt('Apa yang membuat ayam geprek sambel ijo digemari mahasiswa di Pamulang?');
+              setPrompt('Apa yang membuat ayam penyet sambel ijo digemari mahasiswa di Pamulang?');
             }}
             className={`pb-2.5 px-3 text-xs font-bold border-b-2 transition whitespace-nowrap flex items-center gap-1.5 ${
               activeTab === 'search'
@@ -268,7 +268,7 @@ export const AiAdvisorModal: React.FC<AiAdvisorModalProps> = ({
                   </button>
                   <button
                     onClick={() => {
-                      const q = 'Bahan-bahan rahasia ayam geprek sambel ijo Nusantara cabai rawit minyak bawang';
+                      const q = 'Bahan-bahan rahasia ayam penyet sambel ijo Nusantara cabai rawit minyak bawang';
                       setPrompt(q);
                       handleSearchGroundingSubmit(q);
                     }}

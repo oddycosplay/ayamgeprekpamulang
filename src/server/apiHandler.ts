@@ -59,13 +59,13 @@ export async function handleApiRequest(req: IncomingMessage, res: ServerResponse
     // 1. Google Maps Grounding
     if (url.startsWith('/api/gemini/grounding-maps') && req.method === 'POST') {
       const body = await parseJsonBody(req);
-      const query = body.query || 'Ayam Geprek Sambel Ijo Al-Fariz depan Kampus Utama UNPAM Jl Surya Kencana Pamulang Barat';
+      const query = body.query || 'Ayam Penyet Sambel Ijo Al-Fariz depan Kampus Utama UNPAM Jl Surya Kencana Pamulang Barat';
       const ai = getAiClient();
 
       if (!ai) {
         return sendJson(res, 200, {
           success: true,
-          text: `Ayam Geprek Sambel Ijo Al-Fariz berlokasi sangat strategis di Jl. Surya Kencana No. 27, Pamulang Barat, persis di seberang gerbang utama Kampus UNPAM (Universitas Pamulang), tepat di samping warung Mie Ayam dan beberapa langkah dari Lawson minimarket. Mudah diakses dari Bundaran Pamulang maupun halte busway/angkot D07.`,
+          text: `Ayam Penyet Sambel Ijo Al-Fariz berlokasi sangat strategis di Jl. Surya Kencana No. 27, Pamulang Barat, persis di seberang gerbang utama Kampus UNPAM (Universitas Pamulang), tepat di samping warung Mie Ayam dan beberapa langkah dari Lawson minimarket. Mudah diakses dari Bundaran Pamulang maupun halte busway/angkot D07.`,
           mapsLinks: [
             {
               title: "Gerbang Utama Universitas Pamulang (UNPAM)",
@@ -83,7 +83,7 @@ export async function handleApiRequest(req: IncomingMessage, res: ServerResponse
       try {
         const response = await ai.models.generateContent({
           model: 'gemini-3.8-flash',
-          contents: `Jawab dalam bahasa Indonesia dengan jelas dan informatif: ${query}. Berikan panduan navigasi ke gerobak Ayam Geprek Sambel Ijo Al-Fariz di depan Kampus UNPAM Pamulang Barat (Jl. Surya Kencana No. 27), patokan sekitar (sebelah mie ayam & dekat Lawson), dan akses transportasi umum.`,
+          contents: `Jawab dalam bahasa Indonesia dengan jelas dan informatif: ${query}. Berikan panduan navigasi ke gerobak Ayam Penyet Sambel Ijo Al-Fariz di depan Kampus UNPAM Pamulang Barat (Jl. Surya Kencana No. 27), patokan sekitar (sebelah mie ayam & dekat Lawson), dan akses transportasi umum.`,
           config: {
             tools: [{ googleMaps: {} }],
             toolConfig: {
@@ -127,7 +127,7 @@ export async function handleApiRequest(req: IncomingMessage, res: ServerResponse
         console.warn('Maps grounding error, falling back to standard response:', err.message);
         return sendJson(res, 200, {
           success: true,
-          text: `Gerobak Ayam Geprek Sambel Ijo Al-Fariz berada tepat di seberang gerbang utama Kampus UNPAM (Universitas Pamulang), Jl. Surya Kencana No. 27 Pamulang Barat, samping Mie Ayam & dekat Lawson. Akses jalan sangat hidup dan ramai mahasiswa siang hingga malam hari (buka 15.00 - 22.00 WIB).`,
+          text: `Gerobak Ayam Penyet Sambel Ijo Al-Fariz berada tepat di seberang gerbang utama Kampus UNPAM (Universitas Pamulang), Jl. Surya Kencana No. 27 Pamulang Barat, samping Mie Ayam & dekat Lawson. Akses jalan sangat hidup dan ramai mahasiswa siang hingga malam hari (buka 15.00 - 22.00 WIB).`,
           mapsLinks: [
             {
               title: "Titik Lokasi: Depan Kampus Utama UNPAM",
@@ -142,13 +142,13 @@ export async function handleApiRequest(req: IncomingMessage, res: ServerResponse
     // 2. Google Search Grounding
     if (url.startsWith('/api/gemini/grounding-search') && req.method === 'POST') {
       const body = await parseJsonBody(req);
-      const query = body.query || 'Kuliner ayam geprek sambel ijo kampus UNPAM Pamulang tren mahasiswa';
+      const query = body.query || 'Kuliner ayam penyet sambel ijo kampus UNPAM Pamulang tren mahasiswa';
       const ai = getAiClient();
 
       if (!ai) {
         return sendJson(res, 200, {
           success: true,
-          text: `Ayam Geprek Sambel Ijo adalah salah satu kuliner favorit mahasiswa di kawasan Universitas Pamulang karena kombinasi rasa pedas cabai rawit hijau uleg dadakan dengan minyak panas bawang serta ayam goreng krispi berbumbu rempah kuning. Porsi nasi hangat dan harga ramah kantong (Rp 15.000 - Rp 17.000) menjadikannya pilihan utama makan siang dan malam.`,
+          text: `Ayam Penyet Sambel Ijo adalah salah satu kuliner favorit mahasiswa di kawasan Universitas Pamulang karena kombinasi rasa pedas cabai rawit hijau uleg dadakan dengan minyak panas bawang serta ayam goreng krispi berbumbu rempah kuning. Porsi nasi hangat dan harga ramah kantong (Rp 15.000 - Rp 17.000) menjadikannya pilihan utama makan siang dan malam.`,
           citations: [
             {
               title: "Kuliner Populer Seputar Kampus UNPAM Pamulang",
@@ -190,7 +190,7 @@ export async function handleApiRequest(req: IncomingMessage, res: ServerResponse
       } catch (err: any) {
         return sendJson(res, 200, {
           success: true,
-          text: `Ayam Geprek Sambel Ijo Al-Fariz menjadi juara kuliner pedas di Pamulang berkat cabai rawit hijau segar yang diuleg dadakan bersama bawang putih dan disiram minyak kelapa panas. Gurih rempahnya meresap dan kriuknya tahan lama.`,
+          text: `Ayam Penyet Sambel Ijo Al-Fariz menjadi juara kuliner pedas di Pamulang berkat cabai rawit hijau segar yang diuleg dadakan bersama bawang putih dan disiram minyak kelapa panas. Gurih rempahnya meresap dan kriuknya tahan lama.`,
           citations: [],
           source: "fallback"
         });
@@ -207,17 +207,17 @@ export async function handleApiRequest(req: IncomingMessage, res: ServerResponse
       if (!ai) {
         return sendJson(res, 200, {
           success: true,
-          advice: `💡 **Rekomendasi Terbaik:** Paket Geprek + Nasi (Rp 17.000) Level 2 dengan Sambel Dicampur + Es Teh Jumbo (+Rp 5.000), total Rp 22.000. Untuk budget pas Rp 20.000, Anda bisa pilih Paket Geprek + Nasi (Rp 17.000) ditambah Extra Sambel Rawit (+Rp 3.000)! Dijamin kenyang nampol sehabis kelas kuliah di UNPAM.`,
+          advice: `💡 **Rekomendasi Terbaik:** Paket Penyet + Nasi (Rp 17.000) Level 2 dengan Sambel Dicampur + Es Teh Jumbo (+Rp 5.000), total Rp 22.000. Untuk budget pas Rp 20.000, Anda bisa pilih Paket Penyet + Nasi (Rp 17.000) ditambah Extra Sambel Rawit (+Rp 3.000)! Dijamin kenyang nampol sehabis kelas kuliah di UNPAM.`,
           thinkingNotes: isDeepThinking ? "Analisis nutrisi: Karbohidrat 65g, Protein 28g dari dada ayam krispi, Lemak tak jenuh 14g, Capsaicin 45.000 SHU untuk metabolisme optimal mahasiswa." : null,
           source: "local-fallback"
         });
       }
 
       try {
-        const systemInstruction = `Kamu adalah Mas Al-Fariz / Konsultan Kuliner Ahli Ayam Geprek Sambel Ijo Al-Fariz di depan Kampus Utama UNPAM Pamulang.
+        const systemInstruction = `Kamu adalah Mas Al-Fariz / Konsultan Kuliner Ahli Ayam Penyet Sambel Ijo Al-Fariz di depan Kampus Utama UNPAM Pamulang.
 Menu kita:
-- Paket Geprek + Nasi: Rp 17.000 (Ayam krispi fillet + nasi pulen + lalapan + sambel ijo dadakan)
-- Ayam Geprek Saja: Rp 15.000 (1 potong ayam krispi jumbo + sambel ijo)
+- Paket Penyet + Nasi: Rp 17.000 (Ayam krispi fillet + nasi pulen + lalapan + sambel ijo dadakan)
+- Ayam Penyet Saja: Rp 15.000 (1 potong ayam krispi jumbo + sambel ijo)
 - Tambahan: Es Teh Jumbo (+Rp 5.000), Extra Sambel (+Rp 3.000), Tambah Nasi (+Rp 5.000), Tahu/Tempe Krispi (+Rp 4.000).
 Level Pedas: Level 1 (Sedang / ~20k SHU), Level 2 (Pedas Mantap / ~40k SHU), Level 3 (Pedas Nampol / ~70k SHU), Level 4 (Pedas Gila / ~100k SHU), Level 5 (Pedas Mampus / 120k+ SHU).
 Berikan saran ramah, hangat, praktis khas warung gerobak legendaris depan kampus, dengan rincian biaya yang pas.`;
@@ -232,14 +232,14 @@ Berikan saran ramah, hangat, praktis khas warung gerobak legendaris depan kampus
 
         return sendJson(res, 200, {
           success: true,
-          advice: response.text || 'Silakan coba Paket Geprek + Nasi Level 2 favorit kami!',
+          advice: response.text || 'Silakan coba Paket Penyet + Nasi Level 2 favorit kami!',
           thinkingNotes: isDeepThinking ? "Model berpikir: Evaluasi kecukupan kalori mahasiswa, toleransi capsaicin cabai rawit hijau, dan optimasi porsi dengan budget yang ditentukan." : null,
           source: "gemini-advisor"
         });
       } catch (err: any) {
         return sendJson(res, 200, {
           success: true,
-          advice: `Paling pas untuk Anda adalah **Paket Geprek + Nasi** (Rp 17.000) level 2 (pedas mantap), ditemani **Es Teh Manis Jumbo** (Rp 5.000) segar dingin!`,
+          advice: `Paling pas untuk Anda adalah **Paket Penyet + Nasi** (Rp 17.000) level 2 (pedas mantap), ditemani **Es Teh Manis Jumbo** (Rp 5.000) segar dingin!`,
           source: "fallback"
         });
       }
@@ -259,7 +259,7 @@ Berikan saran ramah, hangat, praktis khas warung gerobak legendaris depan kampus
           imageUrl: 'https://lh3.googleusercontent.com/aida/AEtjO1WH0LL-6kRASK1FAeeFzAwBJSPC_tS_kXo7CYWrQdXqUCAFVDanQUT542j53NygbYIy0dJ9rR1WNaHRWzFGSWt2zLlBpEWFJT_FCsiGT74Jz5m5qwbk_ppyCMbanrebd7USy2ZDglaBmUcfbBXM8KxrSfBKQk69Ng5rYb4jiHdSLjQ6DSklsfbcyJtFq1OvdYQ1uka0b7YsbCf4u8fOcsrsAj0TOqaIT302bKHhtHbNyg',
           resolution: imageSize,
           source: "curated-showcase",
-          note: "Gambar resolusi tinggi siap pakai untuk Ayam Geprek Sambel Ijo Al-Fariz."
+          note: "Gambar resolusi tinggi siap pakai untuk Ayam Penyet Sambel Ijo Al-Fariz."
         });
       }
 
@@ -268,7 +268,7 @@ Berikan saran ramah, hangat, praktis khas warung gerobak legendaris depan kampus
         const response = await ai.models.generateContent({
           model: 'gemini-3.1-flash-lite-image',
           contents: {
-            parts: [{ text: `A mouthwatering culinary food photography of Indonesian Ayam Geprek Sambel Ijo Al-Fariz: ${prompt}, authentic stone mortar cobek, golden crispy battered fried chicken, freshly crushed bright green bird's eye chilies and garlic oil, steaming hot jasmine rice, cucumber slices, professional studio food styling, warm ambient lighting` }]
+            parts: [{ text: `A mouthwatering culinary food photography of Indonesian Ayam Penyet Sambel Ijo Al-Fariz: ${prompt}, authentic stone mortar cobek, golden crispy battered fried chicken, freshly crushed bright green bird's eye chilies and garlic oil, steaming hot jasmine rice, cucumber slices, professional studio food styling, warm ambient lighting` }]
           },
           config: {
             imageConfig: {

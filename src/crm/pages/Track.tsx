@@ -24,7 +24,7 @@ export function TrackPage({ code }: { code: string }) {
         <a href="/" className="flex items-center gap-3">
           <LogoMark />
           <div className="leading-tight">
-            <p className="font-display text-lg font-extrabold">Ayam Geprek Al-Fariz</p>
+            <p className="font-display text-lg font-extrabold">Ayam Penyet Al-Fariz</p>
             <p className="text-xs font-semibold text-ink-soft">Sambel ijo uleg dadakan</p>
           </div>
         </a>

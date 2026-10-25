@@ -1,6 +1,6 @@
 {
-  "name": "Ayam Geprek Sambel Ijo Al-Fariz",
-  "description": "Website resmi kuliner otentik Ayam Geprek Sambel Ijo Al-Fariz di depan Kampus UNPAM Pamulang, dilengkapi simulasi pesanan online, peta interaktif, dan rekomendasi menu AI.",
+  "name": "Ayam Penyet Sambel Ijo Al-Fariz",
+  "description": "Website resmi kuliner otentik Ayam Penyet Sambel Ijo Al-Fariz di depan Kampus UNPAM Pamulang, dilengkapi simulasi pesanan online, peta interaktif, dan rekomendasi menu AI.",
   "requestFramePermissions": [],
   "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
 }

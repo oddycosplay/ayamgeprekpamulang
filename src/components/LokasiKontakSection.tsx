@@ -82,7 +82,7 @@ export const LokasiKontakSection: React.FC<LokasiKontakSectionProps> = () => {
               </a>
               <a
                 className="inline-flex items-center gap-2 bg-white/15 hover:bg-white/25 text-white font-bold px-6 py-3 rounded-full text-sm border border-white/30 backdrop-blur transition"
-                href="https://wa.me/628973816530?text=Halo%20Ayam%20Geprek%20Al-Fariz,%20saya%20ingin%20tanya%20lokasi%20gerobak"
+                href="https://wa.me/628973816530?text=Halo%20Ayam%20Penyet%20Al-Fariz,%20saya%20ingin%20tanya%20lokasi%20gerobak"
                 rel="noopener noreferrer"
                 target="_blank"
               >
@@ -102,7 +102,7 @@ export const LokasiKontakSection: React.FC<LokasiKontakSectionProps> = () => {
                   allowFullScreen={false}
                   loading="lazy"
                   referrerPolicy="no-referrer-when-downgrade"
-                  title="Lokasi Google Maps Ayam Geprek Al-Fariz UNPAM"
+                  title="Lokasi Google Maps Ayam Penyet Al-Fariz UNPAM"
                 />
                 <div className="absolute inset-0 pointer-events-none bg-gradient-to-t from-black/80 via-transparent to-transparent z-10 flex flex-col justify-end p-5 sm:p-6">
                   <div className="pointer-events-auto bg-[#F5C518] text-[#5e0d10] text-xs font-black px-3 py-1 rounded-full w-max mb-2 shadow-md flex items-center gap-1.5">
@@ -110,7 +110,7 @@ export const LokasiKontakSection: React.FC<LokasiKontakSectionProps> = () => {
                     <span>📍 DEPAN KAMPUS UNPAM</span>
                   </div>
                   <p className="text-white font-bold text-base sm:text-lg drop-shadow-sm">
-                    Ayam Geprek Sambel Ijo Al-Fariz
+                    Ayam Penyet Sambel Ijo Al-Fariz
                   </p>
                   <p className="text-gray-200 text-xs mt-1 drop-shadow-sm">
                     Samping Mie Ayam & Dekat Lawson Jl. Surya Kencana Pamulang

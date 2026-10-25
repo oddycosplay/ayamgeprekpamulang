@@ -38,7 +38,7 @@ export async function getSettings(): Promise<Settings> {
     tax_percent: Number(map.tax_percent ?? 11),
     accepting_orders: (map.accepting_orders ?? '1') === '1',
     whatsapp: map.whatsapp ?? '',
-    store_name: map.store_name ?? 'Ayam Geprek Sambel Ijo Al-Fariz',
+    store_name: map.store_name ?? 'Ayam Penyet Sambel Ijo Al-Fariz',
   };
 }
 

@@ -377,7 +377,7 @@ function OrderDetailSheet({ id, onClose }: { id?: string; onClose: () => void })
               <a
                 href={waLink(
                   o.customer_phone,
-                  `Halo ${o.customer_name}, pesanan ${o.code} di Ayam Geprek Al-Fariz statusnya: ${statusLabel(o.status)}. Cek di ${trackUrl}`,
+                  `Halo ${o.customer_name}, pesanan ${o.code} di Ayam Penyet Al-Fariz statusnya: ${statusLabel(o.status)}. Cek di ${trackUrl}`,
                 )}
                 target="_blank"
                 rel="noopener noreferrer"

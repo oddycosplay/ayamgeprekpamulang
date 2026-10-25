@@ -91,7 +91,9 @@ export const CitaRasaBanner: React.FC = () => {
             >
               <img
                 src={citaRasaImg}
-                alt="Cita Rasa Asli Ayam Geprek Sambel Ijo Al-Fariz Pamulang"
+                alt="Cita Rasa Asli Ayam Penyet Sambel Ijo Al-Fariz Pamulang"
+                width={288}
+                height={288}
                 loading="lazy"
                 decoding="async"
                 className="w-full h-full object-cover rounded-full shadow-md"

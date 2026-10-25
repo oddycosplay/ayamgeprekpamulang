@@ -4,18 +4,18 @@
   "specVersion": "0.91",
   "host": {
     "domain": "ayamsambelijopamulang.my.id",
-    "publisher": "Ayam Geprek Sambel Ijo Al-Fariz"
+    "publisher": "Ayam Penyet Sambel Ijo Al-Fariz"
   },
   "entries": [
     {
       "id": "alfariz-culinary-info",
       "type": "text/markdown",
       "url": "https://ayamsambelijopamulang.my.id/llms.txt",
-      "description": "Katalog informasi kuliner resmi Ayam Geprek Sambel Ijo Al-Fariz UNPAM Pamulang, menu, harga, dan kontak pemesanan.",
+      "description": "Katalog informasi kuliner resmi Ayam Penyet Sambel Ijo Al-Fariz UNPAM Pamulang, menu, harga, dan kontak pemesanan.",
       "representativeQueries": [
-        "Ayam geprek sambel ijo enak di Pamulang dekat UNPAM",
-        "Menu dan harga ayam geprek Al-Fariz UNPAM",
-        "Pesan ayam geprek sambel ijo Al-Fariz Pamulang"
+        "Ayam penyet sambel ijo enak di Pamulang dekat UNPAM",
+        "Menu dan harga ayam penyet Al-Fariz UNPAM",
+        "Pesan ayam penyet sambel ijo Al-Fariz Pamulang"
       ]
     }
   ]

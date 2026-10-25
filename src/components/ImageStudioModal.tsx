@@ -7,7 +7,7 @@ interface ImageStudioModalProps {
 }
 
 export const ImageStudioModal: React.FC<ImageStudioModalProps> = ({ isOpen, onClose }) => {
-  const [prompt, setPrompt] = useState<string>('Paket Ayam Geprek Sambel Ijo uleg dadakan di cobek batu panas dengan nasi pulen hangat dan timun segar');
+  const [prompt, setPrompt] = useState<string>('Paket Ayam Penyet Sambel Ijo uleg dadakan di cobek batu panas dengan nasi pulen hangat dan timun segar');
   const [imageSize, setImageSize] = useState<'1K' | '2K' | '4K'>('1K');
   const [loading, setLoading] = useState<boolean>(false);
   const [generatedImg, setGeneratedImg] = useState<string | null>(
@@ -65,7 +65,7 @@ export const ImageStudioModal: React.FC<ImageStudioModalProps> = ({ isOpen, onCl
                 </span>
               </div>
               <p className="text-xs text-gray-500">
-                Buat dan sesuaikan foto visual Ayam Geprek Sambel Ijo Al-Fariz dalam resolusi tinggi.
+                Buat dan sesuaikan foto visual Ayam Penyet Sambel Ijo Al-Fariz dalam resolusi tinggi.
               </p>
             </div>
           </div>
@@ -87,7 +87,7 @@ export const ImageStudioModal: React.FC<ImageStudioModalProps> = ({ isOpen, onCl
             <div className="flex flex-wrap gap-2">
               <button
                 onClick={() => {
-                  const p = 'Paket Ayam Geprek Sambel Ijo di Cobek Batu dengan Lalapan Timun Segar';
+                  const p = 'Paket Ayam Penyet Sambel Ijo di Cobek Batu dengan Lalapan Timun Segar';
                   setPrompt(p);
                   handleGenerate(p);
                 }}
@@ -97,7 +97,7 @@ export const ImageStudioModal: React.FC<ImageStudioModalProps> = ({ isOpen, onCl
               </button>
               <button
                 onClick={() => {
-                  const p = 'Ayam Geprek Sambel Ijo dengan Lelehan Keju Mozarella Bakar Hangat';
+                  const p = 'Ayam Penyet Sambel Ijo dengan Lelehan Keju Mozarella Bakar Hangat';
                   setPrompt(p);
                   handleGenerate(p);
                 }}
@@ -180,7 +180,7 @@ export const ImageStudioModal: React.FC<ImageStudioModalProps> = ({ isOpen, onCl
               <div className="relative aspect-square max-w-sm mx-auto rounded-2xl overflow-hidden shadow-md border border-gray-200">
                 <img
                   src={generatedImg}
-                  alt="Ayam Geprek Al-Fariz AI Visual"
+                  alt="Ayam Penyet Al-Fariz AI Visual"
                   className="w-full h-full object-cover"
                 />
                 <span className="absolute bottom-2 right-2 bg-black/70 backdrop-blur-sm text-white text-[10px] font-mono px-2 py-0.5 rounded-md">
@@ -192,7 +192,7 @@ export const ImageStudioModal: React.FC<ImageStudioModalProps> = ({ isOpen, onCl
                   href={generatedImg}
                   target="_blank"
                   rel="noopener noreferrer"
-                  download="ayam-geprek-al-fariz.png"
+                  download="ayam-penyet-al-fariz.png"
                   className="inline-flex items-center gap-1.5 px-4 py-2 bg-white hover:bg-gray-100 text-gray-800 text-xs font-bold rounded-xl border border-gray-300 shadow-sm transition"
                 >
                   <Download className="w-3.5 h-3.5" />

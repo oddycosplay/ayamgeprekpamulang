@@ -1,5 +1,5 @@
 # ==============================================================================
-# AYAM GEPREK SAMBEL IJO AL-FARIZ - HIGH PERFORMANCE PRODUCTION CONFIGURATION
+# AYAM PENYET SAMBEL IJO AL-FARIZ - HIGH PERFORMANCE PRODUCTION CONFIGURATION
 # ==============================================================================
 
 # Disable mod_pagespeed to prevent Apache background DNS fetch latency (504 timeout fix)

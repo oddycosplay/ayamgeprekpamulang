@@ -84,7 +84,7 @@ function LoginPage() {
             </p>
           </div>
           <div className="relative">
-            <img src="/menu/paket-geprek-nasi.jpg" alt="Paket ayam geprek sambel ijo dengan nasi" className="h-56 w-full rounded-[2rem] object-cover ring-4 ring-kuning" />
+            <img src="/menu/paket-geprek-nasi.jpg" alt="Paket ayam penyet sambel ijo dengan nasi" className="h-56 w-full rounded-[2rem] object-cover ring-4 ring-kuning" />
             <span className="absolute -top-4 right-6 rotate-3 rounded-full bg-ijo px-4 py-2 text-sm font-extrabold text-white shadow-lg">
               Sambel ijo uleg dadakan
             </span>

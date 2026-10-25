@@ -33,7 +33,7 @@ export const TestimoniSection: React.FC = () => {
   const [hoverRating, setHoverRating] = useState<number>(0);
   const [reviewComment, setReviewComment] = useState('');
   const [selectedTag, setSelectedTag] = useState('Sambel Nampol 🌶️');
-  const [selectedFavoriteMenu, setSelectedFavoriteMenu] = useState('Paket Geprek + Nasi');
+  const [selectedFavoriteMenu, setSelectedFavoriteMenu] = useState('Paket Penyet + Nasi');
   const [showSuccessToast, setShowSuccessToast] = useState(false);
 
   // Load custom reviews from localStorage on mount
@@ -629,8 +629,8 @@ export const TestimoniSection: React.FC = () => {
                   onChange={(e) => setSelectedFavoriteMenu(e.target.value)}
                   className="w-full text-xs sm:text-sm px-3.5 py-2.5 rounded-xl border border-gray-300 focus:outline-none focus:ring-2 focus:ring-[#781519]/20 focus:border-[#781519] bg-white cursor-pointer"
                 >
-                  <option value="Paket Geprek + Nasi">Paket Geprek + Nasi (Rp 17.000)</option>
-                  <option value="Ayam Geprek Saja">Ayam Geprek Saja (Rp 15.000)</option>
+                  <option value="Paket Penyet + Nasi">Paket Penyet + Nasi (Rp 17.000)</option>
+                  <option value="Ayam Penyet Saja">Ayam Penyet Saja (Rp 15.000)</option>
                   <option value="Paket Box Acara Kampus">Pesanan Box Acara UNPAM</option>
                 </select>
               </div>
@@ -643,7 +643,7 @@ export const TestimoniSection: React.FC = () => {
                 <textarea
                   required
                   rows={3}
-                  placeholder="Ceritakan pengalaman Anda menikmati kepedasan dan kerenyahan Ayam Geprek Sambel Ijo Al-Fariz..."
+                  placeholder="Ceritakan pengalaman Anda menikmati kepedasan dan kerenyahan Ayam Penyet Sambel Ijo Al-Fariz..."
                   value={reviewComment}
                   onChange={(e) => setReviewComment(e.target.value)}
                   className="w-full text-xs sm:text-sm px-3.5 py-2.5 rounded-xl border border-gray-300 focus:outline-none focus:ring-2 focus:ring-[#781519]/20 focus:border-[#781519] resize-none"

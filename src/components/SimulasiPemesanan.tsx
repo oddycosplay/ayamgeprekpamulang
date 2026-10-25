@@ -176,7 +176,7 @@ export const SimulasiPemesanan: React.FC<SimulasiPemesananProps> = ({
     paymentStatus?: 'lunas_simulasi' | 'bayar_di_tempat';
     txId?: string;
   }) => {
-    let msg = `Halo Admin Ayam Geprek Al-Fariz UNPAM!\n\n`;
+    let msg = `Halo Admin Ayam Penyet Al-Fariz UNPAM!\n\n`;
     if (ord.paymentStatus === 'lunas_simulasi') {
       msg += `[PEMBAYARAN LUNAS TERVERIFIKASI] ✅\n`;
       msg += `Metode: ${ord.paymentMethod || 'QRIS Digital'}\n`;
@@ -436,7 +436,7 @@ export const SimulasiPemesanan: React.FC<SimulasiPemesananProps> = ({
             Order Sekarang & Pesan Langsung
           </h2>
           <p className="text-xs xs:text-sm sm:text-base text-gray-600 leading-relaxed px-2">
-            Kustomisasi menu geprek favoritmu, pilih metode bayar digital (QRIS & E-Wallet), simpan ke riwayat lokal, dan pesan langsung via WhatsApp!
+            Kustomisasi menu penyet favoritmu, pilih metode bayar digital (QRIS & E-Wallet), simpan ke riwayat lokal, dan pesan langsung via WhatsApp!
           </p>
         </div>
 
@@ -1028,7 +1028,7 @@ export const SimulasiPemesanan: React.FC<SimulasiPemesananProps> = ({
                     Belum Ada Riwayat Pesanan Tersimpan
                   </h4>
                   <p className="text-xs sm:text-sm text-gray-500 max-w-md mx-auto">
-                    Kustomisasi paket geprek favoritmu, tentukan metode pembayaran digital/tunai, lalu simpan ke perangkat ini agar mudah dipesan kembali kapan saja!
+                    Kustomisasi paket penyet favoritmu, tentukan metode pembayaran digital/tunai, lalu simpan ke perangkat ini agar mudah dipesan kembali kapan saja!
                   </p>
                 </div>
                 <button
@@ -1235,7 +1235,7 @@ export const SimulasiPemesanan: React.FC<SimulasiPemesananProps> = ({
                   Hore! Pesanan Berhasil Disimpan! 🎉
                 </h3>
                 <p className="text-xs sm:text-sm text-gray-500 max-w-sm mx-auto leading-relaxed">
-                  Racikan kustom geprek favoritmu telah tercatat aman di riwayat lokal browser ini.
+                  Racikan kustom penyet favoritmu telah tercatat aman di riwayat lokal browser ini.
                 </p>
               </div>
 

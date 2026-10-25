@@ -98,6 +98,8 @@ export const RahasiaRasaSection: React.FC = () => {
                 <img
                   src={tentangImg}
                   alt="Mas Al-Fariz - Founder & Peracik Sambel Ijo Al-Fariz Pamulang"
+                  width={300}
+                  height={300}
                   loading="lazy"
                   decoding="async"
                   className="w-full h-full object-cover object-top scale-105 group-hover:scale-110 transition-transform duration-500"
@@ -118,7 +120,7 @@ export const RahasiaRasaSection: React.FC = () => {
               {/* Floating Badge */}
               <div className="absolute -bottom-2 right-0 xs:right-2 sm:bottom-0 sm:right-0 z-20 w-20 h-20 sm:w-24 sm:h-24 rounded-full bg-white p-1 shadow-2xl border-2 border-[#781519] flex items-center justify-center transform rotate-6">
                 <div className="w-full h-full rounded-full bg-[#781519] text-center flex flex-col items-center justify-center p-1 text-white">
-                  <span className="text-[7px] sm:text-[8px] font-bold text-[#F5C518]">GEPREK</span>
+                  <span className="text-[7px] sm:text-[8px] font-bold text-[#F5C518]">PENYET</span>
                   <span className="text-[9px] sm:text-[11px] font-serif font-black text-white">AL-FARIZ</span>
                   <span className="text-[6px] sm:text-[7px] text-amber-200">PAMULANG</span>
                 </div>

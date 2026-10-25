@@ -91,8 +91,8 @@ const SCHEMA = [
 ];
 
 const SEED_PRODUCTS: [string, string, string, number, string, string, string, number, number][] = [
-  ['paket-geprek-nasi', 'Paket Geprek + Nasi', 'paket', 17000, 'Ayam krispi fillet geprek sambel ijo uleg dadakan + nasi putih pulen hangat + lalapan timun segar.', '/menu/paket-geprek-nasi.jpg', 'BEST SELLER', 1, 1],
-  ['ayam-geprek-saja', 'Ayam Geprek Saja', 'alacarte', 15000, '1 potong ayam krispi jumbo berbalut sambel ijo cabai rawit pedas gurih tanpa nasi + lalapan.', '/menu/ayam-geprek-saja.jpg', 'ALACARTE', 1, 2],
+  ['paket-geprek-nasi', 'Paket Penyet + Nasi', 'paket', 17000, 'Ayam krispi fillet penyet sambel ijo uleg dadakan + nasi putih pulen hangat + lalapan timun segar.', '/menu/paket-geprek-nasi.jpg', 'BEST SELLER', 1, 1],
+  ['ayam-geprek-saja', 'Ayam Penyet Saja', 'alacarte', 15000, '1 potong ayam krispi jumbo berbalut sambel ijo cabai rawit pedas gurih tanpa nasi + lalapan.', '/menu/ayam-geprek-saja.jpg', 'ALACARTE', 1, 2],
   ['extra-sambel', 'Extra Sambel Ijo', 'tambahan', 3000, 'Tambahan sambel ijo uleg dadakan per porsi.', '', '', 0, 10],
   ['tambah-nasi', 'Tambah Nasi Pulen', 'tambahan', 5000, 'Tambahan nasi putih pulen hangat per porsi.', '', '', 0, 11],
 ];
@@ -138,7 +138,7 @@ async function init() {
     ['tax_percent', '11'],
     ['accepting_orders', '1'],
     ['whatsapp', '628973816530'],
-    ['store_name', 'Ayam Geprek Sambel Ijo Al-Fariz'],
+    ['store_name', 'Ayam Penyet Sambel Ijo Al-Fariz'],
   ]) {
     await pool.execute('INSERT IGNORE INTO settings (k, v) VALUES (?, ?)', [k, v]);
   }

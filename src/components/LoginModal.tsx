@@ -34,7 +34,7 @@ export const LoginModal: React.FC<LoginModalProps> = ({ isOpen, onClose }) => {
             </div>
             <div>
               <h2 className="font-serif text-xl font-bold text-gray-900">Login Owner</h2>
-              <p className="text-xs text-gray-500">Khusus pemilik Ayam Geprek Al-Fariz</p>
+              <p className="text-xs text-gray-500">Khusus pemilik Ayam Penyet Al-Fariz</p>
             </div>
           </div>
           <button onClick={onClose} className="p-2 text-gray-400 hover:text-gray-700" aria-label="Tutup">

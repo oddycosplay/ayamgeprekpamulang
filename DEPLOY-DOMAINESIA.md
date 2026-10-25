@@ -52,7 +52,7 @@ Tabel dan menu awal dibuat otomatis oleh aplikasi saat pertama kali dibuka.
 ## 4. Upload file
 
 1. cPanel > **File Manager**.
-2. Buat folder di luar `public_html`, misalnya `/home/namaakun/ayamgeprek`.
+2. Buat folder di luar `public_html`, misalnya `/home/namaakun/ayampenyet`.
 3. Upload zip dari langkah 2 ke folder itu, lalu klik kanan > **Extract**.
 
 ## 5. Buat aplikasi Node.js
@@ -63,7 +63,7 @@ cPanel > **Setup Node.js App** > **Create Application**:
 | --- | --- |
 | Node.js version | 18 atau lebih baru (pilih versi tertinggi) |
 | Application mode | Production |
-| Application root | `ayamgeprek` |
+| Application root | `ayampenyet` |
 | Application URL | domain kamu (kosongkan path) |
 | Application startup file | `server.cjs` |
 
