@@ -20,18 +20,6 @@
   <img src="https://img.shields.io/badge/Google-Gemini-4285F4?style=for-the-badge&logo=google" alt="Google Gemini" />
 </p>
 
-[![Live Demo](https://img.shields.io/badge/Live%20Demo-%F0%9F%9A%80%20ayamsambelijopamulang.my.id-brightgreen?style=for-the-badge)](https://ayamsambelijopamulang.my.id)
-[![GitHub Repository](https://img.shields.io/badge/GitHub-Repo-181717?style=for-the-badge&logo=github)](https://github.com/oddycosplay/ayamgeprekpamulang)
-[![WhatsApp Order](https://img.shields.io/badge/WhatsApp-Order%2008973816530-25D366?style=for-the-badge&logo=whatsapp&logoColor=white)](https://wa.me/628973816530)
-
-![React 19](https://img.shields.io/badge/React%2019-20232A?style=for-the-badge&logo=react&logoColor=61DAFB)
-![TypeScript](https://img.shields.io/badge/TypeScript-3178C6?style=for-the-badge&logo=typescript&logoColor=white)
-![Vite 8](https://img.shields.io/badge/Vite%208-646CFF?style=for-the-badge&logo=vite&logoColor=white)
-![Tailwind CSS v4](https://img.shields.io/badge/Tailwind_CSS_v4-38B2AC?style=for-the-badge&logo=tailwind-css&logoColor=white)
-![Express](https://img.shields.io/badge/Express-000000?style=for-the-badge&logo=express&logoColor=white)
-![MySQL](https://img.shields.io/badge/MySQL-4479A1?style=for-the-badge&logo=mysql&logoColor=white)
-![Google Gemini](https://img.shields.io/badge/Google%20Gemini-AI-4285F4?style=for-the-badge&logo=google&logoColor=white)
-
 ---
 
 ## 1. Gambaran Umum Proyek
