@@ -1,5 +1,5 @@
 # ==============================================================================
-# AYAM GEPREK SAMBEL IJO AL-FARIZ - HIGH PERFORMANCE PRODUCTION CONFIGURATION
+# AYAM PENYET SAMBEL IJO AL-FARIZ - HIGH PERFORMANCE PRODUCTION CONFIGURATION
 # ==============================================================================
 
 # Disable mod_pagespeed to prevent background fetch latency and 504 gateway timeout
@@ -72,14 +72,14 @@ AddType font/woff2 .woff2
 </IfModule>
 
 # ==============================================================================
-# BROWSER & PROXY CACHING (FAST TTFB < 200MS & LIGHTHOUSE COMPLIANCE)
+# BROWSER & PROXY CACHING (FAST TTFB & LIGHTHOUSE PERFORMANCE FIX)
 # ==============================================================================
 <IfModule mod_expires.c>
   ExpiresActive On
   ExpiresDefault "access plus 1 month"
 
-  # HTML: Cached for 10 minutes locally, stale-while-revalidate for edge
-  ExpiresByType text/html "access plus 600 seconds"
+  # HTML: Always fresh, no stale cache lock on edge proxy
+  ExpiresByType text/html "access plus 0 seconds"
 
   # Static Assets: 1 year immutable cache
   ExpiresByType text/css "access plus 1 year"
@@ -94,19 +94,22 @@ AddType font/woff2 .woff2
 </IfModule>
 
 # ==============================================================================
-# SECURITY HEADERS & REVERSE PROXY OPTIMIZATION
+# SECURITY HEADERS & REVERSE PROXY CACHE INVALIDATION
 # ==============================================================================
 <IfModule mod_headers.c>
   Header set X-Content-Type-Options "nosniff"
   Header set X-Frame-Options "SAMEORIGIN"
   Header set Referrer-Policy "strict-origin-when-cross-origin"
 
-  # Enable fast edge caching on DomaiNesia Nginx reverse proxy
-  Header set X-Accel-Expires "3600"
+  # Instruct Nginx reverse proxy to invalidate cache immediately for fresh HTML
+  Header set X-Accel-Expires "0"
+  Header set X-Accel-Buffering "no"
 
   # Cache-Control optimization for HTML
   <FilesMatch "\.(html|htm)$">
-    Header set Cache-Control "public, max-age=600, s-maxage=3600, stale-while-revalidate=86400"
+    Header set Cache-Control "no-cache, no-store, must-revalidate, max-age=0"
+    Header set Pragma "no-cache"
+    Header set Expires "0"
   </FilesMatch>
 
   # Cache-Control for immutable static assets

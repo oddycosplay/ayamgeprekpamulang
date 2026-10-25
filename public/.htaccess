@@ -2,7 +2,7 @@
 # AYAM PENYET SAMBEL IJO AL-FARIZ - HIGH PERFORMANCE PRODUCTION CONFIGURATION
 # ==============================================================================
 
-# Disable mod_pagespeed to prevent Apache background DNS fetch latency (504 timeout fix)
+# Disable mod_pagespeed to prevent background fetch latency and 504 gateway timeout
 <IfModule pagespeed_module>
   ModPagespeed off
 </IfModule>
@@ -13,8 +13,14 @@
 # Set DirectoryIndex so Apache serves the compiled production bundle first
 DirectoryIndex bundle.html index.html
 
-# Ensure JavaScript MIME types are properly served
+# Ensure JavaScript and AI manifest MIME types are properly served
 AddType application/javascript .js .mjs .jsx .ts .tsx
+AddType application/json .json
+AddType text/plain .txt
+AddType text/markdown .md
+AddType image/svg+xml .svg .svgz
+AddType image/webp .webp
+AddType font/woff2 .woff2
 
 <IfModule mod_rewrite.c>
   RewriteEngine On
@@ -27,10 +33,15 @@ AddType application/javascript .js .mjs .jsx .ts .tsx
   RewriteCond %{HTTPS} off
   RewriteRule ^(.*)$ https://%{HTTP_HOST}%{REQUEST_URI} [L,R=301]
 
-  # 2. Self-healing fallback for stale clients requesting dev scripts
+  # 2. Allow and map AI manifests
+  RewriteRule ^\.well-known/ai-catalog\.json$ /ai-catalog.json [L]
+  RewriteRule ^ai-catalog\.json$ - [L]
+  RewriteRule ^llms\.txt$ - [L]
+
+  # 3. Self-healing fallback for stale clients requesting dev scripts
   RewriteRule ^src/.*$ /self-healing.js [L]
 
-  # 3. Production Bundle Serving & SPA Routing
+  # 4. Production Bundle Serving & SPA Routing
   RewriteRule ^$ bundle.html [L]
   RewriteRule ^index\.html$ bundle.html [L]
 
@@ -45,6 +56,7 @@ AddType application/javascript .js .mjs .jsx .ts .tsx
 # ==============================================================================
 <IfModule mod_deflate.c>
   AddOutputFilterByType DEFLATE text/html
+  AddOutputFilterByType DEFLATE text/plain
   AddOutputFilterByType DEFLATE text/css
   AddOutputFilterByType DEFLATE text/javascript
   AddOutputFilterByType DEFLATE application/javascript
@@ -82,23 +94,25 @@ AddType application/javascript .js .mjs .jsx .ts .tsx
 </IfModule>
 
 # ==============================================================================
-# SECURITY HEADERS & CACHE CONTROL
+# SECURITY HEADERS & REVERSE PROXY CACHE INVALIDATION
 # ==============================================================================
 <IfModule mod_headers.c>
   Header set X-Content-Type-Options "nosniff"
   Header set X-Frame-Options "SAMEORIGIN"
   Header set Referrer-Policy "strict-origin-when-cross-origin"
-  # Instruct Nginx reverse proxy to invalidate cache immediately
+
+  # Instruct Nginx reverse proxy to invalidate cache immediately for fresh HTML
   Header set X-Accel-Expires "0"
   Header set X-Accel-Buffering "no"
 
-  # Cache-Control optimization
+  # Cache-Control optimization for HTML
   <FilesMatch "\.(html|htm)$">
     Header set Cache-Control "no-cache, no-store, must-revalidate, max-age=0"
     Header set Pragma "no-cache"
     Header set Expires "0"
   </FilesMatch>
 
+  # Cache-Control for immutable static assets
   <FilesMatch "\.(js|css|webp|png|jpg|jpeg|gif|svg|woff|woff2|ttf|eot)$">
     Header set Cache-Control "public, max-age=31536000, immutable"
   </FilesMatch>
