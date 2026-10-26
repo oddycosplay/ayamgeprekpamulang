@@ -2,7 +2,7 @@
 
 ![Preview Landing Page Ayam Penyet Sambel Ijo Al-Fariz](./laptop_beranda.png)
 <p align="center">
-  <a href="[https://ayamsambelijopamulang.my.id](https://ayamsambelijopamulang.my.id)">
+  <a href="[https://ayamsambelijopamulang.my.id]">
     <img src="https://img.shields.io/badge/LiveDemo-ayamsambelijopamulang.my.id-brightgreen?style=for-the-badge)" alt="website" />
   </a>
   <a href="https://github.com/oddycosplay/ayamgeprekpamulang/tree/main">
